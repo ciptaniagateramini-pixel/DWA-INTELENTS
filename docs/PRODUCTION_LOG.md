@@ -152,3 +152,8 @@ Music: `public/music/outro_scene12.wav` — original track synthesised by `tools
   "HASIL PRODUKSI — DWA AGENT INTELLIGENT" (https://drive.google.com/drive/folders/1tikZ6KGmPmt9RP3j7F4ecBlaOprj8EO-).
 - The MP4 masters and the ZIP could not be uploaded to Drive from this environment: the Drive connector only accepts
   file content inline in the request (tens of MB is not possible) and direct Google upload endpoints are blocked by the proxy.
+- Sellable Template Kit: `out/AI_Agent_Video_Template_Kit.zip` (82 files, 4 MB), built by `tools/build_template_kit.py`.
+  Client names, brand, phone number, character renders, logos and VO are replaced with neutral sample names,
+  labelled placeholder PNGs and silent WAVs; includes README (buyer guide, `docs/template_kit/PANDUAN_PEMBELI.md`) and SKILL.md.
+  Verified from a clean copy: `npm ci`, type-check, stills of Scenes 01/03/04/09/10/12 and a full Scene 04 MP4 render (210 frames).
+  Scene 12's highlight size now adapts to the brand length (unchanged 118 px for "DWA X TOKO BB").

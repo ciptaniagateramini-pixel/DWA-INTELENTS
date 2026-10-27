@@ -8,6 +8,10 @@ export const SCENE12_FRAMES = 300;
 
 const T = {title: 8, q1: 66, q2: 112, cta: 168, number: 186};
 const WA_NUMBER = '0882000119208';
+const BRAND_LEFT = 'DWA';
+const BRAND_RIGHT = 'TOKO BB';
+// shrink the highlight for longer names so it always fits the 1080 px width
+const TITLE_SIZE = Math.min(118, Math.floor(1600 / `${BRAND_LEFT} X ${BRAND_RIGHT}`.length));
 const ROBOTS = ['Bu Mila', 'Marzuki', 'Acep', 'Bambang', 'Angga', 'Fitri', 'Wawan', 'Lilis', 'Baron', 'Winda', 'Fajar', 'Amanda'];
 
 const usePop = (start: number, damping = 11) => {
@@ -76,7 +80,7 @@ export const Scene12: React.FC = () => {
             position: 'relative',
             fontFamily: FONT,
             fontWeight: 800,
-            fontSize: 118,
+            fontSize: TITLE_SIZE,
             letterSpacing: 2,
             color: COLORS.white,
             textShadow: `0 10px 30px rgba(0,0,0,0.6), 0 0 ${40 * glow}px rgba(255,201,40,0.55)`,
@@ -85,7 +89,7 @@ export const Scene12: React.FC = () => {
             padding: '0 10px',
           }}
         >
-          DWA <span style={{color: COLORS.yellow}}>X</span> TOKO BB
+          {BRAND_LEFT} <span style={{color: COLORS.yellow}}>X</span> {BRAND_RIGHT}
           <div style={{position: 'absolute', top: 0, bottom: 0, left: `${shine}%`, width: '18%', background: 'linear-gradient(100deg, transparent, rgba(255,255,255,0.55), transparent)', transform: 'skewX(-20deg)'}} />
         </div>
       </div>
