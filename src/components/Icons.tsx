@@ -1,7 +1,32 @@
 /** Small glossy round icons drawn as SVG (no external assets). */
-export type IconKind = 'hashtag' | 'kol' | 'idea' | 'search' | 'video' | 'photo' | 'mail' | 'chat' | 'megaphone' | 'bag';
+export type IconKind = 'hashtag' | 'kol' | 'idea' | 'search' | 'video' | 'photo' | 'mail' | 'chat' | 'megaphone' | 'bag' | 'receipt' | 'user' | 'chart' | 'doc';
 
 const GLYPH: Record<IconKind, React.ReactNode> = {
+  receipt: (
+    <g fill="none" stroke="#fff" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round">
+      <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" />
+      <path d="M9 8h6M9 12h6M9 16h3" />
+    </g>
+  ),
+  user: (
+    <g fill="#fff">
+      <circle cx={12} cy={8} r={4} />
+      <path d="M4 20c.9-4 4-6 8-6s7.1 2 8 6z" />
+    </g>
+  ),
+  chart: (
+    <g fill="#fff">
+      <rect x={4} y={13} width={4} height={7} rx={1} />
+      <rect x={10} y={8} width={4} height={12} rx={1} />
+      <rect x={16} y={4} width={4} height={16} rx={1} />
+    </g>
+  ),
+  doc: (
+    <g fill="none" stroke="#fff" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round">
+      <path d="M6 3h8l4 4v14H6z" />
+      <path d="M14 3v4h4M9 12h6M9 16h6" />
+    </g>
+  ),
   bag: (
     <g fill="none" stroke="#fff" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round">
       <path d="M5 8h14l-1.2 12H6.2z" fill="#fff" fillOpacity={0.25} />
@@ -61,6 +86,10 @@ export const ICON_COLORS: Record<IconKind, [string, string]> = {
   chat: ['#6EE7A0', '#16A34A'],
   megaphone: ['#FF8A8F', '#D21F2B'],
   bag: ['#FFD86B', '#E09A00'],
+  receipt: ['#6EE7A0', '#16A34A'],
+  user: ['#C4A1FF', '#7C3AED'],
+  chart: ['#7CC4FF', '#1E6FD9'],
+  doc: ['#FF8A8F', '#D21F2B'],
 };
 
 export const GlossIcon: React.FC<{kind: IconKind; size: number; style?: React.CSSProperties}> = ({kind, size, style}) => {
