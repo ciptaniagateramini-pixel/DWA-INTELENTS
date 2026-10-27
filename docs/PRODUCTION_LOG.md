@@ -126,3 +126,21 @@ Robot reply texts were not in the brief; neutral placeholders (editable in `REPL
 VO: the user's recording `Toko bb.m4a` from the main Drive folder (6.19 s, speech 0.3–5.6 s), high-pass 70 Hz + loudnorm,
 placed at frame 18, unedited and not time-stretched. Content not transcribed (no transcription available in this environment).
 SFX: whoosh per case, send + pop per reply, sync per result, zap + ting per hand-off, low hum. Mix -18.2 LUFS.
+
+## Scene 11 — Rekap data (12 s, 360 frames)
+User wrote "bu mira" → **Bu Mila**. Owner (typing pose) sends "Rekap semua data bulan ini." (typing dots → bubble).
+Energy climbs to Bu Mila (camera follows up). Ten source robots around her (Fitri, Wawan, Lilis, Baron, Penjaga Toko,
+Kurir Toko → transaksi; Angga, Amanda, Fajar → iklan; Winda → prospek) stream 30 data packets into her; a progress ring
+and three category chips (Data Transaksi / Data Iklan / Data Prospek) fill. Report card (doc + chart) pops (f212),
+rides the rail down to the Owner's phone (camera follows down; Owner now in reading pose), and Bu Mila's bubble lands:
+"Laporan selesai. Apakah mau sekalian saya cetak PDF untuk arsip?" (typo-corrected from the brief).
+SFX: whoosh, typing, send, zap, sync ticks, ting + pop on compile and on the reply, hum.
+
+## Scene 12 — Penutup (10 s, 300 frames)
+"DWA X TOKO BB" highlight (Poppins ExtraBold, yellow X, shine sweep, underline), then text on wiping blocks:
+"Mau bisnismu lebih efisien?" / "Mau custom sesuai kebutuhan bisnismu juga?" (typo "custome" corrected),
+CTA block "Bisa diskusi ke link bio atau" + WA logo + 0882000119208. Parade of the 12 AI staff along the bottom.
+Music: `public/music/outro_scene12.wav` — original track synthesised by `tools/make_music.py` (112 BPM, C–G–Am–F), royalty-free; Scene 12 only.
+
+## Master Scene 09–12 (separate from Part 01)
+`out/Master_Scene09-12.mp4` — 1260 frames, 42.000 s, -21.2 LUFS; built by `tools/assemble_master_09_12.sh`.
