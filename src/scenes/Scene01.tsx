@@ -31,6 +31,7 @@ export const S1 = {
   toReading: 164,
   title3: 180,
   bubble2: 186,
+  vo: 8,
 };
 
 export const Scene01: React.FC = () => {
@@ -81,33 +82,38 @@ export const Scene01: React.FC = () => {
           typingFrames={18}
           originX={ph1.x}
           originY={ph1.y}
-          x={POSES.typing.x - 420}
-          y={380}
-          width={840}
+          x={POSES.typing.x - 10}
+          y={470}
+          width={470}
+          fontSize={40}
+          end={S1.toReading + 4}
         />
         <SpeechBubble
           text="Laporan penjualan hari ini xxxx"
           start={S1.bubble2}
           originX={ph2.x}
           originY={ph2.y}
-          x={POSES.reading.x - 420}
-          y={380}
-          width={840}
+          x={POSES.reading.x - 10}
+          y={470}
+          width={470}
+          fontSize={40}
         />
       </div>
       <Title text="Kenalin Owner TOKO BB GOLD" start={S1.title1} end={S1.toTyping + 6} y={170} size={70} breakAfter={1} />
       <Title text="Tinggal kirim perintah" start={S1.title2} end={S1.toReading + 6} y={170} size={70} />
       <Title text="Terima laporan rapih ONTIME" start={S1.title3} y={170} size={66} />
 
-      {/* SFX aligned to actions */}
-      <Sequence from={0}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.7} /></Sequence>
-      <Sequence from={S1.title1}><Audio src={staticFile('sfx/pop.wav')} volume={0.6} /></Sequence>
-      <Sequence from={S1.toTyping - 4}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.6} /></Sequence>
-      <Sequence from={S1.title2}><Audio src={staticFile('sfx/pop.wav')} volume={0.55} /></Sequence>
-      <Sequence from={S1.bubble1}><Audio src={staticFile('sfx/typing.wav')} volume={0.6} /></Sequence>
-      <Sequence from={S1.toReading - 4}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.6} /></Sequence>
-      <Sequence from={S1.title3}><Audio src={staticFile('sfx/pop.wav')} volume={0.55} /></Sequence>
-      <Sequence from={S1.bubble2}><Audio src={staticFile('sfx/ting.wav')} volume={0.6} /></Sequence>
+      {/* VO (ElevenLabs, voice Adrianleoh): speech runs 0.35 s → 5.9 s of the file */}
+      <Sequence from={S1.vo}><Audio src={staticFile('vo/vo_scene01_norm.wav')} volume={1} /></Sequence>
+      {/* SFX aligned to actions, kept under the voice */}
+      <Sequence from={0}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.45} /></Sequence>
+      <Sequence from={S1.title1}><Audio src={staticFile('sfx/pop.wav')} volume={0.4} /></Sequence>
+      <Sequence from={S1.toTyping - 4}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.35} /></Sequence>
+      <Sequence from={S1.title2}><Audio src={staticFile('sfx/pop.wav')} volume={0.35} /></Sequence>
+      <Sequence from={S1.bubble1}><Audio src={staticFile('sfx/typing.wav')} volume={0.35} /></Sequence>
+      <Sequence from={S1.toReading - 4}><Audio src={staticFile('sfx/whoosh.wav')} volume={0.35} /></Sequence>
+      <Sequence from={S1.title3}><Audio src={staticFile('sfx/pop.wav')} volume={0.35} /></Sequence>
+      <Sequence from={S1.bubble2}><Audio src={staticFile('sfx/ting.wav')} volume={0.4} /></Sequence>
     </AbsoluteFill>
   );
 };

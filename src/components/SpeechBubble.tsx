@@ -15,10 +15,14 @@ export const SpeechBubble: React.FC<{
   width: number;
   typingFrames?: number;
   accent?: string;
-}> = ({text, start, originX, originY, x, y, width, typingFrames = 0, accent = COLORS.yellow}) => {
+  end?: number;
+  fontSize?: number;
+}> = ({text, start, originX, originY, x, y, width, typingFrames = 0, accent = COLORS.yellow, end, fontSize = 44}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   if (frame < start) return null;
+  const out = end === undefined ? 0 : interpolate(frame, [end - 8, end], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  if (out >= 1) return null;
   const s = spring({frame: frame - start, fps, config: {damping: 12, stiffness: 160, mass: 0.8}});
   const tx = interpolate(s, [0, 1], [originX - x, 0]);
   const ty = interpolate(s, [0, 1], [originY - y, 0]);
@@ -31,16 +35,17 @@ export const SpeechBubble: React.FC<{
         left: x,
         top: y,
         width,
-        transform: `translate(${tx}px, ${ty}px) scale(${s})`,
+        transform: `translate(${tx}px, ${ty}px) scale(${s * (1 - out * 0.2)})`,
+        opacity: 1 - out,
         transformOrigin: '0% 100%',
-        padding: '30px 36px',
+        padding: `${fontSize * 0.6}px ${fontSize * 0.75}px`,
         borderRadius: 40,
         borderBottomLeftRadius: 8,
         background: 'linear-gradient(160deg, rgba(255,255,255,0.98), rgba(236,240,255,0.95))',
         boxShadow: `0 24px 50px rgba(0,0,0,0.45), 0 0 0 4px ${accent}`,
         fontFamily: FONT,
         fontWeight: 600,
-        fontSize: 44,
+        fontSize,
         lineHeight: 1.25,
         color: COLORS.navy,
       }}
