@@ -143,4 +143,4 @@ CTA block "Bisa diskusi ke link bio atau" + WA logo + 0882000119208. Parade of t
 Music: `public/music/outro_scene12.wav` — original track synthesised by `tools/make_music.py` (112 BPM, C–G–Am–F), royalty-free; Scene 12 only.
 
 ## Master Scene 09–12 (separate from Part 01)
-`out/Master_Scene09-12.mp4` — 1260 frames, 42.000 s, -21.2 LUFS; built by `tools/assemble_master_09_12.sh`.
+`out/Master_Scene09-12.mp4` — 1260 frames, 42.000 s; built by `tools/assemble_master_09_12.sh`, then raised to social loudness with `tools/loudness.sh` (two-pass loudnorm, -14 LUFS / -1 dBTP target; measured -14.3 LUFS, peak -0.6 dB; was -21.2 LUFS).
