@@ -98,3 +98,17 @@ The `Part01` Remotion composition renders the same sequence directly.
 Final QA on the master file: frames at start/middle/end of every scene inspected — text spelling verbatim,
 all 12 robots present, Bambang in Scenes 2 and 3, energy flows top-down, no customer images, no clipping of characters.
 Open item: word-level VO check by ear (automatic transcription unavailable in this environment).
+
+## Scene 09 — standalone short (8 s, 240 frames), NOT part of the Part01 master
+File: `out/Scene09.mp4`. Customer assets are used here (allowed for this scene by the user); cut-outs in `assets/clean/customers/`.
+Pairs: Bu Rina → WhatsApp → Fitri, Bu Wiwi → Instagram → Wawan, Pak Tata → TikTok → Lilis, Adrian → BB App → Baron.
+Camera walks each pair (customer → channel logo → robot), then pulls back to show all four pairs in one frame.
+Chat bubbles (WhatsApp-style, sender name + read ticks), typo-corrected per the user's request:
+- Bu Rina: "Halo, saya mau jual emas muda nih"
+- Bu Wiwi: "Halo, saya mau jual emas tua. Tapi mau di-pickup ya."
+- Pak Tata: "Min, saya mau jual kalung. Sekalian mau pesan custom lagi. Minggu depan ke sana."
+- Adrian: no message text was supplied → shown as an in-app order (BB tile + bag icon), no invented text.
+Each bubble pops with ting + pop; each robot lights up (zap + sync) the moment its message arrives.
+Narration (typo-corrected): "Beginilah cara kerja mereka yang dirancang oleh team D.W.A untuk TOKO BB" — shown on screen.
+**VO blocked:** ElevenLabs rejected the generation ("Free Tier access has been disabled … upgrade to a paid subscription").
+The VO slot is wired (`VO_FILE` in `src/scenes/Scene09.tsx`); add the audio file and re-render to include it.

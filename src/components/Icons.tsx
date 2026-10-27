@@ -1,7 +1,13 @@
 /** Small glossy round icons drawn as SVG (no external assets). */
-export type IconKind = 'hashtag' | 'kol' | 'idea' | 'search' | 'video' | 'photo' | 'mail' | 'chat' | 'megaphone';
+export type IconKind = 'hashtag' | 'kol' | 'idea' | 'search' | 'video' | 'photo' | 'mail' | 'chat' | 'megaphone' | 'bag';
 
 const GLYPH: Record<IconKind, React.ReactNode> = {
+  bag: (
+    <g fill="none" stroke="#fff" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round">
+      <path d="M5 8h14l-1.2 12H6.2z" fill="#fff" fillOpacity={0.25} />
+      <path d="M9 10V7a3 3 0 0 1 6 0v3" />
+    </g>
+  ),
   hashtag: <path d="M9 4L7 20M17 4l-2 16M4 9h16M3 15h16" stroke="#fff" strokeWidth={2.4} strokeLinecap="round" fill="none" />,
   kol: <path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="#fff" />,
   idea: (
@@ -54,6 +60,7 @@ export const ICON_COLORS: Record<IconKind, [string, string]> = {
   mail: ['#7CC4FF', '#1E6FD9'],
   chat: ['#6EE7A0', '#16A34A'],
   megaphone: ['#FF8A8F', '#D21F2B'],
+  bag: ['#FFD86B', '#E09A00'],
 };
 
 export const GlossIcon: React.FC<{kind: IconKind; size: number; style?: React.CSSProperties}> = ({kind, size, style}) => {
