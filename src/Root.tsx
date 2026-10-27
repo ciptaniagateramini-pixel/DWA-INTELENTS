@@ -9,6 +9,7 @@ import {Scene06, SCENE06_FRAMES} from './scenes/Scene06';
 import {Scene07, SCENE07_FRAMES} from './scenes/Scene07';
 import {Scene08, SCENE08_FRAMES} from './scenes/Scene08';
 import {Scene09, SCENE09_FRAMES} from './scenes/Scene09';
+import {Scene10, SCENE10_FRAMES} from './scenes/Scene10';
 import {Part01, PART01_FRAMES} from './Part01';
 
 export const Root: React.FC = () => (
@@ -30,6 +31,7 @@ export const Root: React.FC = () => (
     <Composition id="Scene08" component={Scene08} durationInFrames={SCENE08_FRAMES} fps={FPS} width={WIDTH} height={HEIGHT} />
     {/* standalone short, not part of the Part01 master */}
     <Composition id="Scene09" component={Scene09} durationInFrames={SCENE09_FRAMES} fps={FPS} width={WIDTH} height={HEIGHT} />
+    <Composition id="Scene10" component={Scene10} durationInFrames={SCENE10_FRAMES} fps={FPS} width={WIDTH} height={HEIGHT} />
     <Composition id="Part01" component={Part01} durationInFrames={PART01_FRAMES} fps={FPS} width={WIDTH} height={HEIGHT} />
     {/* Checkpoint B: first beat of Scene 01 (2.8 s, ends before the camera leaves the first pose) */}
     <Composition

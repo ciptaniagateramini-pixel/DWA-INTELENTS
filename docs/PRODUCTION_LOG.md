@@ -112,3 +112,17 @@ Each bubble pops with ting + pop; each robot lights up (zap + sync) the moment i
 Narration (typo-corrected): "Beginilah cara kerja mereka yang dirancang oleh team D.W.A untuk TOKO BB" — shown on screen.
 **VO blocked:** ElevenLabs rejected the generation ("Free Tier access has been disabled … upgrade to a paid subscription").
 The VO slot is wired (`VO_FILE` in `src/scenes/Scene09.tsx`); add the audio file and re-render to include it.
+
+## Scene 10 — standalone (12 s, 360 frames), continues Scene 09, NOT part of the Part01 master
+File: `out/Scene10.mp4`. Opens on Scene 09's final framing, same layout; adds a destination column.
+Per case the camera glides customer → robot → destination (sine easing):
+1. the customer's Scene 09 message collapses to a one-line quote, the robot replies (typing dots, then a green "sent" bubble);
+2. a processing badge spins, then shows the result: FIX JUAL / JUAL • PICKUP / RENCANA JUAL / BELI EMAS • NO. BOOKING;
+3. a packet travels to the destination, which lights up with a sync bar + check:
+   Bu Rina → Fitri → Penjaga Toko · Bu Wiwi → Wawan → Kurir Toko · Pak Tata → Lilis → Winda (Follow-up) · Adrian → Baron → Penjaga Toko.
+Ends with a pull-back showing the whole flow.
+Robot reply texts were not in the brief; neutral placeholders (editable in `REPLIES`, `src/scenes/Scene10.tsx`):
+"Siap, Bu Rina! Langsung kami proses ya." / "Siap, Bu Wiwi! Kurir kami jemput ya." / "Siap, Pak Tata! Kami catat dulu ya." / "Pembelian diterima. No. booking dikirim."
+VO: the user's recording `Toko bb.m4a` from the main Drive folder (6.19 s, speech 0.3–5.6 s), high-pass 70 Hz + loudnorm,
+placed at frame 18, unedited and not time-stretched. Content not transcribed (no transcription available in this environment).
+SFX: whoosh per case, send + pop per reply, sync per result, zap + ting per hand-off, low hum. Mix -18.2 LUFS.

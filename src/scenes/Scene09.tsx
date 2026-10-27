@@ -13,7 +13,7 @@ export const SCENE09_FRAMES = 240;
 export const SCENE09_NARRATION = 'Beginilah cara kerja mereka yang dirancang oleh team D.W.A untuk TOKO BB';
 const VO_FILE: string | null = null; // e.g. 'vo/vo_scene09_norm.wav'
 
-type Row = {
+export type Row = {
   customer: string;
   file: string;
   logo?: string;
@@ -22,18 +22,18 @@ type Row = {
   role: string;
   message?: string;
 };
-const ROWS: Row[] = [
+export const ROWS: Row[] = [
   {customer: 'Bu Rina', file: 'Ibu Rina-Pelanggan via WA', logo: 'WA Logo No Background', robot: 'Fitri', role: 'WhatsApp', message: 'Halo, saya mau jual emas muda nih'},
   {customer: 'Bu Wiwi', file: 'Ibu Wiwi', logo: 'Logo Insta No Background', robot: 'Wawan', role: 'Instagram', message: 'Halo, saya mau jual emas tua. Tapi mau di-pickup ya.'},
   {customer: 'Pak Tata', file: 'Pak Tata', logo: 'Logo TikTok No Background', robot: 'Lilis', role: 'TikTok', message: 'Min, saya mau jual kalung. Sekalian mau pesan custom lagi. Minggu depan ke sana.'},
   {customer: 'Adrian', file: 'Adrian', logoText: 'BB', robot: 'Baron', role: 'BB App'},
 ];
 
-const ROW_Y = [300, 690, 1080, 1470];
-const CUST = {x: 200, h: 340};
-const CUST_W = CUST.h * 0.75;
-const LOGO = {x: 560, size: 104};
-const ROBOT = {x: 870, h: 300};
+export const ROW_Y = [300, 690, 1080, 1470];
+export const CUST = {x: 200, h: 340};
+export const CUST_W = CUST.h * 0.75;
+export const LOGO = {x: 560, size: 104};
+export const ROBOT = {x: 870, h: 300};
 const STEP = 40;
 const BASE = 4;
 const OUTRO = BASE + STEP * 4 + 4; // 168
@@ -42,7 +42,7 @@ const t = (i: number) => {
   const b = BASE + i * STEP;
   return {bubble: b + 6, leave: b + 14, logo: b + 22, robot: b + 32};
 };
-const phoneOf = (y: number): [number, number] => [CUST.x - CUST_W / 2 + 0.8 * CUST_W, y - CUST.h / 2 + 0.33 * CUST.h];
+export const phoneOf = (y: number): [number, number] => [CUST.x - CUST_W / 2 + 0.8 * CUST_W, y - CUST.h / 2 + 0.33 * CUST.h];
 
 const linkPts = (y: number): [number, number][] => {
   const [px, py] = phoneOf(y);
