@@ -1,0 +1,7 @@
+node_modules/
+out/*.mp4
+!out/scene01_test.mp4
+.remotion/
+public/clean/
+assets/original/
+out/stills/
