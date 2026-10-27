@@ -1,0 +1,45 @@
+# Production log — DWA AGENT INTELLIGENT Part 01
+
+Master: 1080×1920, 30 fps, H.264, 900 frames (Scene 01 = 240, Scene 02 = 300, Scene 03 = 360).
+
+## Approvals
+- Gate A (asset audit) + Gate B (Scene 01 test): approved by user after preview.
+- Gate C: user chose ElevenLabs voice **Adrianleoh** directly, no samples.
+- Scene 01 full preview approved; user asked to finish without further test iterations.
+
+## Scene 01 — Owner (0–8 s)
+Three Owner poses side by side in one world; camera dives from overview to each pose in turn.
+Texts (verbatim): "Kenalin Owner TOKO BB GOLD" (f14), "Tinggal kirim perintah" (f100),
+"Terima laporan rapih ONTIME" (f180). Bubbles grow from the phone: "Buat riset harga kompetitor kepada Marzuki" (f112, typing dots first),
+"Laporan penjualan hari ini xxxx" (f186). VO from f8. SFX: whoosh f0/f80/f160, pop on titles, typing f112, ting f186.
+
+## Scene 02 — AI Staff (8–18 s)
+Header "DWA AGENT INTELLIGENT" (white), footer "AI STAFF TOKO BB GOLD" (f204, pop). VO from f10.
+**Arrival order** (one every 15 frames = 0.5 s, from scene frame 18):
+
+| # | Robot | Scene frame | Grid cell |
+|---|---|---|---|
+| 1 | Bu Mila | 18 | row 1, left |
+| 2 | Marzuki | 33 | row 1, centre |
+| 3 | Acep | 48 | row 1, right |
+| 4 | Bambang | 63 | row 2, left |
+| 5 | Angga | 78 | row 2, centre |
+| 6 | Fitri | 93 | row 2, right |
+| 7 | Wawan | 108 | row 3, left |
+| 8 | Lilis | 123 | row 3, centre |
+| 9 | Baron | 138 | row 3, right |
+| 10 | Winda | 153 | row 4, left |
+| 11 | Fajar | 168 | row 4, centre |
+| 12 | Amanda | 183 | row 4, right |
+
+12 pop cues (one per arrival), whoosh at start and before the footer.
+
+## Scene 03 — Struktur (18–30 s)
+Title "struktur kerja Agent". No narrator: low electric hum + zap on every card arrival.
+Hierarchy: Owner → Marzuki (dashed gold direct link, bypassing Bu Mila) and Owner → Bu Mila (HRD) →
+Acep (Harga), Bambang (Divisi Pelanggan, red accent + larger glow), Angga (Marketing).
+Bambang → Fitri (WhatsApp), Wawan (Instagram), Lilis (TikTok), Baron (BB App), Penjaga Toko (Janji Temu), Kurir Toko (Pickup / COD).
+Angga → Winda (Follow-up), Fajar (Email / Broadcast), Amanda (Konten).
+Energy travels top-down; cards light up on arrival; camera follows then zooms out (f176→f215) to the full diagram; looping pulses afterwards.
+Customer images (Bu Rina, Bu Wiwi, Pak Tata, Adrian) are not used.
+Penjaga Toko and Kurir Toko (human store roles) are shown as store staff per the brief's hierarchy.

@@ -58,3 +58,16 @@ def bell(fr, start):
     return x
 save("ting.wav", bell(1318.5, 0) * 0.8 + bell(1975.5, 0.09))
 print("sfx ok")
+
+# --- Scene 03: electric zap and low hum ---
+tt = t(0.35)
+chirp = np.sin(2 * np.pi * np.cumsum(2400 * np.exp(-tt * 9) + 200) / SR)
+crackle = rng.standard_normal(len(tt)) * (rng.random(len(tt)) > 0.85)
+save("zap.wav", (chirp * 0.6 + crackle * 0.8) * np.exp(-tt * 11))
+
+tt = t(12.2)
+hum = (np.sin(2*np.pi*55*tt) + 0.6*np.sin(2*np.pi*110*tt) + 0.25*np.sin(2*np.pi*165*tt)) * (0.75 + 0.25*np.sin(2*np.pi*0.7*tt))
+hum += 0.08 * bandsweep(rng.standard_normal(len(tt)), 900, 1100, q=3)
+fade = np.minimum(1, np.minimum(tt / 0.6, (tt[-1] - tt) / 0.8))
+save("hum.wav", hum * fade)
+print("sfx scene03 ok")
