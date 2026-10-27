@@ -80,7 +80,7 @@ SFX: whoosh, zap, send ×3, sync ticks, ting.
 ## Deliverables (Gate E/F)
 | File | Frames | Duration | Notes |
 |---|---|---|---|
-| `out/Part01.mp4` | 1650 | 55.000 s | Master Scenes 01–08, H.264 1080×1920 30 fps, AAC 48 kHz, -20.4 LUFS integrated |
+| `out/Hasil master part 1.mp4` (was `Part01.mp4`) | 1650 | 55.000 s | Master Scenes 01–08, H.264 1080×1920 30 fps, AAC 48 kHz, -20.4 LUFS integrated |
 | `out/Part01_37s_v2.mp4` | 1110 | 37.000 s | Previous master (Scenes 01–04) |
 | `out/Part01_30s_v1.mp4` | 900 | 30.000 s | Previous master (Scenes 01–03) |
 | `out/Scene01.mp4` | 240 | 8 s | |
@@ -143,4 +143,12 @@ CTA block "Bisa diskusi ke link bio atau" + WA logo + 0882000119208. Parade of t
 Music: `public/music/outro_scene12.wav` — original track synthesised by `tools/make_music.py` (112 BPM, C–G–Am–F), royalty-free; Scene 12 only.
 
 ## Master Scene 09–12 (separate from Part 01)
-`out/Master_Scene09-12.mp4` — 1260 frames, 42.000 s; built by `tools/assemble_master_09_12.sh`, then raised to social loudness with `tools/loudness.sh` (two-pass loudnorm, -14 LUFS / -1 dBTP target; measured -14.3 LUFS, peak -0.6 dB; was -21.2 LUFS).
+`out/Hasil master part 1A.mp4` (was `Master_Scene09-12.mp4`) — 1260 frames, 42.000 s; built by `tools/assemble_master_09_12.sh`, then raised to social loudness with `tools/loudness.sh` (two-pass loudnorm, -14 LUFS / -1 dBTP target; measured -14.3 LUFS, peak -0.6 dB; was -21.2 LUFS).
+
+## Handover
+- Masters renamed: `out/Hasil master part 1.mp4` (Scenes 01–08, 55 s) and `out/Hasil master part 1A.mp4` (Scenes 09–12, 42 s).
+- Project assets bundled: `out/DWA_AGENT_Aset_Project.zip` (originals, clean cut-outs, fonts, SFX, music, VO, source, tools, docs).
+- Sellable skill template: `docs/SKILL_Video_Iklan_AI_Agent_2.5D.md`, also uploaded to Drive folder
+  "HASIL PRODUKSI — DWA AGENT INTELLIGENT" (https://drive.google.com/drive/folders/1tikZ6KGmPmt9RP3j7F4ecBlaOprj8EO-).
+- The MP4 masters and the ZIP could not be uploaded to Drive from this environment: the Drive connector only accepts
+  file content inline in the request (tens of MB is not possible) and direct Google upload endpoints are blocked by the proxy.
