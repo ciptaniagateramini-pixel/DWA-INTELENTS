@@ -43,3 +43,18 @@ Angga → Winda (Follow-up), Fajar (Email / Broadcast), Amanda (Konten).
 Energy travels top-down; cards light up on arrival; camera follows then zooms out (f176→f215) to the full diagram; looping pulses afterwards.
 Customer images (Bu Rina, Bu Wiwi, Pak Tata, Adrian) are not used.
 Penjaga Toko and Kurir Toko (human store roles) are shown as store staff per the brief's hierarchy.
+
+## Deliverables (Gate E/F)
+| File | Frames | Duration | Notes |
+|---|---|---|---|
+| `out/Part01.mp4` | 900 | 30.000 s | Master, H.264 1080×1920 30 fps, AAC 48 kHz, -19.1 LUFS integrated |
+| `out/Scene01.mp4` | 240 | 8 s | |
+| `out/Scene02.mp4` | 300 | 10 s | camera tracking clamped after QA found row 1 sliding under the header |
+| `out/Scene03.mp4` | 360 | 12 s | |
+
+Master assembly: `tools/assemble_master.sh` (one re-encode, locked to 900 frames; each scene's audio trimmed to its exact length).
+The `Part01` Remotion composition renders the same sequence directly.
+
+Final QA on the master file: frames at start/middle/end of every scene inspected — text spelling verbatim,
+all 12 robots present, Bambang in Scenes 2 and 3, energy flows top-down, no customer images, no clipping of characters.
+Open item: word-level VO check by ear (automatic transcription unavailable in this environment).
