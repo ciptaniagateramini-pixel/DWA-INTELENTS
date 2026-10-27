@@ -1,6 +1,7 @@
 # Production log — DWA AGENT INTELLIGENT Part 01
 
-Master: 1080×1920, 30 fps, H.264, 900 frames (Scene 01 = 240, Scene 02 = 300, Scene 03 = 360).
+Master: 1080×1920, 30 fps, H.264, 1110 frames = 37 s (Scene 01 = 240, Scene 02 = 300, Scene 03 = 360, Scene 04 = 210).
+The earlier 30 s master (Scenes 01–03) is kept as `out/Part01_30s_v1.mp4`.
 
 ## Approvals
 - Gate A (asset audit) + Gate B (Scene 01 test): approved by user after preview.
@@ -44,13 +45,24 @@ Energy travels top-down; cards light up on arrival; camera follows then zooms ou
 Customer images (Bu Rina, Bu Wiwi, Pak Tata, Adrian) are not used.
 Penjaga Toko and Kurir Toko (human store roles) are shown as store staff per the brief's hierarchy.
 
+## Scene 04 — Perintah dari mana saja (30–37 s), added on user request
+Owner (typing pose) in front, relaxed and floating; the agent chain works behind her (parallax back layer).
+Chat pops from the phone (verbatim): "Atur harga buyback hari ini" (f34, send + pop).
+Energy: phone → Bu Mila (f66) → Acep (f82) → Bambang (f98) → channel cards Fitri/WhatsApp (f116), Wawan/Instagram (f121),
+Lilis/TikTok (f126), Baron/BB App (f131). Each channel shows a sync bar filling and a green check = price updated.
+Channel badges use the supplied 3D logos (WA, Instagram, TikTok — original alpha, PASS); BB App has no supplied logo, so a yellow "BB" tile is used.
+SFX: whoosh, typing, send, pop, zap ×3, sync blip ×4, ting, low hum. No VO (none requested).
+"toko bb" in the request was interpreted as the BB App channel (Baron).
+
 ## Deliverables (Gate E/F)
 | File | Frames | Duration | Notes |
 |---|---|---|---|
-| `out/Part01.mp4` | 900 | 30.000 s | Master, H.264 1080×1920 30 fps, AAC 48 kHz, -19.1 LUFS integrated |
+| `out/Part01.mp4` | 1110 | 37.000 s | Master incl. Scene 04, H.264 1080×1920 30 fps, AAC 48 kHz, -19.6 LUFS integrated |
+| `out/Part01_30s_v1.mp4` | 900 | 30.000 s | Previous master (Scenes 01–03) |
 | `out/Scene01.mp4` | 240 | 8 s | |
 | `out/Scene02.mp4` | 300 | 10 s | camera tracking clamped after QA found row 1 sliding under the header |
 | `out/Scene03.mp4` | 360 | 12 s | |
+| `out/Scene04.mp4` | 210 | 7 s | |
 
 Master assembly: `tools/assemble_master.sh` (one re-encode, locked to 900 frames; each scene's audio trimmed to its exact length).
 The `Part01` Remotion composition renders the same sequence directly.

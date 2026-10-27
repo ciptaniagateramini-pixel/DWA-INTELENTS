@@ -71,3 +71,16 @@ hum += 0.08 * bandsweep(rng.standard_normal(len(tt)), 900, 1100, q=3)
 fade = np.minimum(1, np.minimum(tt / 0.6, (tt[-1] - tt) / 0.8))
 save("hum.wav", hum * fade)
 print("sfx scene03 ok")
+
+# --- Scene 04: data-sync blips (rising 3-note) and message send ---
+tt = t(0.32); sync = np.zeros(len(tt))
+for k, fr in enumerate([1046.5, 1318.5, 1568.0]):
+    s = int(k * 0.07 * SR); u = tt[: len(tt) - s]
+    sync[s:] += np.sin(2 * np.pi * fr * u) * np.exp(-u * 28) * (0.8 + 0.1 * k)
+save("sync.wav", sync)
+
+tt = t(0.4)
+send = bandsweep(rng.standard_normal(len(tt)), 600, 6000, q=4) * np.sin(np.pi * np.clip(tt / 0.4, 0, 1)) ** 2
+send += np.sin(2 * np.pi * np.cumsum(500 + 1500 * tt / 0.4) / SR) * np.exp(-((tt - 0.28) ** 2) / 0.002) * 0.5
+save("send.wav", send)
+print("sfx scene04 ok")
