@@ -1,7 +1,8 @@
 # Production log — DWA AGENT INTELLIGENT Part 01
 
-Master: 1080×1920, 30 fps, H.264, 1110 frames = 37 s (Scene 01 = 240, Scene 02 = 300, Scene 03 = 360, Scene 04 = 210).
-The earlier 30 s master (Scenes 01–03) is kept as `out/Part01_30s_v1.mp4`.
+Master: 1080×1920, 30 fps, H.264, 1650 frames = 55 s
+(Scene 01 = 240, 02 = 300, 03 = 360, 04 = 210, 05 = 150, 06 = 120, 07 = 150, 08 = 120).
+Earlier masters kept: `out/Part01_30s_v1.mp4` (Scenes 01–03), `out/Part01_37s_v2.mp4` (Scenes 01–04).
 
 ## Approvals
 - Gate A (asset audit) + Gate B (Scene 01 test): approved by user after preview.
@@ -54,15 +55,42 @@ Channel badges use the supplied 3D logos (WA, Instagram, TikTok — original alp
 SFX: whoosh, typing, send, pop, zap ×3, sync blip ×4, ting, low hum. No VO (none requested).
 "toko bb" in the request was interpreted as the BB App channel (Baron).
 
+## Scene 05 — Riset ke Marzuki (37–42 s)
+Owner (typing pose) in front. Chat (verbatim as supplied): "Riset ide konten & hastage dan KOL yang cocok" (f30).
+Gold dashed direct link phone → Marzuki (f62); research icons (search, #, KOL star, idea) orbit him.
+Pink link Marzuki → Amanda (f98); Amanda produces content: video/photo/#/idea tiles pop out with progress rings, REC dot blinks.
+SFX: whoosh, typing, send, pop, zap ×2, small pops, sync blips.
+
+## Scene 06 — Amanda kirim ke Owner (42–46 s), different look
+Magenta wash + diagonal light streaks. Amanda large top-left; Owner (reading pose) bottom-right.
+Amanda reflects a pink energy beam straight into the Owner's phone; four content packets ride it in,
+the complete content pack card pops on the phone (f80, ting), Owner replies "Oke" (f90, send + pop), Amanda bounces.
+
+## Scene 07 — Perintah ke Bu Mila (46–51 s)
+User wrote "robot mira"; no such asset exists, interpreted as **Bu Mila** (HRD hub).
+Owner (present pose, phone showing content) in front. Chat (verbatim as supplied):
+"Distributikan konten ini ke divisi kanal, dan hubungi team marketing untuk follow up dan broadcast promo" (f24).
+Content packets travel phone → Bu Mila (f60) → Bambang + Angga (f78) → Fitri/Wawan/Lilis/Baron and Winda/Fajar (f96–108), each with sync bar + check.
+
+## Scene 08 — Marketing menyebar pesan (51–55 s)
+Angga (Marketing), Winda (Follow-up), Fajar (Email / Broadcast) in the centre; 56 generic contact nodes (database) above and below.
+Chat/megaphone/mail packets fly out on arcs; each contact lights up with a ripple. No customer images used.
+SFX: whoosh, zap, send ×3, sync ticks, ting.
+
 ## Deliverables (Gate E/F)
 | File | Frames | Duration | Notes |
 |---|---|---|---|
-| `out/Part01.mp4` | 1110 | 37.000 s | Master incl. Scene 04, H.264 1080×1920 30 fps, AAC 48 kHz, -19.6 LUFS integrated |
+| `out/Part01.mp4` | 1650 | 55.000 s | Master Scenes 01–08, H.264 1080×1920 30 fps, AAC 48 kHz, -20.4 LUFS integrated |
+| `out/Part01_37s_v2.mp4` | 1110 | 37.000 s | Previous master (Scenes 01–04) |
 | `out/Part01_30s_v1.mp4` | 900 | 30.000 s | Previous master (Scenes 01–03) |
 | `out/Scene01.mp4` | 240 | 8 s | |
 | `out/Scene02.mp4` | 300 | 10 s | camera tracking clamped after QA found row 1 sliding under the header |
 | `out/Scene03.mp4` | 360 | 12 s | |
 | `out/Scene04.mp4` | 210 | 7 s | |
+| `out/Scene05.mp4` | 150 | 5 s | |
+| `out/Scene06.mp4` | 120 | 4 s | |
+| `out/Scene07.mp4` | 150 | 5 s | |
+| `out/Scene08.mp4` | 120 | 4 s | |
 
 Master assembly: `tools/assemble_master.sh` (one re-encode, locked to 900 frames; each scene's audio trimmed to its exact length).
 The `Part01` Remotion composition renders the same sequence directly.
