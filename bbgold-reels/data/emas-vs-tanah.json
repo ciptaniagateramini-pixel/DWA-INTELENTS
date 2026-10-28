@@ -1,0 +1,102 @@
+{
+  "id": "emas-vs-tanah",
+  "judul": "Emas atau Tanah?",
+  "audio": "assets/audio/narasi.wav",
+  "words": "data/emas-vs-tanah.words.json",
+  "kataKunci": ["Emas", "Tanah", "Nilai"],
+  "caption": "Emas atau tanah, mana yang lebih untung? Dua-duanya investasi jangka panjang, bedanya ada di cara nilainya bertumbuh. Bukan soal mana yang lebih untung, tapi mana yang sesuai tujuan finansialmu.\n\nTanya harga emas hari ini lewat WhatsApp bb gold.\n\nBukan saran keuangan. Setiap investasi memiliki risiko.\n\n#bbgold #emas #investasiemas #Purwakarta #Subang #Karawang",
+  "cover": {
+    "label": "Edukasi bb gold",
+    "baris": [{ "kunci": "Emas" }, { "teks": "atau" }, { "kunci": "Tanah?" }],
+    "sub": "Mana yang lebih untung?"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "start": { "w": "emas" },
+      "kata": [
+        { "teks": "Emas", "muncul": { "w": "emas" }, "fokus": true },
+        { "teks": "atau", "muncul": { "w": "atau" } },
+        { "teks": "Tanah", "muncul": { "w": "tanah" }, "fokus": true }
+      ],
+      "tanya": { "teks": "mana yang lebih untung?", "muncul": { "w": "mana" } }
+    },
+    {
+      "type": "judul",
+      "start": { "w": "sebenarnya" },
+      "baris": "Dua-duanya investasi",
+      "miring": "jangka panjang.",
+      "garis": { "w": "jangka" }
+    },
+    {
+      "type": "nilai",
+      "start": { "w": "bedanya" },
+      "atas": "Bedanya ada di cara",
+      "kunci": { "teks": "Nilai", "akhiran": "nya", "muncul": { "w": "nilainya" } },
+      "bawah": { "teks": "bertumbuh.", "muncul": { "w": "bertumbuh" } }
+    },
+    {
+      "type": "poin",
+      "start": { "w": "bertumbuh", "at": "end", "offset": 0.32 },
+      "kartu": [
+        {
+          "kunci": "Emas",
+          "fokus": { "w": "emas", "n": 1 },
+          "muncul": { "w": "bertumbuh", "at": "end", "offset": 0.32 },
+          "sub": "Untung saat dijual",
+          "keluar": { "w": "asalkan" }
+        },
+        {
+          "kunci": "Tanah",
+          "fokus": { "w": "tanah", "n": 1 },
+          "muncul": { "w": "sedangkan" },
+          "sub": "Untung tanpa dijual",
+          "gantiSub": { "teks": "Kalau dimanfaatkan:", "muncul": { "w": "asalkan" } }
+        }
+      ],
+      "chip": [
+        { "teks": "Disewakan", "ikon": "kunci", "muncul": { "w": "disewakan" } },
+        { "teks": "Ditanami", "ikon": "tunas", "muncul": { "w": "ditanami" } },
+        { "teks": "Dibangun", "ikon": "rumah", "muncul": { "w": "dibangun" } }
+      ]
+    },
+    {
+      "type": "poin2",
+      "start": { "w": "soal" },
+      "judul": "Mencairkan",
+      "baris": [
+        {
+          "ikon": "centang",
+          "kunci": "Emas",
+          "muncul": { "w": "mencairkan", "at": "end", "offset": -0.18 },
+          "fokus": { "w": "emas", "n": 2 },
+          "sub": { "teks": "Tinggal dijual", "muncul": { "w": "tinggal" } }
+        },
+        {
+          "ikon": "jam",
+          "kunci": "Tanah",
+          "muncul": { "w": "dijual", "n": 2, "at": "end", "offset": 0.08 },
+          "fokus": { "w": "tanah", "n": 2 },
+          "sub": { "teks": "Tunggu pembeli cocok", "muncul": { "w": "harus" } }
+        }
+      ]
+    },
+    {
+      "type": "kesimpulan",
+      "start": { "w": "dua-duanya", "n": 1 },
+      "atas": "Dua-duanya punya",
+      "tengah": "kelebihan",
+      "bawah": "masing-masing."
+    },
+    {
+      "type": "outro",
+      "start": { "w": "masing-masing", "at": "end", "offset": 0.45 },
+      "durasi": 3.0,
+      "nama": "bb gold",
+      "slogan": "Jual dan beli transparan, gak bikin kamu penasaran",
+      "handle": "@tokobbgold",
+      "ajakan": "Tanya harga emas hari ini lewat WhatsApp",
+      "disclaimer": "Bukan saran keuangan. Setiap investasi memiliki risiko."
+    }
+  ]
+}
