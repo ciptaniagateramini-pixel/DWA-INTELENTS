@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>bb gold Logo Outro</title>
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+  import { loadLogo, prepareText, drawFrame, blurActive, FPS, DURATION } from "/logo-outro/logo.js";
+  const canvas = document.getElementById("c");
+  const ctx = canvas.getContext("2d");
+  const off = new OffscreenCanvas(1080, 1920);
+  const octx = off.getContext("2d", { willReadFrequently: true });
+  const SUB = 8, SHUTTER = 0.75;
+
+  const font = new FontFace("Poppins", "url(/assets/fonts/Poppins-Bold.woff2)", { weight: "700" });
+  document.fonts.add(await font.load());
+  await loadLogo("/assets/logo/bb-gold-profil-ring-mustard.svg");
+  const text = prepareText(ctx);
+
+  // Rata-rata sub-frame dengan alpha premultiplied supaya versi tanpa latar tetap benar
+  function render(t, opt) {
+    if (!blurActive(t)) { drawFrame(ctx, t, opt); return; }
+    const n = 1080 * 1920 * 4;
+    const acc = new Float32Array(n);
+    for (let i = 0; i < SUB; i++) {
+      const ts = t + ((i + 0.5) / SUB - 0.5) * (SHUTTER / FPS);
+      drawFrame(octx, ts, opt);
+      const d = octx.getImageData(0, 0, 1080, 1920).data;
+      for (let j = 0; j < n; j += 4) {
+        const a = d[j + 3];
+        acc[j] += d[j] * a; acc[j + 1] += d[j + 1] * a; acc[j + 2] += d[j + 2] * a; acc[j + 3] += a;
+      }
+    }
+    const out = new ImageData(1080, 1920);
+    for (let j = 0; j < n; j += 4) {
+      const a = acc[j + 3];
+      if (a > 0) { out.data[j] = acc[j] / a; out.data[j + 1] = acc[j + 1] / a; out.data[j + 2] = acc[j + 2] / a; }
+      out.data[j + 3] = a / SUB;
+    }
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.putImageData(out, 0, 0);
+  }
+  window.renderFrame = (t, background) => { render(t, { background }); return canvas.toDataURL("image/png"); };
+  window.__meta = { fps: FPS, duration: DURATION, text };
+  window.__ready = true;
+</script>
+</body>
+</html>

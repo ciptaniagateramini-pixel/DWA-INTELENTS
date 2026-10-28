@@ -33,3 +33,13 @@ Hasil di `render/`:
 1. Buat narasi di flow ElevenLabs, simpan di `assets/audio/`, lalu transkripsi dengan timestamp kata ke `data/<id>.words.json`.
 2. Salin `data/emas-vs-tanah.json`, lalu ganti teks dan referensi katanya.
 3. Jalankan render.
+
+## Animasi logo outro
+Mengikuti `brief-logo-outro-bb-gold.md`. Renderer canvas di `logo-outro/` (`logo.js` = fungsi waktu deterministik).
+```
+node logo-outro/render.mjs                    # MP4 mustard + WebM VP9 alpha + contact sheet
+node logo-outro/render.mjs --preview=1.66,3.5 # cek frame tertentu
+```
+Hasil: `render/logo-outro.mp4`, `render/logo-outro-alpha.webm`, `render/logo-outro-contact-sheet.png`,
+`render/logo-outro-keyframe-teks.png` (frame konfirmasi tafsir "layer"), `render/logo-outro-akhir.png`.
+SFX: `assets/audio/logo-outro/` (putaran dari flow ElevenLabs, click dari Drive), whoosh geser = `whoosh-2.wav`.
