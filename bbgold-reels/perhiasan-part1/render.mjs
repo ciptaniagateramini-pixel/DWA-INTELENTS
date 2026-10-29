@@ -14,8 +14,10 @@ const require = createRequire(import.meta.url);
 const { chromium } = require("playwright");
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DATA = "data/perhiasan-part1.json";
-const ID = "perhiasan-part1";
+const args0 = process.argv.slice(2);
+const DATA = (args0.find((a) => a.startsWith("--data=")) || "--data=data/perhiasan-part1.json").slice(7);
+const DJSON = JSON.parse(fs.readFileSync(path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."), DATA), "utf8"));
+const ID = DJSON.out || DJSON.id;
 const OUT = path.join(ROOT, "render");
 const TMP = path.join(OUT, ".tmp-" + ID);
 fs.mkdirSync(TMP, { recursive: true });
@@ -23,7 +25,7 @@ const args = process.argv.slice(2);
 const tokens = JSON.parse(fs.readFileSync(path.join(ROOT, "tokens.json"), "utf8"));
 
 // Frame contact sheet: awal tiap kalimat, puncak tiap adegan, kartu, zoom out, outro
-const SHEET = [0.2, 1.2, 3.8, 4.95, 7.2, 10.5, 11.9, 14.5, 16.6, 20.0, 23.2, 24.6, 25.8, 26.85, 27.38, 29.6];
+const SHEET = DJSON.sheet || [0.2, 1.2, 3.8, 4.95, 7.2, 10.5, 11.9, 14.5, 16.6, 20.0, 23.2, 24.6, 25.8, 26.85, 27.38, 29.6];
 
 const MIME = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".woff2": "font/woff2" };
 const server = http.createServer((req, res) => {
@@ -35,7 +37,8 @@ const server = http.createServer((req, res) => {
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
 
 const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+const DRAFT = args.includes("--draft"); // pratinjau 540x960 15 fps
+const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: DRAFT ? 0.5 : 1 });
 page.on("pageerror", (e) => { console.error("[page error]", e); process.exit(1); });
 page.on("console", (m) => console.log("[page]", m.text()));
 await page.goto(`http://127.0.0.1:${server.address().port}/perhiasan-part1/index.html?data=${DATA}`);
@@ -53,7 +56,7 @@ if (sheet || preview) {
   for (const [i, t] of times.entries()) fs.writeFileSync(path.join(TMP, `p-${String(i).padStart(2, "0")}.png`), await shot(t));
   await finish();
   if (sheet) {
-    const label = times.map((t, i) => `[${i}:v]scale=270:480,drawtext=fontfile=${path.join(ROOT, "assets/fonts/Poppins-Bold.woff2")}:text='${t.toFixed(2)} s':x=10:y=10:fontsize=22:fontcolor=0x082A59:box=1:boxcolor=0xFBF7EC:boxborderw=6[v${i}]`);
+    const label = times.map((t, i) => `[${i}:v]scale=270:480:flags=lanczos,drawtext=fontfile=${path.join(ROOT, "assets/fonts/Poppins-Bold.woff2")}:text='${t.toFixed(2)} s':x=10:y=10:fontsize=22:fontcolor=0x082A59:box=1:boxcolor=0xFBF7EC:boxborderw=6[v${i}]`);
     const inputs = times.flatMap((_, i) => ["-i", path.join(TMP, `p-${String(i).padStart(2, "0")}.png`)]);
     const stack = times.map((_, i) => `[v${i}]`).join("") + `xstack=inputs=${times.length}:layout=` + times.map((_, i) => `${(i % 8) * 270}_${Math.floor(i / 8) * 480}`).join("|") + "[out]";
     execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", ...inputs, "-filter_complex", [...label, stack].join(";"), "-map", "[out]", "-frames:v", "1", path.join(OUT, `${ID}-contact-sheet.png`)]);
@@ -63,7 +66,7 @@ if (sheet || preview) {
 }
 
 // ---- Render final ----
-const fps = meta.fps, frames = Math.round(meta.duration * fps);
+const fps = DRAFT ? 15 : meta.fps, frames = Math.round(meta.duration * fps);
 const videoTmp = path.join(TMP, "video.mp4");
 const ff = spawn("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(fps), "-c:v", "png", "-i", "-",
   "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p", "-r", String(fps), videoTmp], { stdio: ["pipe", "inherit", "inherit"] });
@@ -111,7 +114,7 @@ execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", ...inputs, "
 const I = parseFloat(/I:\s+(-?[\d.]+) LUFS/.exec(spawnSync("ffmpeg", ["-hide_banner", "-i", mixWav, "-af", "ebur128", "-f", "null", "-"], { encoding: "utf8" }).stderr.split("Summary")[1])[1]);
 const finalWav = path.join(TMP, "final.wav");
 execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-i", mixWav, "-af", `volume=${(-14 - I).toFixed(2)}dB,alimiter=limit=0.84:level=false`, finalWav]);
-const final = path.join(OUT, `${ID}.mp4`);
+const final = path.join(OUT, `${ID}${DRAFT ? "-draft" : ""}.mp4`);
 execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-i", videoTmp, "-i", finalWav, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", final], { stdio: "inherit" });
 fs.writeFileSync(path.join(OUT, `${ID}.timeline.json`), JSON.stringify({ ...meta, narratorPeakDb: narPeak, mixLufsBefore: I }, null, 2));
 console.log("Selesai:", final);

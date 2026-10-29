@@ -1,0 +1,331 @@
+{
+ "id": "part2",
+ "out": "part2",
+ "judul": "Fakta di balik emas perhiasan Part 2",
+ "audio": "assets/audio/part2/narasi.mp3",
+ "words": "data/part2.words.json",
+ "assetDir": "assets/part2",
+ "jedaAwal": 0.3,
+ "zigzag": {
+  "start": [
+   540,
+   960
+  ],
+  "langkah": 1600,
+  "sudut": 60,
+  "radiusTikungan": 320,
+  "lebarGaris": 14,
+  "garisMendahului": 260
+ },
+ "kamera": {
+  "punch": 0.3,
+  "punchSkala": 1.55,
+  "zoomOut": 0.8,
+  "overview": 1.0,
+  "redup": 0.4,
+  "redupDurasi": 0.4
+ },
+ "kalimat": [
+  {
+   "mulai": 0,
+   "fokus": "staff",
+   "aset": [
+    {
+     "id": "staff",
+     "file": "06-gelembung-staff",
+     "x": -225,
+     "y": -170,
+     "s": 1.0,
+     "t": 0.05
+    },
+    {
+     "id": "konsumen",
+     "file": "06-gelembung-konsumen",
+     "x": 225,
+     "y": -170,
+     "s": 1.0,
+     "t": 1.52
+    },
+    {
+     "id": "maskot6",
+     "file": "06-maskot-menengahi",
+     "x": 0,
+     "y": 330,
+     "s": 0.85,
+     "t": 2.56
+    }
+   ],
+   "langkah": [
+    {
+     "t": 1.52,
+     "ke": "konsumen"
+    },
+    {
+     "t": 2.56,
+     "ke": "overview"
+    }
+   ]
+  },
+  {
+   "mulai": 3.84,
+   "fokus": "salaman",
+   "aset": [
+    {
+     "id": "latar7",
+     "file": "07-latar-toko-emas",
+     "x": 0,
+     "y": 0,
+     "s": 1.0,
+     "t": 3.84,
+     "latar": true
+    },
+    {
+     "id": "salaman",
+     "file": "07-salaman",
+     "x": 0,
+     "y": -60,
+     "s": 0.8,
+     "t": 4.0
+    },
+    {
+     "id": "maskot7",
+     "file": "06-maskot-menengahi",
+     "x": 140,
+     "y": 180,
+     "s": 0.55,
+     "t": 6.48,
+     "masuk": "naik"
+    },
+    {
+     "id": "berat",
+     "file": "07-surat-berat",
+     "x": -285,
+     "y": 390,
+     "s": 0.62,
+     "t": 5.24
+    },
+    {
+     "id": "ketentuan",
+     "file": "07-surat-ketentuan",
+     "x": 0,
+     "y": 390,
+     "s": 0.62,
+     "t": 5.76
+    },
+    {
+     "id": "rincian",
+     "file": "07-surat-rincian",
+     "x": 285,
+     "y": 390,
+     "s": 0.62,
+     "t": 6.96
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "transparansi",
+     "x": 0,
+     "y": -520,
+     "size": 120,
+     "t": 4.48
+    }
+   ],
+   "langkah": [
+    {
+     "t": 4.48,
+     "ke": "overview"
+    },
+    {
+     "t": 6.96,
+     "ke": "rincian",
+     "s": 2.0
+    }
+   ]
+  },
+  {
+   "mulai": 7.92,
+   "fokus": "penjelasan",
+   "fokusOffset": [
+    -110,
+    -80
+   ],
+   "aset": [
+    {
+     "id": "penjelasan",
+     "file": "08-penjelasan",
+     "x": 0,
+     "y": 20,
+     "s": 0.85,
+     "t": 7.92
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "bertanya",
+     "x": 0,
+     "y": -640,
+     "size": 130,
+     "t": 12.12
+    }
+   ],
+   "langkah": [
+    {
+     "t": 10.8,
+     "ke": "penjelasan",
+     "offset": [
+      270,
+      270
+     ],
+     "s": 1.6
+    },
+    {
+     "t": 12.12,
+     "ke": "overview"
+    }
+   ]
+  },
+  {
+   "mulai": 15.28,
+   "fokus": "tokoa",
+   "aset": [
+    {
+     "id": "tokoa",
+     "file": "09-toko-a",
+     "x": -230,
+     "y": -200,
+     "s": 0.85,
+     "t": 15.68
+    },
+    {
+     "id": "papana",
+     "file": "09-papan-a",
+     "x": -230,
+     "y": 260,
+     "s": 0.7,
+     "t": 16.16
+    },
+    {
+     "id": "tokob",
+     "file": "09-toko-b",
+     "x": 230,
+     "y": -200,
+     "s": 0.85,
+     "t": 16.96
+    },
+    {
+     "id": "papanb",
+     "file": "09-papan-b",
+     "x": 230,
+     "y": 260,
+     "s": 0.7,
+     "t": 17.2
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "teliti",
+     "x": 0,
+     "y": -560,
+     "size": 140,
+     "t": 18.88
+    }
+   ],
+   "langkah": [
+    {
+     "t": 16.96,
+     "ke": "tokob"
+    },
+    {
+     "t": 18.88,
+     "ke": "overview"
+    }
+   ]
+  },
+  {
+   "mulai": 20.96,
+   "fokus": "logam",
+   "aset": [
+    {
+     "id": "logam",
+     "file": "10-logam-mulia",
+     "x": -280,
+     "y": -380,
+     "s": 0.75,
+     "t": 22.0
+    },
+    {
+     "id": "cincin",
+     "file": "10-perhiasan-cincin",
+     "x": 0,
+     "y": -400,
+     "s": 0.6,
+     "t": 22.32
+    },
+    {
+     "id": "dollar",
+     "file": "10-uang-dollar",
+     "x": 280,
+     "y": -380,
+     "s": 0.75,
+     "t": 23.12
+    },
+    {
+     "id": "maskot10",
+     "file": "10-maskot-melambai",
+     "x": -200,
+     "y": 260,
+     "s": 0.85,
+     "t": 24.6
+    },
+    {
+     "id": "follow",
+     "file": "10-gelembung-follow",
+     "x": 170,
+     "y": 0,
+     "s": 0.9,
+     "t": 25.84
+    },
+    {
+     "id": "logo",
+     "file": "mustard-logo-lengkap",
+     "x": 235,
+     "y": 390,
+     "s": 0.65,
+     "t": 26.64
+    }
+   ]
+  }
+ ],
+ "penutup": {
+  "kartu": [],
+  "kartuSelesai": 0,
+  "zoomOut": [
+   27.9,
+   28.7
+  ],
+  "crossFade": [
+   28.65,
+   28.8
+  ],
+  "outroMulai": 28.75,
+  "outroPutaran": 720
+ },
+ "sheet": [
+  0.5,
+  2.0,
+  3.6,
+  4.6,
+  6.95,
+  7.75,
+  8.6,
+  11.4,
+  13.0,
+  16.3,
+  17.9,
+  19.6,
+  22.0,
+  27.2,
+  28.6,
+  30.8
+ ]
+}

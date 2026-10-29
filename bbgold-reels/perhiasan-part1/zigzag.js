@@ -111,6 +111,7 @@ export async function boot(dataPath) {
     scenes.push({ box, k });
     const T = sentenceStarts[i];
     cues.push({ type: "whoosh", t: T - tokens.audio.whooshLead, fixed: true });
+    for (const st of k.langkah || []) cues.push({ type: "whoosh", t: V(st.t) - tokens.audio.whooshLead, fixed: true });
     for (const a of k.aset) {
       const node = await placeSvg(box, await loadSvg(a.file), a.x, a.y, a.s);
       a.el = node;
@@ -154,7 +155,7 @@ export async function boot(dataPath) {
     }
   }
   cues.sort((a, b) => a.t - b.t);
-  data.kalimat.forEach((k) => k.aset.forEach((a) => anims.push({ el: a.el, kind: a.latar ? "fade" : "pop", t: a.ev.t, dur: a.latar ? 0.5 : 0.4 })));
+  data.kalimat.forEach((k) => k.aset.forEach((a) => anims.push({ el: a.el, kind: a.latar ? "fade" : (a.masuk || "pop"), t: a.ev.t, dur: a.latar ? 0.5 : a.masuk === "naik" ? 0.6 : 0.4 })));
   P.kartu.forEach((c) => anims.push({ el: c.el, kind: "pop", t: c.ev.t, dur: 0.4 }));
   let wn = 0;
   cues.forEach((c) => (c.file = c.type === "whoosh" ? `whoosh-${(wn++ % 2) + 1}` : "pop"));
@@ -162,8 +163,8 @@ export async function boot(dataPath) {
   // ---- Kamera ----
   const sceneOf = (i) => ({ x: centers[i][0], y: centers[i][1], s: K.overview, L: Lc[i] });
   const focusPos = (i) => {
-    const a = data.kalimat[i].aset.find((x) => x.id === data.kalimat[i].fokus);
-    return [centers[i][0] + a.x, centers[i][1] + a.y];
+    const k = data.kalimat[i], a = k.aset.find((x) => x.id === k.fokus), o = k.fokusOffset || [0, 0];
+    return [centers[i][0] + a.x + o[0], centers[i][1] + a.y + o[1]];
   };
   const fitAll = Math.min(W / (box.x1 - box.x0), (H - 200) / (box.y1 - box.y0));
   const allView = { x: (box.x0 + box.x1) / 2, y: (box.y0 + box.y1) / 2, s: fitAll };
@@ -186,8 +187,27 @@ export async function boot(dataPath) {
         return { x: q[0] + off[0], y: q[1] + off[1], s: lerp(prev.s, K.punchSkala, p), L };
       }
       // Setelah itu hanya zoom out sampai semua aset kalimat terlihat
-      const p = ease.inOut(prog(t, T + K.punch, K.zoomOut));
-      const cur = { x: lerp(f[0], sc.x, p), y: lerp(f[1], sc.y, p), s: lerp(K.punchSkala, sc.s, p), L: sc.L };
+      let cur;
+      const steps = data.kalimat[i].langkah;
+      if (!steps) {
+        const p = ease.inOut(prog(t, T + K.punch, K.zoomOut));
+        cur = { x: lerp(f[0], sc.x, p), y: lerp(f[1], sc.y, p), s: lerp(K.punchSkala, sc.s, p), L: sc.L };
+      } else {
+        // Langkah kamera tambahan dalam satu kalimat (geser ke aset lain, zoom ke detail, atau zoom out)
+        cur = { x: f[0], y: f[1], s: K.punchSkala, L: sc.L };
+        for (const st of steps) {
+          const t0 = V(st.t);
+          if (t < t0) break;
+          let tx, ty, ts, dur, e;
+          if (st.ke === "overview") { tx = sc.x; ty = sc.y; ts = sc.s; dur = K.zoomOut; e = ease.inOut; }
+          else {
+            const a = data.kalimat[i].aset.find((x) => x.id === st.ke), o = st.offset || [0, 0];
+            tx = sc.x + a.x + o[0]; ty = sc.y + a.y + o[1]; ts = st.s ?? cur.s; dur = st.dur ?? 0.45; e = ease.out;
+          }
+          const p = e(prog(t, t0, dur));
+          cur = { x: lerp(cur.x, tx, p), y: lerp(cur.y, ty, p), s: lerp(cur.s, ts, p), L: sc.L };
+        }
+      }
       if (t < next) {
         if (i === sentenceStarts.length - 1 && t >= P.zoomOut[0]) {
           const z = ease.outExpo(prog(t, P.zoomOut[0], P.zoomOut[1] - P.zoomOut[0])); // cepat lalu mengendap, supaya gambar utuh sempat terlihat
@@ -225,6 +245,7 @@ export async function boot(dataPath) {
       for (const a of list) {
         const p = prog(t, a.t, a.dur);
         if (a.kind === "pop") { if (t < a.t) o = 0; else { const e = ease.outExpo(p); o *= e; s *= 0.7 + 0.3 * e; y += (1 - e) * 24; } }
+        else if (a.kind === "naik") { if (t < a.t) o = 0; else { const e = ease.out(p); o *= Math.min(1, p * 4); y += (1 - e) * 240; } }
         else if (a.kind === "fade") { o *= t < a.t ? 0 : ease.out(p); }
         else if (a.kind === "rise") { if (t < a.t) o = 0; else { const e = ease.out(p); o *= e; y += (1 - e) * 40; } }
         else if (a.kind === "keluar") { const e = ease.inOut(p); o *= 1 - e; x -= 260 * e; }
