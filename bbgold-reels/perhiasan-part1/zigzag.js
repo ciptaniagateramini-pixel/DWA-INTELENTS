@@ -241,7 +241,7 @@ export async function boot(dataPath) {
   };
 
   window.__meta = {
-    id: data.id, fps: tokens.frame.fps, duration, lead, audio: data.audio, cues, shifted,
+    id: data.id, fps: tokens.frame.fps, duration, lead, audio: data.audio, cues: cues.map(({ type, t, file }) => ({ type, t: +t.toFixed(3), file })), shifted,
     outro: { mulai: P.outroMulai },
     sentences: sentenceStarts,
   };
