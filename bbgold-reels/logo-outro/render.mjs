@@ -74,22 +74,17 @@ console.log();
 execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-pattern_type", "glob", "-i", path.join(TMP, "s-*.png"),
   "-vf", "scale=270:480,tile=6x2:padding=8:color=0x082A59", "-frames:v", "1", path.join(OUT, "logo-outro-contact-sheet.png")]);
 
-// Audio: putaran (ujung keras jatuh di 0,95) + hentakan kunci, whoosh geser 1,30, click 1,60
-const spin = path.join(AUDIO, "logo-outro/putaran-c.mp3");
-const SPIN_PEAK_END = 0.60; // akhir bagian keras pada klip putaran
-const spinStart = 0.95 - SPIN_PEAK_END;
+// Audio: tiga file final dari pemilik (putaran-logo memuncak tepat di 0,95), whoosh geser 1,30, click 1,60
+const OUTRO = path.join(AUDIO, "logo-outro");
 const f = [
-  `[0:a]aresample=48000,atrim=0:${SPIN_PEAK_END + 0.08},afade=t=in:d=0.12,afade=t=out:st=${SPIN_PEAK_END - 0.02}:d=0.1,volume=-9dB,adelay=${Math.round(spinStart * 1000)}:all=1[spin]`,
-  // Hentakan kunci: tumpul, rendah, pendek (sinus 120 Hz meluruh 90 ms)
-  `aevalsrc='0.5*sin(2*PI*120*t)*exp(-t/0.03)*min(1,t/0.003)':s=48000:d=0.15,volume=-8dB,adelay=950:all=1[thud]`,
-  `[1:a]aresample=48000,volume=-17dB,adelay=1300:all=1[geser]`,
+  `[0:a]aresample=48000,volume=-6dB[spin]`,
+  `[1:a]aresample=48000,afade=t=out:st=0.62:d=0.05,volume=-14dB,adelay=1300:all=1[geser]`,
   `[2:a]aresample=48000,volume=0dB,adelay=1600:all=1[click]`,
-  `[spin][thud][geser][click]amix=inputs=4:normalize=0:duration=longest,highpass=f=80,lowpass=f=14000,apad,atrim=0:${meta.duration},aformat=channel_layouts=stereo[out]`,
+  `[spin][geser][click]amix=inputs=3:normalize=0:duration=longest,highpass=f=80,lowpass=f=14000,apad,atrim=0:${meta.duration},aformat=channel_layouts=stereo[out]`,
 ];
 const wav = path.join(TMP, "audio.wav");
-execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-i", spin, "-i", path.join(AUDIO, "whoosh-2.wav"), "-i", path.join(AUDIO, "logo-outro/click.mp3"),
+execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-i", path.join(OUTRO, "putaran-logo.wav"), "-i", path.join(OUTRO, "whoosh-geser.wav"), "-i", path.join(OUTRO, "click.mp3"),
   "-filter_complex", f.join(";"), "-map", "[out]", "-ar", "48000", wav], { stdio: "inherit" });
 execFileSync("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error", "-i", path.join(TMP, "mustard.mp4"), "-i", wav,
   "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", path.join(OUT, "logo-outro.mp4")], { stdio: "inherit" });
-fs.copyFileSync(wav, path.join(AUDIO, "logo-outro/logo-outro-sfx.wav"));
 console.log("Selesai: render/logo-outro.mp4, render/logo-outro-alpha.webm");

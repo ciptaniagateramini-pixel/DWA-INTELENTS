@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>bb gold Zig-zag</title>
+<style>
+  html, body { margin: 0; padding: 0; overflow: hidden; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  #world { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; }
+  #hud, #fade, #outro { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  #fade { opacity: 0; }
+  #outro { display: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="world"></div>
+  <div id="hud"></div>
+  <div id="fade"></div>
+  <canvas id="outro" width="1080" height="1920"></canvas>
+</div>
+<script type="module">
+  import { boot } from "/perhiasan-part1/zigzag.js";
+  boot(new URLSearchParams(location.search).get("data"));
+</script>
+</body>
+</html>

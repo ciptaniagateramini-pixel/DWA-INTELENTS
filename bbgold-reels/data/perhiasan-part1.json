@@ -1,0 +1,294 @@
+{
+  "id": "perhiasan-part1",
+  "judul": "Perhiasan Permata Part 1",
+  "audio": "assets/audio/perhiasan-part1/narasi-raw.mp3",
+  "words": "data/perhiasan-part1.words.json",
+  "assetDir": "assets/perhiasan-part1",
+  "jedaAwal": 0.3,
+  "zigzag": {
+    "start": [
+      540,
+      960
+    ],
+    "langkah": 1600,
+    "sudut": 60,
+    "radiusTikungan": 320,
+    "lebarGaris": 14,
+    "garisMendahului": 260
+  },
+  "kamera": {
+    "punch": 0.3,
+    "punchSkala": 1.55,
+    "zoomOut": 0.8,
+    "overview": 1.0,
+    "redup": 0.4,
+    "redupDurasi": 0.4
+  },
+  "kalimat": [
+    {
+      "mulai": 0,
+      "fokus": "maskot1",
+      "aset": [
+        {
+          "id": "maskot1",
+          "file": "01-maskot-penasaran",
+          "x": -200,
+          "y": 170,
+          "s": 1.0,
+          "t": 0.05
+        },
+        {
+          "id": "label",
+          "file": "01-label-mr-beeb",
+          "x": -200,
+          "y": -330,
+          "s": 1.1,
+          "t": 0.35,
+          "keluar": 1.9
+        },
+        {
+          "id": "surat",
+          "file": "01-surat-emas",
+          "x": 250,
+          "y": -300,
+          "s": 0.8,
+          "t": 1.6
+        },
+        {
+          "id": "cincin1",
+          "file": "01-perhiasan-cincin",
+          "x": 170,
+          "y": 260,
+          "s": 0.75,
+          "t": 2.88
+        },
+        {
+          "id": "permata1",
+          "file": "01-permata",
+          "x": 330,
+          "y": 330,
+          "s": 0.5,
+          "t": 3.3
+        }
+      ]
+    },
+    {
+      "mulai": 4.48,
+      "fokus": "maskot2",
+      "aset": [
+        {
+          "id": "latar",
+          "file": "02-latar-toko-bayangan",
+          "x": 0,
+          "y": 0,
+          "s": 1.0,
+          "t": 4.48,
+          "latar": true
+        },
+        {
+          "id": "maskot2",
+          "file": "02-maskot-menjelaskan",
+          "x": -210,
+          "y": 170,
+          "s": 0.85,
+          "t": 4.5
+        },
+        {
+          "id": "timbangan2",
+          "file": "02-timbangan",
+          "x": 210,
+          "y": 260,
+          "s": 0.95,
+          "t": 4.8
+        },
+        {
+          "id": "cincin2",
+          "file": "01-perhiasan-cincin",
+          "x": 210,
+          "y": 60,
+          "s": 0.5,
+          "t": 5.12
+        },
+        {
+          "id": "permata2",
+          "file": "01-permata",
+          "x": 90,
+          "y": -10,
+          "s": 0.42,
+          "t": 6.36
+        },
+        {
+          "id": "uang",
+          "file": "02-uang",
+          "x": 220,
+          "y": 480,
+          "s": 0.6,
+          "t": 9.56
+        }
+      ],
+      "kunci": [
+        {
+          "teks": "permata",
+          "x": 0,
+          "y": -470,
+          "size": 140,
+          "t": 6.36
+        }
+      ]
+    },
+    {
+      "mulai": 11.36,
+      "fokus": "pembeli",
+      "aset": [
+        {
+          "id": "pembeli",
+          "file": "03-pembeli-kaget",
+          "x": -200,
+          "y": 160,
+          "s": 0.8,
+          "t": 11.4
+        },
+        {
+          "id": "timbangan3",
+          "file": "02-timbangan",
+          "x": 210,
+          "y": 260,
+          "s": 0.95,
+          "t": 12.08
+        },
+        {
+          "id": "permata3",
+          "file": "01-permata",
+          "x": 270,
+          "y": -40,
+          "s": 0.5,
+          "t": 13.04
+        }
+      ],
+      "kunci": [
+        {
+          "teks": "tidak ikut",
+          "x": 0,
+          "y": -470,
+          "size": 140,
+          "t": 13.6
+        }
+      ]
+    },
+    {
+      "mulai": 16.16,
+      "fokus": "toko1",
+      "aset": [
+        {
+          "id": "toko1",
+          "file": "04-toko-1-sinar-mas",
+          "x": -290,
+          "y": -170,
+          "s": 0.7,
+          "t": 16.72
+        },
+        {
+          "id": "toko2",
+          "file": "04-toko-2-makmur",
+          "x": 0,
+          "y": -170,
+          "s": 0.7,
+          "t": 17.12
+        },
+        {
+          "id": "toko3",
+          "file": "04-toko-3-mulia-jaya",
+          "x": 290,
+          "y": -170,
+          "s": 0.7,
+          "t": 17.5
+        },
+        {
+          "id": "maskot4",
+          "file": "04-maskot-duduk",
+          "x": 0,
+          "y": 290,
+          "s": 0.75,
+          "t": 19.3
+        }
+      ]
+    },
+    {
+      "mulai": 22.64,
+      "fokus": "maskot5",
+      "aset": [
+        {
+          "id": "maskot5",
+          "file": "05-maskot-bingung",
+          "x": 0,
+          "y": 60,
+          "s": 0.75,
+          "t": 22.7
+        },
+        {
+          "id": "tanya",
+          "file": "05-tanda-tanya",
+          "x": 300,
+          "y": -200,
+          "s": 0.45,
+          "t": 23.36
+        },
+        {
+          "id": "konsumen",
+          "file": "05-konsumen-bingung",
+          "x": -280,
+          "y": 380,
+          "s": 0.55,
+          "t": 23.5
+        },
+        {
+          "id": "staff",
+          "file": "05-staff-toko",
+          "x": 280,
+          "y": 380,
+          "s": 0.55,
+          "t": 23.7
+        }
+      ],
+      "kunci": [
+        {
+          "teks": "siapa yang|salah?",
+          "x": 0,
+          "y": -520,
+          "size": 130,
+          "t": 23.36
+        }
+      ]
+    }
+  ],
+  "penutup": {
+    "catatan": "Waktu video (bukan waktu narasi), sesuai bagian 5 data produksi",
+    "kartu": [
+      {
+        "file": "05-kartu-lanjut-part2",
+        "x": 525,
+        "y": 980,
+        "s": 2.0,
+        "t": 24.86
+      },
+      {
+        "file": "05-kartu-follow",
+        "x": 525,
+        "y": 1310,
+        "s": 2.2,
+        "t": 25.3
+      }
+    ],
+    "kartuSelesai": 26.3,
+    "zoomOut": [
+      26.35,
+      27.35
+    ],
+    "crossFade": [
+      27.3,
+      27.45
+    ],
+    "outroMulai": 27.4,
+    "outroPutaran": 720
+  }
+}

@@ -4,6 +4,9 @@
 export const FPS = 30;
 export const DURATION = 3.6;
 
+// Total putaran sel (derajat). Bisa diubah per produksi, misalnya 720 untuk Perhiasan Part 1.
+export const OPT = { spinDeg: 540 };
+
 // Palet canvas mustard (brief bagian 3) + biru tua untuk bayangan
 export const COLOR = {
   canvas: "#E5B527",
@@ -119,7 +122,7 @@ function drawLogo(ctx, t, L) {
     const c = G.cells[i];
     const tl = T.kunci[i];
     const e = expoOut(prog(t, T.spinStart, tl));
-    const orbit = -540 * (1 - e) * DEG;
+    const orbit = -OPT.spinDeg * (1 - e) * DEG;
     const rf = 1.6 - 0.6 * e;
     const anti = inOut(prog(t, ...T.antisipasi));
     const base = t < T.spinStart ? lerp(0.6, 0.58, anti) : lerp(0.58, 1, e);
