@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuitansi DP Abona</title>
+<style>
+  :root { --ink:#1b2430; --muted:#6b7684; --line:#e3e7ec; --accent:#1f4e8c; --soft:#f4f7fb; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#eef1f5; color:var(--ink); font:14px/1.5 "Segoe UI", Arial, sans-serif; }
+  .bar { max-width:800px; margin:16px auto 0; padding:0 16px; display:flex; gap:8px; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted); }
+  .bar button { background:var(--accent); color:#fff; border:0; border-radius:6px; padding:8px 16px; font-size:14px; cursor:pointer; }
+  .page { max-width:800px; margin:12px auto 32px; background:#fff; padding:44px 48px; box-shadow:0 2px 12px rgba(0,0,0,.08); border-top:6px solid var(--accent); }
+  [contenteditable]:hover { outline:1px dashed #b8c4d4; }
+  [contenteditable]:focus { outline:2px solid var(--accent); }
+  header { display:flex; justify-content:space-between; gap:24px; border-bottom:1px solid var(--line); padding-bottom:18px; }
+  .co-name { font-size:20px; font-weight:700; color:var(--accent); }
+  .muted { color:var(--muted); }
+  h1 { margin:0; font-size:30px; letter-spacing:5px; color:var(--accent); text-align:right; }
+  .no { text-align:right; font-weight:600; }
+  .bc { margin-top:8px; text-align:right; }
+  .bc svg { display:inline-block; width:300px; max-width:100%; height:48px; }
+  .bc-text { font:11px/1.2 monospace; letter-spacing:2px; color:var(--muted); }
+  table.rows { width:100%; border-collapse:collapse; margin-top:24px; }
+  .rows td { padding:12px 4px; border-bottom:1px dotted #c5ccd6; vertical-align:top; }
+  .rows td:first-child { width:190px; color:var(--muted); white-space:nowrap; }
+  .rows td:nth-child(2) { width:16px; color:var(--muted); }
+  .words { font-style:italic; font-weight:600; background:var(--soft); padding:6px 10px; border-radius:4px; display:inline-block; }
+  .foot { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-top:32px; }
+  .amount { border:2px solid var(--accent); border-radius:8px; padding:12px 20px; font-size:22px; font-weight:700; color:var(--accent); }
+  .amount small { display:block; font-size:11px; font-weight:700; letter-spacing:1px; color:var(--muted); }
+  .sign { text-align:center; width:240px; }
+  .sign .space { height:90px; display:flex; align-items:center; justify-content:center; color:#c5ccd6; font-size:11px; }
+  .sign .name { border-top:1px solid var(--ink); padding-top:4px; font-weight:600; }
+  .note { margin-top:28px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px; }
+  @media (max-width:640px) {
+    .page { padding:24px 16px; }
+    header, .foot { flex-direction:column; align-items:stretch; }
+    h1, .no, .bc { text-align:left; }
+    .rows td:first-child { width:auto; white-space:normal; }
+    .sign { width:100%; }
+  }
+  @media print {
+    body { background:#fff; }
+    .bar { display:none; }
+    .page { box-shadow:none; margin:0; max-width:none; padding:24px; }
+    [contenteditable]:hover, [contenteditable]:focus { outline:none; }
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <span>Klik teks mana pun untuk mengedit, lalu cetak / simpan sebagai PDF.</span>
+  <button onclick="window.print()">Cetak / PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <div contenteditable="true">
+      <div class="co-name">PT DRAJAT WIGUNA ADIDAYA</div>
+      <div class="muted">Sukatani, Purwakarta<br>Telp: 0882-0001-19208<br>Email: customerservice@dwabussines.com</div>
+    </div>
+    <div>
+      <h1>KUITANSI</h1>
+      <div class="no" contenteditable="true">No. KWT/DWA/X/2026/001</div>
+      <div class="bc"><svg viewBox="0 0 506 56" preserveAspectRatio="none" role="img" aria-label="Barcode KWT/DWA/X/2026/001"><g fill="#1b2430"><rect x="20" y="0" width="4" height="56"/><rect x="26" y="0" width="2" height="56"/><rect x="32" y="0" width="2" height="56"/><rect x="42" y="0" width="2" height="56"/><rect x="46" y="0" width="4" height="56"/><rect x="56" y="0" width="6" height="56"/><rect x="64" y="0" width="6" height="56"/><rect x="72" y="0" width="2" height="56"/><rect x="80" y="0" width="4" height="56"/><rect x="86" y="0" width="4" height="56"/><rect x="92" y="0" width="6" height="56"/><rect x="104" y="0" width="2" height="56"/><rect x="108" y="0" width="2" height="56"/><rect x="112" y="0" width="6" height="56"/><rect x="122" y="0" width="4" height="56"/><rect x="130" y="0" width="2" height="56"/><rect x="134" y="0" width="4" height="56"/><rect x="144" y="0" width="2" height="56"/><rect x="152" y="0" width="6" height="56"/><rect x="160" y="0" width="2" height="56"/><rect x="168" y="0" width="4" height="56"/><rect x="174" y="0" width="2" height="56"/><rect x="178" y="0" width="2" height="56"/><rect x="186" y="0" width="4" height="56"/><rect x="196" y="0" width="2" height="56"/><rect x="200" y="0" width="6" height="56"/><rect x="210" y="0" width="4" height="56"/><rect x="218" y="0" width="6" height="56"/><rect x="230" y="0" width="2" height="56"/><rect x="234" y="0" width="4" height="56"/><rect x="240" y="0" width="2" height="56"/><rect x="244" y="0" width="6" height="56"/><rect x="254" y="0" width="4" height="56"/><rect x="262" y="0" width="4" height="56"/><rect x="270" y="0" width="6" height="56"/><rect x="280" y="0" width="2" height="56"/><rect x="284" y="0" width="2" height="56"/><rect x="290" y="0" width="6" height="56"/><rect x="298" y="0" width="4" height="56"/><rect x="306" y="0" width="4" height="56"/><rect x="314" y="0" width="6" height="56"/><rect x="324" y="0" width="2" height="56"/><rect x="328" y="0" width="4" height="56"/><rect x="336" y="0" width="6" height="56"/><rect x="344" y="0" width="2" height="56"/><rect x="350" y="0" width="2" height="56"/><rect x="354" y="0" width="6" height="56"/><rect x="364" y="0" width="4" height="56"/><rect x="372" y="0" width="2" height="56"/><rect x="378" y="0" width="6" height="56"/><rect x="386" y="0" width="4" height="56"/><rect x="394" y="0" width="2" height="56"/><rect x="400" y="0" width="6" height="56"/><rect x="408" y="0" width="4" height="56"/><rect x="416" y="0" width="2" height="56"/><rect x="422" y="0" width="6" height="56"/><rect x="432" y="0" width="4" height="56"/><rect x="438" y="0" width="2" height="56"/><rect x="444" y="0" width="2" height="56"/><rect x="448" y="0" width="4" height="56"/><rect x="460" y="0" width="4" height="56"/><rect x="470" y="0" width="6" height="56"/><rect x="478" y="0" width="2" height="56"/><rect x="482" y="0" width="4" height="56"/></g></svg><div class="bc-text">KWT/DWA/X/2026/001</div></div>
+    </div>
+  </header>
+
+  <table class="rows" contenteditable="true">
+    <tr><td>Telah terima dari</td><td>:</td><td><b>CV. ABONA BAKERY RASA</b><br><span class="muted">Purwakarta, Purwakarta · PIC: Mujada Tohir</span></td></tr>
+    <tr><td>Uang sejumlah</td><td>:</td><td><span class="words">Satu juta lima ratus ribu rupiah</span></td></tr>
+    <tr><td>Untuk pembayaran</td><td>:</td><td>Uang muka (DP) 50% <b>Branding UMKM – Paket Kolaborasi</b>, sesuai Invoice No. INV/DWA/X/2026/001.<br><span class="muted">Total nilai pekerjaan Rp 3.000.000 · Sisa Rp 1.500.000 dibayar 2 minggu setelah pekerjaan berjalan.</span></td></tr>
+    <tr><td>Cara pembayaran</td><td>:</td><td>Transfer ke BRI 4355 0104 0248 530 a.n. PT Drajat Wiguna Adidaya</td></tr>
+    <tr><td>Tanggal diterima</td><td>:</td><td>[tanggal uang masuk ke rekening]</td></tr>
+  </table>
+
+  <div class="foot">
+    <div class="amount" contenteditable="true"><small>JUMLAH</small>Rp 1.500.000,-</div>
+    <div class="sign" contenteditable="true">
+      <div>Purwakarta, [tanggal]</div>
+      <div>Penerima,</div>
+      <div class="space">tanda tangan &amp; cap perusahaan</div>
+      <div class="name">[Nama Penerima]</div>
+      <div class="muted">PT Drajat Wiguna Adidaya</div>
+    </div>
+  </div>
+
+  <div class="note" contenteditable="true">Kuitansi ini sah setelah ditandatangani dan dicap oleh PT Drajat Wiguna Adidaya.</div>
+</div>
+</body>
+</html>
