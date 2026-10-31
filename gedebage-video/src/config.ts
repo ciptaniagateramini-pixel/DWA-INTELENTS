@@ -127,13 +127,15 @@ export const T = {
   closing: [720, 840],
 } as const;
 
-// Narration (voice-over). Captions are always rendered; audio plays only when a
-// file is set (place it in public/, e.g. 'narasi.mp3').
-export const VOICEOVER: string | null = null;
-export const NARRATION: {from: number; to: number; text: string}[] = [
-  {from: 10, to: 112, text: 'Ini waktu yang tepat, untuk para investor!!'},
-  {from: 125, to: 300, text: 'Kota Bandung, kota unik. Dengan sejuta potensi bisnis…'},
-  {from: 340, to: 540, text: 'Investasi aset di kota Bandung tinggal selangkah lagi.'},
-  {from: 600, to: 762, text: 'Sekarang kamu cukup hubungi penjual tangan pertamanya dulu.'},
-  {from: 770, to: 836, text: 'Tanya-tanya, survei, deal!'},
+// Narration (voice-over). public/narasi.mp3 (18.5 s, from the user's Google Drive) is
+// split at its natural pauses (ffmpeg silencedetect) and each sentence is placed on
+// its scene. clip = [start, end] in seconds inside the source file; at = video frame.
+export const VOICEOVER: string | null = 'narasi.mp3';
+export type NarrationLine = {at: number; clip: [number, number]; text: string};
+export const NARRATION: NarrationLine[] = [
+  {at: 12, clip: [0, 3.39], text: 'Ini waktu yang tepat, untuk para investor!!'},
+  {at: 129, clip: [3.39, 8.13], text: 'Kota Bandung, kota unik. Dengan sejuta potensi bisnis…'},
+  {at: 339, clip: [8.13, 11.76], text: 'Investasi aset di kota Bandung tinggal selangkah lagi.'},
+  {at: 600, clip: [11.76, 15.45], text: 'Sekarang kamu cukup hubungi penjual tangan pertamanya dulu.'},
+  {at: 738, clip: [15.45, 18.52], text: 'Tanya-tanya, survei, deal!'},
 ];

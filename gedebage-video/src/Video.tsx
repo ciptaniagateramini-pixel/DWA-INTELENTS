@@ -1,10 +1,10 @@
 import React from 'react';
-import {AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
-import {COLORS, NARRATION, PLOT, PLOT_CENTER, T, TEXT, VOICEOVER} from './config';
+import {COLORS, FPS, NARRATION, PLOT, PLOT_CENTER, T, TEXT, VOICEOVER} from './config';
 import {cameraAt, project} from './geo';
 import {MapSequence} from './components/MapSequence';
 import {AnimatedPin, Headline, LandPolygon, NarrationCaption, PriceCTA, slatePanel} from './components/Overlays';
@@ -76,10 +76,23 @@ export const GedebageVideo: React.FC = () => {
       >
         {TEXT.attribution} · Batas tanah: perkiraan dari screenshot penjual
       </div>
-      {NARRATION.map((n) => (
-        <NarrationCaption key={n.from} frame={frame} {...n} />
-      ))}
-      {VOICEOVER && <Audio src={staticFile(VOICEOVER)} />}
+      {NARRATION.map((n) => {
+        const len = Math.round((n.clip[1] - n.clip[0]) * FPS);
+        return (
+          <React.Fragment key={n.at}>
+            <NarrationCaption frame={frame} from={n.at - 4} to={Math.min(n.at + len + 10, 838)} text={n.text} />
+            {VOICEOVER && (
+              <Sequence from={n.at} durationInFrames={len}>
+                <Audio
+                  src={staticFile(VOICEOVER)}
+                  startFrom={Math.round(n.clip[0] * FPS)}
+                  endAt={Math.round(n.clip[1] * FPS)}
+                />
+              </Sequence>
+            )}
+          </React.Fragment>
+        );
+      })}
     </AbsoluteFill>
   );
 };

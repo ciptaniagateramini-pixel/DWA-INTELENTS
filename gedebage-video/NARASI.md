@@ -11,10 +11,16 @@ Gaya: narator wanita, bersemangat, hangat, nada edukasi.
 | 00:25.7 – 00:27.9 | Penutup harga + CTA | Tanya-tanya, survei, deal! |
 
 ## Status audio
-Belum ada file suara: ElevenLabs menolak (akun free tier dinonaktifkan karena "unusual activity"), vidIQ kehabisan kredit, dan container tidak punya mesin TTS. Video v1 memakai caption narasi tanpa audio.
+Sumber: `public/narasi.mp3` = "New tts node.mp3" dari Google Drive pengguna (file id 1UlSgahpf8e5ufkZTh0X8NvDr-0LKnpob), mono 44,1 kHz, 18,5 dtk.
 
-## Cara memasang suara
-1. Rekam / generate VO (≤ 28 dtk), simpan sebagai `public/narasi.mp3`.
-2. Di `src/config.ts` ubah `export const VOICEOVER: string | null = null;` menjadi `'narasi.mp3'`.
-3. Bila perlu, geser waktu caption di `NARRATION` agar pas dengan rekaman.
-4. `npm run render`.
+File dipotong di jeda alami (ffmpeg `silencedetect`, −35 dB, ≥0,25 dtk) dan tiap kalimat ditempatkan pada adegannya:
+
+| Kalimat | Potongan di file | Mulai di video |
+|---|---|---|
+| 1 | 0,00 – 3,39 dtk | 0,4 dtk |
+| 2 | 3,39 – 8,13 dtk | 4,3 dtk |
+| 3 | 8,13 – 11,76 dtk | 11,3 dtk |
+| 4 | 11,76 – 15,45 dtk | 20,0 dtk |
+| 5 | 15,45 – 18,52 dtk | 24,6 dtk |
+
+Pemetaan kalimat ditentukan dari pola jeda, bukan transkripsi — cek ulang saat menonton. Atur di `NARRATION` (`src/config.ts`).
