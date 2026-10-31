@@ -219,7 +219,7 @@ export const PriceCTA: React.FC<{frame: number; start: number; lines: {a: string
         position: 'absolute',
         left: 90,
         right: 90,
-        top: 1240,
+        top: 1170,
         padding: '34px 30px',
         textAlign: 'center',
         fontFamily: FONT,
@@ -245,6 +245,47 @@ export const PriceCTA: React.FC<{frame: number; start: number; lines: {a: string
         {lines.cta}
       </div>
       <div style={{color: COLORS.muted, fontSize: 18, marginTop: 18}}>{lines.note}</div>
+    </div>
+  );
+};
+
+/* ---------- NarrationCaption ---------- */
+export const NarrationCaption: React.FC<{frame: number; from: number; to: number; text: string}> = ({
+  frame,
+  from,
+  to,
+  text,
+}) => {
+  const o = interpolate(frame, [from, from + 8, to - 8, to], [0, 1, 1, 0], clamp);
+  if (o <= 0) return null;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: 1555,
+        left: 80,
+        right: 80,
+        display: 'flex',
+        justifyContent: 'center',
+        opacity: o,
+        transform: `translateY(${(1 - o) * 10}px)`,
+      }}
+    >
+      <div
+        style={{
+          background: 'rgba(15,23,32,0.82)',
+          borderRadius: 14,
+          padding: '12px 24px',
+          fontFamily: FONT,
+          fontSize: 34,
+          fontWeight: 600,
+          lineHeight: 1.25,
+          color: COLORS.white,
+          textAlign: 'center',
+        }}
+      >
+        {text}
+      </div>
     </div>
   );
 };

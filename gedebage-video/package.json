@@ -5,7 +5,7 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "stills": "node scripts/render-stills.mjs",
-    "render": "remotion render src/index.ts GedebageVideo output/gedebage_final_1080x1920.mp4",
+    "render": "remotion render src/index.ts GedebageVideo output/gedebage_final_v1_1080x1920.mp4 --concurrency=4 --crf=18",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

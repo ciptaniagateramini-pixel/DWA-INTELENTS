@@ -7,7 +7,7 @@ import {AnimatedPin, CARD_PHOTO_H, CARD_W, LandmarkConnector, LandmarkPhotoCard}
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 const CARD_H = CARD_PHOTO_H + 110;
 // Single pop-up slot: lower third, clear of the plot and the iOS bottom bar.
-const SINGLE: [number, number] = [390, 1350];
+const SINGLE: [number, number] = [390, 1180];
 
 const nearestEdge = (x: number, y: number, px: number, py: number): [number, number] => [
   Math.max(x, Math.min(px, x + CARD_W)),

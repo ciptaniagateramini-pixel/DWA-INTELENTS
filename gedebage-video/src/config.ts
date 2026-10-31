@@ -86,7 +86,7 @@ export const LANDMARKS: Landmark[] = [
     distanceLabel: '± 1,8 km · garis lurus',
     verified: true,
     photo: null, // planned: assets/photos/stasiun_tegalluar_nfarras_ccbysa4.jpg
-    boardSlot: [390, 1290],
+    boardSlot: [390, 1240],
   },
 ];
 
@@ -110,8 +110,8 @@ export const CAMERA: CameraKey[] = [
   {frame: 120, center: [107.62, -6.93], widthKm: 420},
   {frame: 200, center: [107.64, -6.925], widthKm: 32},
   {frame: 290, center: PLOT_CENTER, widthKm: 0.3},
-  {frame: 325, center: PLOT_CENTER, widthKm: 0.28},
-  {frame: 375, center: CONTEXT_CENTER, widthKm: 4.6},
+  {frame: 322, center: PLOT_CENTER, widthKm: 0.27},
+  {frame: 352, center: CONTEXT_CENTER, widthKm: 4.6},
   {frame: 720, center: CONTEXT_CENTER, widthKm: 4.6},
   {frame: 775, center: PLOT_CENTER, widthKm: 0.42},
   {frame: 840, center: PLOT_CENTER, widthKm: 0.38},
@@ -126,3 +126,14 @@ export const T = {
   board: [570, 720],
   closing: [720, 840],
 } as const;
+
+// Narration (voice-over). Captions are always rendered; audio plays only when a
+// file is set (place it in public/, e.g. 'narasi.mp3').
+export const VOICEOVER: string | null = null;
+export const NARRATION: {from: number; to: number; text: string}[] = [
+  {from: 10, to: 112, text: 'Ini waktu yang tepat, untuk para investor!!'},
+  {from: 125, to: 300, text: 'Kota Bandung, kota unik. Dengan sejuta potensi bisnis…'},
+  {from: 340, to: 540, text: 'Investasi aset di kota Bandung tinggal selangkah lagi.'},
+  {from: 600, to: 762, text: 'Sekarang kamu cukup hubungi penjual tangan pertamanya dulu.'},
+  {from: 770, to: 836, text: 'Tanya-tanya, survei, deal!'},
+];

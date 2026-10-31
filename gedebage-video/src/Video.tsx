@@ -1,13 +1,13 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
-import {COLORS, PLOT, PLOT_CENTER, T, TEXT} from './config';
+import {COLORS, NARRATION, PLOT, PLOT_CENTER, T, TEXT, VOICEOVER} from './config';
 import {cameraAt, project} from './geo';
 import {MapSequence} from './components/MapSequence';
-import {AnimatedPin, Headline, LandPolygon, PriceCTA, slatePanel} from './components/Overlays';
+import {AnimatedPin, Headline, LandPolygon, NarrationCaption, PriceCTA, slatePanel} from './components/Overlays';
 import {AllLandmarksBoard} from './components/AllLandmarksBoard';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -37,7 +37,7 @@ export const GedebageVideo: React.FC = () => {
             ...slatePanel,
             position: 'absolute',
             left: '50%',
-            top: 1330,
+            top: 1300,
             transform: `translate(-50%, ${(1 - areaIn) * 20}px)`,
             opacity: areaIn,
             padding: '22px 44px',
@@ -65,7 +65,7 @@ export const GedebageVideo: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          bottom: 300,
+          bottom: 255,
           left: 0,
           right: 0,
           textAlign: 'center',
@@ -76,23 +76,10 @@ export const GedebageVideo: React.FC = () => {
       >
         {TEXT.attribution} · Batas tanah: perkiraan dari screenshot penjual
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: 150,
-          right: 50,
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: 16,
-          fontWeight: 600,
-          letterSpacing: 2,
-          color: COLORS.slateSolid,
-          background: COLORS.mustard,
-          padding: '6px 14px',
-          borderRadius: 8,
-        }}
-      >
-        PREVIEW
-      </div>
+      {NARRATION.map((n) => (
+        <NarrationCaption key={n.from} frame={frame} {...n} />
+      ))}
+      {VOICEOVER && <Audio src={staticFile(VOICEOVER)} />}
     </AbsoluteFill>
   );
 };
