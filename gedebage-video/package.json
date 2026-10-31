@@ -1,0 +1,29 @@
+{
+  "name": "gedebage-property-video",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "stills": "node scripts/render-stills.mjs",
+    "render": "remotion render src/index.ts GedebageVideo output/gedebage_final_1080x1920.mp4",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.1.0",
+    "@remotion/bundler": "^4.0.300",
+    "@remotion/cli": "^4.0.300",
+    "@remotion/renderer": "^4.0.300",
+    "d3-geo": "^3.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.300",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
+    "@types/react": "^18.3.12",
+    "@types/topojson-client": "^3.1.5",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,35 @@
+{
+ "plot_corners": [
+  [
+   -6.948271104997243,
+   107.70951269431814
+  ],
+  [
+   -6.948405938424334,
+   107.70983535576684
+  ],
+  [
+   -6.9493268323538935,
+   107.70963024143283
+  ],
+  [
+   -6.949329637975053,
+   107.70941194431641
+  ]
+ ],
+ "centroid": [
+  -6.94883337843763,
+  107.70959755895855
+ ],
+ "area_m2_estimate": 3394.258736636663,
+ "distances": {
+  "Masjid Raya Al Jabbar (bangunan masjid, OSM way 761092783)": 678,
+  "Masjid Raya Al Jabbar (tepi timur bangunan)": 611,
+  "Stasiun Cimekar (gedung, OSM way 1149442988)": 308,
+  "Stadion GBLA (centroid, OSM way 244493457)": 1008,
+  "Stadion GBLA (tepi utara)": 865,
+  "Summarecon Bandung (centroid kawasan, OSM rel 20228846)": 1797,
+  "Summarecon Bandung (titik terdekat bbox kawasan)": 448,
+  "Stasiun KCIC Tegalluar Summarecon (idwiki)": 1759
+ }
+}
