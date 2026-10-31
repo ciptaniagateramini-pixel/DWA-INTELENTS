@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.1.0",
     "@fontsource/poppins": "^5.1.0",
     "@remotion/bundler": "^4.0.300",
     "@remotion/cli": "^4.0.300",
