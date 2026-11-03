@@ -1,0 +1,306 @@
+{
+ "metode": "perkiraan suku kata + jeda, pencocokan berurutan (tanpa ASR)",
+ "audio": "assets/audio/proses-emas/narasi-vivan-rapi.wav",
+ "words": [
+  {
+   "text": "Pernah",
+   "start": 0.12,
+   "end": 0.88
+  },
+  {
+   "text": "kepikiran,",
+   "start": 0.88,
+   "end": 2.39
+  },
+  {
+   "text": "perhiasan",
+   "start": 2.64,
+   "end": 3.16
+  },
+  {
+   "text": "yang",
+   "start": 3.16,
+   "end": 3.34
+  },
+  {
+   "text": "kamu",
+   "start": 3.34,
+   "end": 3.69
+  },
+  {
+   "text": "jual",
+   "start": 3.69,
+   "end": 3.86
+  },
+  {
+   "text": "ke",
+   "start": 3.86,
+   "end": 4.04
+  },
+  {
+   "text": "toko",
+   "start": 4.04,
+   "end": 4.38
+  },
+  {
+   "text": "emas",
+   "start": 4.38,
+   "end": 4.73
+  },
+  {
+   "text": "dibawa",
+   "start": 4.73,
+   "end": 5.26
+  },
+  {
+   "text": "ke",
+   "start": 5.26,
+   "end": 5.43
+  },
+  {
+   "text": "mana?",
+   "start": 5.43,
+   "end": 5.78
+  },
+  {
+   "text": "Perhiasan",
+   "start": 6.04,
+   "end": 6.49
+  },
+  {
+   "text": "itu",
+   "start": 6.49,
+   "end": 6.78
+  },
+  {
+   "text": "dilebur",
+   "start": 6.78,
+   "end": 7.23
+  },
+  {
+   "text": "dulu,",
+   "start": 7.23,
+   "end": 7.53
+  },
+  {
+   "text": "lalu",
+   "start": 7.53,
+   "end": 7.83
+  },
+  {
+   "text": "dimurnikan,",
+   "start": 7.83,
+   "end": 8.42
+  },
+  {
+   "text": "jadi",
+   "start": 8.62,
+   "end": 9.11
+  },
+  {
+   "text": "emas",
+   "start": 9.11,
+   "end": 9.59
+  },
+  {
+   "text": "batangan",
+   "start": 9.89,
+   "end": 10.63
+  },
+  {
+   "text": "lokal",
+   "start": 10.63,
+   "end": 11.12
+  },
+  {
+   "text": "berkadar",
+   "start": 11.12,
+   "end": 11.86
+  },
+  {
+   "text": "murni,",
+   "start": 11.86,
+   "end": 12.35
+  },
+  {
+   "text": "atau",
+   "start": 12.68,
+   "end": 13.02
+  },
+  {
+   "text": "yang",
+   "start": 13.02,
+   "end": 13.18
+  },
+  {
+   "text": "biasa",
+   "start": 13.18,
+   "end": 13.52
+  },
+  {
+   "text": "disebut",
+   "start": 13.52,
+   "end": 14.02
+  },
+  {
+   "text": "cukim.",
+   "start": 14.02,
+   "end": 14.36
+  },
+  {
+   "text": "Cukim",
+   "start": 14.57,
+   "end": 15.0
+  },
+  {
+   "text": "ini",
+   "start": 15.0,
+   "end": 15.43
+  },
+  {
+   "text": "kemudian",
+   "start": 15.43,
+   "end": 16.08
+  },
+  {
+   "text": "diolah",
+   "start": 16.08,
+   "end": 16.51
+  },
+  {
+   "text": "lagi",
+   "start": 16.51,
+   "end": 16.94
+  },
+  {
+   "text": "oleh",
+   "start": 16.94,
+   "end": 17.37
+  },
+  {
+   "text": "pengrajin,",
+   "start": 17.37,
+   "end": 18.02
+  },
+  {
+   "text": "jadi",
+   "start": 18.38,
+   "end": 18.73
+  },
+  {
+   "text": "perhiasan",
+   "start": 18.73,
+   "end": 19.24
+  },
+  {
+   "text": "baru.",
+   "start": 19.24,
+   "end": 19.59
+  },
+  {
+   "text": "Di",
+   "start": 20.02,
+   "end": 20.15
+  },
+  {
+   "text": "setiap",
+   "start": 20.15,
+   "end": 20.42
+  },
+  {
+   "text": "tahap",
+   "start": 20.77,
+   "end": 21.36
+  },
+  {
+   "text": "ada",
+   "start": 21.36,
+   "end": 21.94
+  },
+  {
+   "text": "biaya,",
+   "start": 21.94,
+   "end": 22.53
+  },
+  {
+   "text": "mulai",
+   "start": 22.93,
+   "end": 23.3
+  },
+  {
+   "text": "dari",
+   "start": 23.3,
+   "end": 23.68
+  },
+  {
+   "text": "pengrajin",
+   "start": 23.68,
+   "end": 24.24
+  },
+  {
+   "text": "sampai",
+   "start": 24.24,
+   "end": 24.62
+  },
+  {
+   "text": "produksi.",
+   "start": 24.62,
+   "end": 25.18
+  },
+  {
+   "text": "Itulah",
+   "start": 25.46,
+   "end": 25.99
+  },
+  {
+   "text": "kenapa",
+   "start": 25.99,
+   "end": 26.52
+  },
+  {
+   "text": "jual",
+   "start": 26.52,
+   "end": 26.69
+  },
+  {
+   "text": "beli",
+   "start": 26.69,
+   "end": 27.04
+  },
+  {
+   "text": "perhiasan",
+   "start": 27.04,
+   "end": 27.57
+  },
+  {
+   "text": "selalu",
+   "start": 27.57,
+   "end": 28.1
+  },
+  {
+   "text": "ada",
+   "start": 28.1,
+   "end": 28.45
+  },
+  {
+   "text": "selisih",
+   "start": 28.45,
+   "end": 28.98
+  },
+  {
+   "text": "harga,",
+   "start": 28.98,
+   "end": 29.33
+  },
+  {
+   "text": "atau",
+   "start": 29.63,
+   "end": 30.08
+  },
+  {
+   "text": "spread.",
+   "start": 30.08,
+   "end": 30.31
+  }
+ ]
+}

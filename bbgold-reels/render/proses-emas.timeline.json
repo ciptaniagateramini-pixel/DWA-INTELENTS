@@ -1,84 +1,84 @@
 {
   "id": "proses-emas",
   "fps": 30,
-  "duration": 31.35,
+  "duration": 35.26,
   "lead": 0.3,
-  "audio": "assets/audio/proses-emas/narasi-bersih.wav",
+  "audio": "assets/audio/proses-emas/narasi-vivan-rapi.wav",
   "cues": [
     {
       "type": "pop",
-      "t": 1.74,
+      "t": 2.94,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 2.18,
+      "t": 3.46,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 2.62,
+      "t": 3.99,
       "file": "pop"
     },
     {
       "type": "whoosh",
-      "t": 3.8,
+      "t": 5.41,
       "file": "whoosh-1"
     },
     {
       "type": "whoosh",
-      "t": 6,
+      "t": 7.57,
       "file": "whoosh-2"
     },
     {
       "type": "whoosh",
-      "t": 7.6000000000000005,
+      "t": 8.76,
       "file": "whoosh-1"
     },
     {
       "type": "whoosh",
-      "t": 11.65,
+      "t": 14.51,
       "file": "whoosh-2"
     },
     {
       "type": "whoosh",
-      "t": 16.5,
+      "t": 20.25,
       "file": "whoosh-1"
     },
     {
       "type": "pop",
-      "t": 17.3,
+      "t": 21.57,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 17.7,
+      "t": 22.33,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 20.63,
+      "t": 26.21,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 21.3,
+      "t": 26.79,
       "file": "pop"
     },
     {
       "type": "pop",
-      "t": 22.5,
+      "t": 27.8,
       "file": "pop"
     },
     {
       "type": "whoosh",
-      "t": 26.799999999999997,
+      "t": 30.709999999999997,
       "file": "whoosh-2"
     }
   ],
   "shifted": [],
   "outro": {
-    "mulai": 27.75
+    "mulai": 31.66
   },
   "narratorPeakDb": -1.5,
   "mixLufsBefore": -16.3

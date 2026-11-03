@@ -1,0 +1,230 @@
+{
+ "id": "proses-emas",
+ "out": "proses-emas",
+ "page": "proses-emas/index.html",
+ "judul": "Perhiasan dilebur jadi cukim, lalu jadi perhiasan baru",
+ "audio": "assets/audio/proses-emas/narasi-vivan-rapi.wav",
+ "words": "data/proses-emas-vivan.words.json",
+ "jedaAwal": 0.3,
+ "label": "Perjalanan emas perhiasan",
+ "kataKunci": [
+  "dilebur",
+  "dimurnikan",
+  "cukim",
+  "pengrajin",
+  "baru",
+  "biaya",
+  "produksi",
+  "spread"
+ ],
+ "stasiun": {
+  "toko": 0,
+  "tungku": 900,
+  "murni": 1800,
+  "cetak": 2700,
+  "pengrajin": 3600,
+  "etalase": 4500
+ },
+ "jalur": [
+  {
+   "t": 0.3,
+   "x": -150
+  },
+  {
+   "t": 5.51,
+   "x": 900
+  },
+  {
+   "t": 7.67,
+   "x": 1720
+  },
+  {
+   "t": 8.86,
+   "x": 2930,
+   "d": 0.6
+  },
+  {
+   "t": 14.37,
+   "x": 2670,
+   "d": 0.05
+  },
+  {
+   "t": 14.61,
+   "x": 3400,
+   "d": 0.75
+  }
+ ],
+ "waktu": {
+  "perhiasan": [
+   2.94,
+   3.46,
+   3.99
+  ],
+  "lebur": [
+   6.67,
+   7.62
+  ],
+  "keluarTungku": 7.65,
+  "murni": [
+   7.99,
+   8.75
+  ],
+  "tuang": [
+   10.1,
+   11.83
+  ],
+  "dingin": [
+   11.83,
+   13.58
+  ],
+  "cap": 14.06,
+  "batangJalan": 14.37,
+  "giling": [
+   15.59,
+   17.34
+  ],
+  "bentuk": [
+   17.46,
+   18.57
+  ],
+  "etalase": 21.57,
+  "blok": [
+   22.33,
+   26.21,
+   26.79
+  ],
+  "jual": 27.8,
+  "spread": 30.38
+ },
+ "kamera": [
+  {
+   "t": 0.3,
+   "x": -150,
+   "y": -100,
+   "s": 1.3
+  },
+  {
+   "t": 5.51,
+   "x": 900,
+   "y": 0,
+   "s": 1.1
+  },
+  {
+   "t": 7.67,
+   "x": 1760,
+   "y": -60,
+   "s": 1.15
+  },
+  {
+   "t": 8.86,
+   "x": 2760,
+   "y": 0,
+   "s": 1.05
+  },
+  {
+   "t": 14.61,
+   "x": 3700,
+   "y": 0,
+   "s": 1.05
+  },
+  {
+   "t": 20.35,
+   "x": 4920,
+   "y": -590,
+   "z": 170,
+   "s": 0.85
+  },
+  {
+   "t": 30.81,
+   "x": 2200,
+   "y": 0,
+   "z": 0,
+   "s": 0.24
+  }
+ ],
+ "tahap": [
+  {
+   "t": 0.3,
+   "judul": "Dijual ke toko",
+   "no": "1"
+  },
+  {
+   "t": 6.36,
+   "judul": "Dilebur",
+   "no": "2"
+  },
+  {
+   "t": 7.8,
+   "judul": "Dimurnikan",
+   "no": "3"
+  },
+  {
+   "t": 9.27,
+   "judul": "Jadi cukim",
+   "no": "4"
+  },
+  {
+   "t": 14.98,
+   "judul": "Pengrajin",
+   "no": "5"
+  },
+  {
+   "t": 21.01,
+   "judul": "Biaya & spread",
+   "no": "6"
+  }
+ ],
+ "pops": [
+  2.94,
+  3.46,
+  3.99,
+  21.57,
+  22.33,
+  26.21,
+  26.79,
+  27.8
+ ],
+ "sfxTambahan": [
+  {
+   "file": "assets/audio/proses-emas/desis-lebur.wav",
+   "t": 6.97,
+   "db": -20
+  },
+  {
+   "file": "assets/audio/proses-emas/tuang.wav",
+   "t": 10.2,
+   "db": -20
+  },
+  {
+   "file": "assets/audio/proses-emas/ketuk-cap.wav",
+   "t": 14.2,
+   "db": -14
+  }
+ ],
+ "penutup": {
+  "crossFade": [
+   31.56,
+   31.71
+  ],
+  "outroMulai": 31.66,
+  "outroPutaran": 720
+ },
+ "sheet": [
+  4.21,
+  6.18,
+  7.38,
+  8.29,
+  10.83,
+  13.29,
+  14.25,
+  16.22,
+  18.17,
+  19.5,
+  23.83,
+  27.04,
+  29.08,
+  30.56,
+  31.31,
+  33.81
+ ]
+}
