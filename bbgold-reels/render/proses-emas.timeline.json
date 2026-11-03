@@ -1,0 +1,85 @@
+{
+  "id": "proses-emas",
+  "fps": 30,
+  "duration": 31.35,
+  "lead": 0.3,
+  "audio": "assets/audio/proses-emas/narasi-bersih.wav",
+  "cues": [
+    {
+      "type": "pop",
+      "t": 1.74,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 2.18,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 2.62,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 3.8,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "whoosh",
+      "t": 6,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "whoosh",
+      "t": 7.6000000000000005,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "whoosh",
+      "t": 11.65,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "whoosh",
+      "t": 16.5,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 17.3,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 17.7,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 20.63,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 21.3,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 22.5,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 26.799999999999997,
+      "file": "whoosh-2"
+    }
+  ],
+  "shifted": [],
+  "outro": {
+    "mulai": 27.75
+  },
+  "narratorPeakDb": -1.5,
+  "mixLufsBefore": -16.3
+}
