@@ -1,0 +1,309 @@
+{
+ "id": "proses-emas",
+ "out": "proses-emas",
+ "judul": "Perhiasan dilebur jadi cukim, lalu jadi perhiasan baru",
+ "audio": "assets/audio/proses-emas/narasi-bersih.wav",
+ "words": "data/proses-emas.words.json",
+ "assetDir": "assets/proses-emas",
+ "jedaAwal": 0.3,
+ "zigzag": {
+  "start": [
+   540,
+   960
+  ],
+  "langkah": 1600,
+  "sudut": 60,
+  "radiusTikungan": 320,
+  "lebarGaris": 14,
+  "garisMendahului": 260
+ },
+ "kamera": {
+  "punch": 0.3,
+  "punchSkala": 1.4,
+  "zoomOut": 0.8,
+  "overview": 1.0,
+  "redup": 0.4,
+  "redupDurasi": 0.4
+ },
+ "kalimat": [
+  {
+   "mulai": 0,
+   "fokus": "meja",
+   "fokusOffset": [
+    0,
+    -120
+   ],
+   "aset": [
+    {
+     "id": "meja",
+     "file": "meja-toko",
+     "x": 0,
+     "y": 300,
+     "s": 1.0,
+     "t": 0.05
+    },
+    {
+     "id": "cincin",
+     "file": "cincin-lama",
+     "x": -230,
+     "y": 180,
+     "s": 0.9,
+     "t": 1.44
+    },
+    {
+     "id": "kalung",
+     "file": "kalung-lama",
+     "x": 30,
+     "y": 185,
+     "s": 0.8,
+     "t": 1.88
+    },
+    {
+     "id": "anting",
+     "file": "anting-lama",
+     "x": 250,
+     "y": 170,
+     "s": 0.8,
+     "t": 2.32
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "ke mana?",
+     "x": 0,
+     "y": -380,
+     "size": 150,
+     "t": 3.64
+    }
+   ]
+  },
+  {
+   "mulai": 4.08,
+   "fokus": "tungku",
+   "fokusOffset": [
+    0,
+    -200
+   ],
+   "aset": [
+    {
+     "id": "tungku",
+     "file": "tungku",
+     "x": 0,
+     "y": 130,
+     "s": 0.95,
+     "t": 4.08,
+     "anim": true
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "dilebur",
+     "x": 0,
+     "y": -560,
+     "size": 150,
+     "t": 4.81
+    }
+   ]
+  },
+  {
+   "mulai": 6.41,
+   "fokus": "murni",
+   "aset": [
+    {
+     "id": "murni",
+     "file": "murni",
+     "x": -190,
+     "y": -250,
+     "s": 0.6,
+     "t": 6.41,
+     "anim": true
+    },
+    {
+     "id": "cetak",
+     "file": "cetak",
+     "x": 60,
+     "y": 300,
+     "s": 0.68,
+     "t": 7.45,
+     "anim": true
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "dimurnikan",
+     "x": 0,
+     "y": -640,
+     "size": 120,
+     "t": 6.76
+    },
+    {
+     "teks": "cukim",
+     "x": 250,
+     "y": -230,
+     "size": 150,
+     "t": 11.27
+    }
+   ],
+   "langkah": [
+    {
+     "t": 7.45,
+     "ke": "cetak",
+     "s": 1.3
+    },
+    {
+     "t": 11.27,
+     "ke": "overview"
+    }
+   ]
+  },
+  {
+   "mulai": 11.61,
+   "fokus": "pengrajin",
+   "aset": [
+    {
+     "id": "pengrajin",
+     "file": "pengrajin",
+     "x": 0,
+     "y": -60,
+     "s": 0.9,
+     "t": 11.61,
+     "anim": true
+    },
+    {
+     "id": "baru",
+     "file": "perhiasan-baru",
+     "x": 0,
+     "y": 430,
+     "s": 0.65,
+     "t": 15.7
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "perhiasan|baru",
+     "x": 0,
+     "y": -600,
+     "size": 120,
+     "t": 15.7
+    }
+   ]
+  },
+  {
+   "mulai": 17.09,
+   "fokus": "alur",
+   "aset": [
+    {
+     "id": "alur",
+     "file": "alur-biaya",
+     "x": 0,
+     "y": -120,
+     "s": 0.95,
+     "t": 17.09,
+     "anim": true
+    },
+    {
+     "id": "chip1",
+     "file": "chip-pengrajin",
+     "x": 0,
+     "y": 210,
+     "s": 1.0,
+     "t": 20.33
+    },
+    {
+     "id": "chip2",
+     "file": "chip-produksi",
+     "x": 0,
+     "y": 380,
+     "s": 1.0,
+     "t": 21.0
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "biaya",
+     "x": 0,
+     "y": -480,
+     "size": 160,
+     "t": 19.04
+    }
+   ]
+  },
+  {
+   "mulai": 21.4,
+   "fokus": "spread",
+   "fokusOffset": [
+    -150,
+    -100
+   ],
+   "aset": [
+    {
+     "id": "spread",
+     "file": "spread",
+     "x": 0,
+     "y": 160,
+     "s": 1.0,
+     "t": 21.4,
+     "anim": true
+    }
+   ],
+   "kunci": [
+    {
+     "teks": "spread",
+     "x": 0,
+     "y": -460,
+     "size": 170,
+     "t": 25.95
+    }
+   ]
+  }
+ ],
+ "penutup": {
+  "kartu": [],
+  "kartuSelesai": 0,
+  "zoomOut": [
+   26.85,
+   27.65
+  ],
+  "crossFade": [
+   27.6,
+   27.75
+  ],
+  "outroMulai": 27.7,
+  "outroPutaran": 720
+ },
+ "sfxTambahan": [
+  {
+   "file": "assets/audio/proses-emas/desis-lebur.wav",
+   "t": 5.38,
+   "db": -20
+  },
+  {
+   "file": "assets/audio/proses-emas/tuang.wav",
+   "t": 7.9,
+   "db": -20
+  },
+  {
+   "file": "assets/audio/proses-emas/ketuk-cap.wav",
+   "t": 11.3,
+   "db": -14
+  }
+ ],
+ "sheet": [
+  2.6,
+  4.3,
+  5.6,
+  7.2,
+  8.3,
+  10.3,
+  11.9,
+  13.3,
+  14.9,
+  16.5,
+  19.6,
+  21.6,
+  23.5,
+  26.4,
+  27.4,
+  29.8
+ ]
+}

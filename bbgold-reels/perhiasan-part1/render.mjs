@@ -102,6 +102,8 @@ meta.cues.forEach((c, i) => {
   const db = narPeak + A.sfxDb - peakOf(f) + (jitter(i, 1) * 2 - 1) * A.sfxVariasiDb;
   add(f, c.t, db, 1 + (jitter(i, 2) * 2 - 1) * A.sfxVariasiPitch);
 });
+// SFX tambahan dari data (opsional), waktu video; gain relatif puncak narasi
+for (const x of DJSON.sfxTambahan || []) { const f = path.join(ROOT, x.file); add(f, x.t, narPeak + x.db - peakOf(f)); }
 // Outro: tiga file final pemilik, tanpa pitch shift. Click paling jelas, whoosh geser paling pelan.
 const O = path.join(AUD, "logo-outro"), t0 = meta.outro.mulai;
 add(path.join(O, "putaran-logo.wav"), t0, narPeak - 8 - peakOf(path.join(O, "putaran-logo.wav")));

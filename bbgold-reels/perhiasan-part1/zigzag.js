@@ -115,6 +115,7 @@ export async function boot(dataPath) {
     for (const a of k.aset) {
       const node = await placeSvg(box, await loadSvg(a.file), a.x, a.y, a.s);
       a.el = node;
+      if (a.anim) { a.svg = node.querySelector("svg"); a.svg.pauseAnimations(); a.svg.setCurrentTime(0); } // animasi SMIL diatur per frame
       const ev = { type: "pop", t: V(a.t), asset: a, silent: !!a.latar };
       if (!ev.silent) cues.push(ev);
       a.ev = ev;
@@ -230,7 +231,9 @@ export async function boot(dataPath) {
   const byEl = new Map();
   anims.forEach((a) => { if (!byEl.has(a.el)) byEl.set(a.el, []); byEl.get(a.el).push(a); });
 
+  const animAssets = data.kalimat.flatMap((k) => k.aset.filter((a) => a.anim));
   window.renderAt = (t) => {
+    for (const a of animAssets) a.svg.setCurrentTime(Math.max(0, t - a.ev.t));
     const cam = camera(t);
     world.style.transform = `translate(${(CX - cam.s * cam.x).toFixed(2)}px, ${(CY - cam.s * cam.y).toFixed(2)}px) scale(${cam.s.toFixed(5)})`;
     // Garis digambar bertahap mengikuti kamera
