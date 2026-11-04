@@ -1,10 +1,12 @@
 # Perkiraan waktu kata tanpa ASR: jeda terdeteksi dipasangkan berurutan ke batas kata
 # (tanda baca diutamakan), lalu kata dibagi menurut jumlah suku kata. Pemakaian:
-#   python3 -I proses-emas/align_dp.py AUDIO.wav OUT.json
+#   python3 -I proses-emas/align_dp.py AUDIO.wav OUT.json [NASKAH.txt]
 import subprocess, sys, json, re, numpy as np
 audio, outp = sys.argv[1], sys.argv[2]
-src = open("proses-emas/align.py").read().split("NASKAH = (")[1].split(")\n")[0]
-words = "".join(re.findall(r'"([^"]*)"', src)).split()
+if len(sys.argv) > 3: words = open(sys.argv[3]).read().split()  # naskah dari file teks
+else:
+    src = open("proses-emas/align.py").read().split("NASKAH = (")[1].split(")\n")[0]
+    words = "".join(re.findall(r'"([^"]*)"', src)).split()
 syl = [max(1, len(re.findall(r"[aiueo]+", w.lower()))) for w in words]
 w = 480
 x = np.frombuffer(subprocess.run(["ffmpeg", "-v", "quiet", "-i", audio, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"], capture_output=True).stdout, np.float32)

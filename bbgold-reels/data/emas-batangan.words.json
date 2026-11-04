@@ -1,0 +1,512 @@
+{
+ "metode": "pemetaan manual rentang bicara + suku kata (tanpa ASR)",
+ "audio": "assets/audio/emas-batangan/rekaman-asli.mp3",
+ "akhir": 49.95,
+ "words": [
+  {
+   "text": "Di",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "text": "Indonesia,",
+   "start": 0.2,
+   "end": 1.02
+  },
+  {
+   "text": "ada",
+   "start": 1.23,
+   "end": 1.57
+  },
+  {
+   "text": "banyak",
+   "start": 1.57,
+   "end": 1.91
+  },
+  {
+   "text": "merek",
+   "start": 1.91,
+   "end": 2.25
+  },
+  {
+   "text": "emas",
+   "start": 2.25,
+   "end": 2.59
+  },
+  {
+   "text": "batangan.",
+   "start": 2.59,
+   "end": 3.1
+  },
+  {
+   "text": "Misalnya",
+   "start": 3.48,
+   "end": 3.88
+  },
+  {
+   "text": "UBS,",
+   "start": 3.88,
+   "end": 4.29
+  },
+  {
+   "text": "Lotus",
+   "start": 4.37,
+   "end": 4.75
+  },
+  {
+   "text": "Archi,",
+   "start": 4.75,
+   "end": 5.13
+  },
+  {
+   "text": "dan",
+   "start": 5.31,
+   "end": 5.53
+  },
+  {
+   "text": "Emasku",
+   "start": 5.53,
+   "end": 6.2
+  },
+  {
+   "text": "dari",
+   "start": 6.36,
+   "end": 6.97
+  },
+  {
+   "text": "Hartadinata.",
+   "start": 6.97,
+   "end": 8.49
+  },
+  {
+   "text": "UBS",
+   "start": 8.99,
+   "end": 9.52
+  },
+  {
+   "text": "diproduksi",
+   "start": 9.52,
+   "end": 10.23
+  },
+  {
+   "text": "PT",
+   "start": 10.35,
+   "end": 10.72
+  },
+  {
+   "text": "Untung",
+   "start": 10.72,
+   "end": 11.08
+  },
+  {
+   "text": "Bersama",
+   "start": 11.08,
+   "end": 11.64
+  },
+  {
+   "text": "Sejahtera.",
+   "start": 11.64,
+   "end": 12.37
+  },
+  {
+   "text": "Lotus",
+   "start": 12.76,
+   "end": 13.15
+  },
+  {
+   "text": "Archi",
+   "start": 13.15,
+   "end": 13.54
+  },
+  {
+   "text": "dibuat",
+   "start": 13.54,
+   "end": 13.93
+  },
+  {
+   "text": "perusahaan",
+   "start": 13.93,
+   "end": 14.71
+  },
+  {
+   "text": "patungan",
+   "start": 14.71,
+   "end": 15.29
+  },
+  {
+   "text": "Lotus",
+   "start": 15.29,
+   "end": 15.68
+  },
+  {
+   "text": "Lingga",
+   "start": 15.68,
+   "end": 16.07
+  },
+  {
+   "text": "Pratama",
+   "start": 16.07,
+   "end": 16.66
+  },
+  {
+   "text": "dan",
+   "start": 16.66,
+   "end": 16.85
+  },
+  {
+   "text": "Archi",
+   "start": 16.93,
+   "end": 17.3
+  },
+  {
+   "text": "Group.",
+   "start": 17.3,
+   "end": 17.49
+  },
+  {
+   "text": "Sedangkan",
+   "start": 17.89,
+   "end": 18.45
+  },
+  {
+   "text": "Emasku",
+   "start": 18.45,
+   "end": 19.02
+  },
+  {
+   "text": "diproduksi",
+   "start": 19.02,
+   "end": 19.77
+  },
+  {
+   "text": "PT",
+   "start": 19.87,
+   "end": 20.24
+  },
+  {
+   "text": "Hartadinata",
+   "start": 20.24,
+   "end": 21.15
+  },
+  {
+   "text": "Abadi.",
+   "start": 21.15,
+   "end": 21.7
+  },
+  {
+   "text": "Yang",
+   "start": 22.18,
+   "end": 22.33
+  },
+  {
+   "text": "membuat",
+   "start": 22.33,
+   "end": 22.64
+  },
+  {
+   "text": "mereka",
+   "start": 22.64,
+   "end": 23.1
+  },
+  {
+   "text": "sama?",
+   "start": 23.1,
+   "end": 23.41
+  },
+  {
+   "text": "Kadarnya.",
+   "start": 23.82,
+   "end": 24.6
+  },
+  {
+   "text": "Semuanya",
+   "start": 24.96,
+   "end": 25.5
+  },
+  {
+   "text": "emas",
+   "start": 25.5,
+   "end": 25.86
+  },
+  {
+   "text": "murni",
+   "start": 25.86,
+   "end": 26.21
+  },
+  {
+   "text": "dua",
+   "start": 26.21,
+   "end": 26.39
+  },
+  {
+   "text": "puluh",
+   "start": 26.39,
+   "end": 26.75
+  },
+  {
+   "text": "empat",
+   "start": 26.75,
+   "end": 27.11
+  },
+  {
+   "text": "karat,",
+   "start": 27.11,
+   "end": 27.47
+  },
+  {
+   "text": "sembilan",
+   "start": 27.56,
+   "end": 28.02
+  },
+  {
+   "text": "puluh",
+   "start": 28.02,
+   "end": 28.32
+  },
+  {
+   "text": "sembilan",
+   "start": 28.32,
+   "end": 28.78
+  },
+  {
+   "text": "koma",
+   "start": 28.78,
+   "end": 29.09
+  },
+  {
+   "text": "sembilan",
+   "start": 29.09,
+   "end": 29.55
+  },
+  {
+   "text": "sembilan",
+   "start": 29.55,
+   "end": 30.0
+  },
+  {
+   "text": "persen.",
+   "start": 30.0,
+   "end": 30.31
+  },
+  {
+   "text": "Yang",
+   "start": 30.73,
+   "end": 30.96
+  },
+  {
+   "text": "beda?",
+   "start": 30.96,
+   "end": 31.42
+  },
+  {
+   "text": "Produsen",
+   "start": 31.73,
+   "end": 32.24
+  },
+  {
+   "text": "dan",
+   "start": 32.24,
+   "end": 32.41
+  },
+  {
+   "text": "tempat",
+   "start": 32.49,
+   "end": 32.93
+  },
+  {
+   "text": "produksinya.",
+   "start": 32.93,
+   "end": 33.82
+  },
+  {
+   "text": "Jadi,",
+   "start": 34.31,
+   "end": 34.95
+  },
+  {
+   "text": "apakah",
+   "start": 35.09,
+   "end": 35.55
+  },
+  {
+   "text": "semuanya",
+   "start": 35.55,
+   "end": 36.01
+  },
+  {
+   "text": "sama-sama",
+   "start": 36.01,
+   "end": 36.62
+  },
+  {
+   "text": "emas",
+   "start": 36.62,
+   "end": 36.93
+  },
+  {
+   "text": "dan",
+   "start": 36.93,
+   "end": 37.08
+  },
+  {
+   "text": "aset",
+   "start": 37.08,
+   "end": 37.39
+  },
+  {
+   "text": "yang",
+   "start": 37.39,
+   "end": 37.54
+  },
+  {
+   "text": "likuid?",
+   "start": 37.54,
+   "end": 37.85
+  },
+  {
+   "text": "Sama-sama",
+   "start": 38.29,
+   "end": 39.0
+  },
+  {
+   "text": "emas",
+   "start": 39.0,
+   "end": 39.36
+  },
+  {
+   "text": "murni,",
+   "start": 39.36,
+   "end": 39.72
+  },
+  {
+   "text": "dan",
+   "start": 39.84,
+   "end": 40.03
+  },
+  {
+   "text": "bisa",
+   "start": 40.03,
+   "end": 40.41
+  },
+  {
+   "text": "dijual",
+   "start": 40.41,
+   "end": 40.8
+  },
+  {
+   "text": "kembali.",
+   "start": 40.8,
+   "end": 41.37
+  },
+  {
+   "text": "Tapi",
+   "start": 41.8,
+   "end": 42.37
+  },
+  {
+   "text": "harga",
+   "start": 42.46,
+   "end": 42.83
+  },
+  {
+   "text": "jual",
+   "start": 42.83,
+   "end": 43.01
+  },
+  {
+   "text": "kembali",
+   "start": 43.01,
+   "end": 43.56
+  },
+  {
+   "text": "dan",
+   "start": 43.56,
+   "end": 43.74
+  },
+  {
+   "text": "tempat",
+   "start": 43.74,
+   "end": 44.11
+  },
+  {
+   "text": "yang",
+   "start": 44.11,
+   "end": 44.29
+  },
+  {
+   "text": "menerimanya",
+   "start": 44.29,
+   "end": 45.21
+  },
+  {
+   "text": "bisa",
+   "start": 45.29,
+   "end": 45.59
+  },
+  {
+   "text": "berbeda",
+   "start": 45.59,
+   "end": 46.03
+  },
+  {
+   "text": "di",
+   "start": 46.03,
+   "end": 46.18
+  },
+  {
+   "text": "tiap",
+   "start": 46.18,
+   "end": 46.33
+  },
+  {
+   "text": "merek.",
+   "start": 46.33,
+   "end": 46.63
+  },
+  {
+   "text": "Kalau",
+   "start": 47.13,
+   "end": 47.45
+  },
+  {
+   "text": "kamu,",
+   "start": 47.45,
+   "end": 47.77
+  },
+  {
+   "text": "pilih",
+   "start": 47.96,
+   "end": 48.22
+  },
+  {
+   "text": "yang",
+   "start": 48.22,
+   "end": 48.35
+  },
+  {
+   "text": "mana?",
+   "start": 48.35,
+   "end": 48.61
+  },
+  {
+   "text": "Komen",
+   "start": 49.01,
+   "end": 49.32
+  },
+  {
+   "text": "di",
+   "start": 49.32,
+   "end": 49.48
+  },
+  {
+   "text": "bawah,",
+   "start": 49.48,
+   "end": 49.79
+  },
+  {
+   "text": "ya.",
+   "start": 49.79,
+   "end": 49.95
+  }
+ ]
+}

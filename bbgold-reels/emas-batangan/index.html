@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><title>bb gold Etalase Kartu</title>
+<style>
+html,body{margin:0;overflow:hidden;background:#E5B527}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+canvas{position:absolute;left:0;top:0}
+#kartu{position:absolute;left:0;top:0;width:1080px;height:1920px;perspective:2200px;perspective-origin:540px 860px}
+.k{position:absolute;left:0;top:0;transform-style:preserve-3d;will-change:transform}
+.k .muka,.k .bel{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;overflow:hidden}
+.k .muka img{width:100%;height:100%;display:block}
+.k .kilau{position:absolute;inset:0;mix-blend-mode:screen}
+.k .bel{transform:rotateY(180deg);background:#082A59;display:flex;align-items:center;justify-content:center}
+.k .bel span{font:700 220px Poppins;color:#E5B527}
+.k .bayang{position:absolute;left:6%;right:6%;bottom:-50px;height:60px;border-radius:50%;background:#082A59;filter:blur(18px);transform:translateZ(-1px)}
+#outro{display:none}
+</style></head>
+<body><div id="stage"><canvas id="grid" width="1080" height="1920"></canvas><div id="kartu"></div><canvas id="main" width="1080" height="1920"></canvas><canvas id="outro" width="1080" height="1920"></canvas></div>
+<script type="module">import { boot } from "/emas-batangan/etalase.js"; boot(new URLSearchParams(location.search).get("data"));</script>
+</body></html>

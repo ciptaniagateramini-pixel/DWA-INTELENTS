@@ -27,7 +27,7 @@ const tokens = JSON.parse(fs.readFileSync(path.join(ROOT, "tokens.json"), "utf8"
 // Frame contact sheet: awal tiap kalimat, puncak tiap adegan, kartu, zoom out, outro
 const SHEET = DJSON.sheet || [0.2, 1.2, 3.8, 4.95, 7.2, 10.5, 11.9, 14.5, 16.6, 20.0, 23.2, 24.6, 25.8, 26.85, 27.38, 29.6];
 
-const MIME = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".woff2": "font/woff2" };
+const MIME = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".png": "image/png" };
 const server = http.createServer((req, res) => {
   const p = path.join(ROOT, decodeURIComponent(new URL(req.url, "http://x").pathname));
   if (!p.startsWith(ROOT) || !fs.existsSync(p) || fs.statSync(p).isDirectory()) { res.writeHead(404); return res.end(); }
