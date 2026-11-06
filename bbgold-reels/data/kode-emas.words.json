@@ -1,0 +1,587 @@
+{
+ "metode": "pemetaan manual rentang bicara + suku kata (tanpa ASR)",
+ "audio": "assets/audio/kode-emas/rekaman-asli.mp3",
+ "akhir": 55.03,
+ "words": [
+  {
+   "text": "Bunda-bunda,",
+   "start": 0.0,
+   "end": 0.8
+  },
+  {
+   "text": "wajib",
+   "start": 1.06,
+   "end": 1.39
+  },
+  {
+   "text": "tahu",
+   "start": 1.39,
+   "end": 1.71
+  },
+  {
+   "text": "tips",
+   "start": 1.71,
+   "end": 1.88
+  },
+  {
+   "text": "tipis",
+   "start": 1.88,
+   "end": 2.21
+  },
+  {
+   "text": "kali",
+   "start": 2.21,
+   "end": 2.53
+  },
+  {
+   "text": "ini!",
+   "start": 2.53,
+   "end": 2.86
+  },
+  {
+   "text": "Sebelum",
+   "start": 3.4,
+   "end": 3.92
+  },
+  {
+   "text": "bungkus",
+   "start": 3.92,
+   "end": 4.26
+  },
+  {
+   "text": "perhiasan",
+   "start": 4.26,
+   "end": 4.77
+  },
+  {
+   "text": "yang",
+   "start": 4.77,
+   "end": 4.95
+  },
+  {
+   "text": "kalian",
+   "start": 4.95,
+   "end": 5.29
+  },
+  {
+   "text": "suka,",
+   "start": 5.37,
+   "end": 5.76
+  },
+  {
+   "text": "sambil",
+   "start": 5.97,
+   "end": 6.33
+  },
+  {
+   "text": "pilih-pilih,",
+   "start": 6.33,
+   "end": 7.05
+  },
+  {
+   "text": "cek",
+   "start": 7.41,
+   "end": 7.63
+  },
+  {
+   "text": "dulu",
+   "start": 7.63,
+   "end": 8.08
+  },
+  {
+   "text": "kode",
+   "start": 8.08,
+   "end": 8.52
+  },
+  {
+   "text": "kadar",
+   "start": 8.52,
+   "end": 8.97
+  },
+  {
+   "text": "dan",
+   "start": 9.08,
+   "end": 9.26
+  },
+  {
+   "text": "cap",
+   "start": 9.26,
+   "end": 9.45
+  },
+  {
+   "text": "pabrik",
+   "start": 9.45,
+   "end": 9.82
+  },
+  {
+   "text": "pembuatnya",
+   "start": 9.82,
+   "end": 10.37
+  },
+  {
+   "text": "di",
+   "start": 10.37,
+   "end": 10.56
+  },
+  {
+   "text": "produknya.",
+   "start": 10.56,
+   "end": 11.11
+  },
+  {
+   "text": "Misalnya,",
+   "start": 11.62,
+   "end": 12.28
+  },
+  {
+   "text": "Bu",
+   "start": 12.64,
+   "end": 12.79
+  },
+  {
+   "text": "Rina",
+   "start": 12.79,
+   "end": 13.1
+  },
+  {
+   "text": "mau",
+   "start": 13.1,
+   "end": 13.25
+  },
+  {
+   "text": "beli",
+   "start": 13.25,
+   "end": 13.55
+  },
+  {
+   "text": "cincin",
+   "start": 13.55,
+   "end": 13.86
+  },
+  {
+   "text": "enam",
+   "start": 13.86,
+   "end": 14.16
+  },
+  {
+   "text": "belas",
+   "start": 14.16,
+   "end": 14.47
+  },
+  {
+   "text": "karat.",
+   "start": 14.47,
+   "end": 14.77
+  },
+  {
+   "text": "Coba",
+   "start": 15.31,
+   "end": 15.61
+  },
+  {
+   "text": "lihat",
+   "start": 15.61,
+   "end": 15.9
+  },
+  {
+   "text": "bagian",
+   "start": 15.9,
+   "end": 16.2
+  },
+  {
+   "text": "dalam",
+   "start": 16.2,
+   "end": 16.5
+  },
+  {
+   "text": "cincinnya.",
+   "start": 16.5,
+   "end": 16.94
+  },
+  {
+   "text": "Biasanya",
+   "start": 17.4,
+   "end": 17.96
+  },
+  {
+   "text": "ada",
+   "start": 17.96,
+   "end": 18.34
+  },
+  {
+   "text": "kode",
+   "start": 18.34,
+   "end": 18.72
+  },
+  {
+   "text": "enam",
+   "start": 18.72,
+   "end": 19.09
+  },
+  {
+   "text": "belas",
+   "start": 19.09,
+   "end": 19.47
+  },
+  {
+   "text": "K,",
+   "start": 19.47,
+   "end": 19.66
+  },
+  {
+   "text": "atau",
+   "start": 19.94,
+   "end": 20.26
+  },
+  {
+   "text": "tujuh",
+   "start": 20.26,
+   "end": 20.57
+  },
+  {
+   "text": "ratus,",
+   "start": 20.69,
+   "end": 21.03
+  },
+  {
+   "text": "atau",
+   "start": 21.22,
+   "end": 21.59
+  },
+  {
+   "text": "tujuh",
+   "start": 21.59,
+   "end": 21.97
+  },
+  {
+   "text": "puluh.",
+   "start": 21.97,
+   "end": 22.34
+  },
+  {
+   "text": "Lalu",
+   "start": 22.76,
+   "end": 23.12
+  },
+  {
+   "text": "ada",
+   "start": 23.12,
+   "end": 23.47
+  },
+  {
+   "text": "cap",
+   "start": 23.55,
+   "end": 23.73
+  },
+  {
+   "text": "produksinya,",
+   "start": 23.73,
+   "end": 24.46
+  },
+  {
+   "text": "biasanya",
+   "start": 24.84,
+   "end": 25.4
+  },
+  {
+   "text": "berupa",
+   "start": 25.4,
+   "end": 25.96
+  },
+  {
+   "text": "logo",
+   "start": 25.96,
+   "end": 26.34
+  },
+  {
+   "text": "pabrik",
+   "start": 26.34,
+   "end": 26.71
+  },
+  {
+   "text": "pembuatnya.",
+   "start": 26.71,
+   "end": 27.27
+  },
+  {
+   "text": "Misalnya",
+   "start": 27.68,
+   "end": 28.37
+  },
+  {
+   "text": "UBS,",
+   "start": 28.51,
+   "end": 29.27
+  },
+  {
+   "text": "Lotus,",
+   "start": 29.53,
+   "end": 30.15
+  },
+  {
+   "text": "dan",
+   "start": 30.36,
+   "end": 30.55
+  },
+  {
+   "text": "masih",
+   "start": 30.55,
+   "end": 30.92
+  },
+  {
+   "text": "banyak",
+   "start": 30.92,
+   "end": 31.3
+  },
+  {
+   "text": "lagi.",
+   "start": 31.3,
+   "end": 31.67
+  },
+  {
+   "text": "Terus,",
+   "start": 32.19,
+   "end": 32.66
+  },
+  {
+   "text": "kalau",
+   "start": 32.83,
+   "end": 33.1
+  },
+  {
+   "text": "nggak",
+   "start": 33.1,
+   "end": 33.24
+  },
+  {
+   "text": "ada",
+   "start": 33.24,
+   "end": 33.52
+  },
+  {
+   "text": "kode",
+   "start": 33.52,
+   "end": 33.79
+  },
+  {
+   "text": "dan",
+   "start": 33.79,
+   "end": 33.93
+  },
+  {
+   "text": "cap",
+   "start": 33.93,
+   "end": 34.07
+  },
+  {
+   "text": "pabriknya,",
+   "start": 34.07,
+   "end": 34.48
+  },
+  {
+   "text": "berarti",
+   "start": 34.57,
+   "end": 35.32
+  },
+  {
+   "text": "bukan",
+   "start": 35.32,
+   "end": 35.83
+  },
+  {
+   "text": "emas?",
+   "start": 35.83,
+   "end": 36.33
+  },
+  {
+   "text": "Tetap",
+   "start": 36.68,
+   "end": 37.16
+  },
+  {
+   "text": "emas,",
+   "start": 37.16,
+   "end": 37.65
+  },
+  {
+   "text": "kalau",
+   "start": 37.82,
+   "end": 38.15
+  },
+  {
+   "text": "kamu",
+   "start": 38.15,
+   "end": 38.49
+  },
+  {
+   "text": "belinya",
+   "start": 38.49,
+   "end": 38.99
+  },
+  {
+   "text": "di",
+   "start": 38.99,
+   "end": 39.15
+  },
+  {
+   "text": "toko",
+   "start": 39.15,
+   "end": 39.49
+  },
+  {
+   "text": "emas.",
+   "start": 39.49,
+   "end": 39.82
+  },
+  {
+   "text": "Biasanya",
+   "start": 40.12,
+   "end": 40.73
+  },
+  {
+   "text": "itu",
+   "start": 40.81,
+   "end": 41.18
+  },
+  {
+   "text": "buatan",
+   "start": 41.18,
+   "end": 41.54
+  },
+  {
+   "text": "pengrajin",
+   "start": 41.54,
+   "end": 42.09
+  },
+  {
+   "text": "lokal.",
+   "start": 42.09,
+   "end": 42.46
+  },
+  {
+   "text": "Jadi",
+   "start": 42.95,
+   "end": 43.34
+  },
+  {
+   "text": "bedanya",
+   "start": 43.34,
+   "end": 43.91
+  },
+  {
+   "text": "apa?",
+   "start": 43.91,
+   "end": 44.3
+  },
+  {
+   "text": "Cuma",
+   "start": 44.67,
+   "end": 45.05
+  },
+  {
+   "text": "beda",
+   "start": 45.05,
+   "end": 45.42
+  },
+  {
+   "text": "produsen.",
+   "start": 45.42,
+   "end": 45.99
+  },
+  {
+   "text": "Ada",
+   "start": 46.27,
+   "end": 46.61
+  },
+  {
+   "text": "buatan",
+   "start": 46.61,
+   "end": 46.94
+  },
+  {
+   "text": "pabrik,",
+   "start": 46.94,
+   "end": 47.28
+  },
+  {
+   "text": "ada",
+   "start": 47.56,
+   "end": 47.93
+  },
+  {
+   "text": "buatan",
+   "start": 47.93,
+   "end": 48.31
+  },
+  {
+   "text": "pengrajin.",
+   "start": 48.31,
+   "end": 48.87
+  },
+  {
+   "text": "Mau",
+   "start": 49.35,
+   "end": 49.49
+  },
+  {
+   "text": "tahu",
+   "start": 49.49,
+   "end": 49.76
+  },
+  {
+   "text": "kelebihan",
+   "start": 49.76,
+   "end": 50.3
+  },
+  {
+   "text": "dan",
+   "start": 50.3,
+   "end": 50.44
+  },
+  {
+   "text": "kekurangannya?",
+   "start": 50.44,
+   "end": 51.12
+  },
+  {
+   "text": "Follow",
+   "start": 51.55,
+   "end": 52.0
+  },
+  {
+   "text": "dulu,",
+   "start": 52.0,
+   "end": 52.45
+  },
+  {
+   "text": "dong!",
+   "start": 52.45,
+   "end": 52.67
+  },
+  {
+   "text": "Biar",
+   "start": 52.91,
+   "end": 53.16
+  },
+  {
+   "text": "makin",
+   "start": 53.16,
+   "end": 53.65
+  },
+  {
+   "text": "teliti",
+   "start": 53.74,
+   "end": 54.17
+  },
+  {
+   "text": "investasi",
+   "start": 54.17,
+   "end": 54.74
+  },
+  {
+   "text": "emas.",
+   "start": 54.74,
+   "end": 55.03
+  }
+ ]
+}

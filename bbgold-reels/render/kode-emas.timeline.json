@@ -1,0 +1,186 @@
+{
+  "id": "kode-emas",
+  "fps": 30,
+  "duration": 60.63,
+  "lead": 0.8,
+  "audio": "assets/audio/kode-emas/rekaman-asli.mp3",
+  "T": {
+    "wajib": 1.86,
+    "sebelum": 4.2,
+    "cek": 8.21,
+    "cap": 10.06,
+    "misal": 12.42,
+    "rina": 13.59,
+    "cincin": 14.350000000000001,
+    "coba": 16.11,
+    "k16": 19.39,
+    "t700": 21.060000000000002,
+    "t70": 22.39,
+    "capProd": 24.35,
+    "logo": 26.76,
+    "ubs": 29.310000000000002,
+    "lotus": 30.330000000000002,
+    "banyak": 31.720000000000002,
+    "terus": 32.989999999999995,
+    "bukan": 36.12,
+    "tetap": 37.48,
+    "toko": 39.949999999999996,
+    "pengrajin": 40.919999999999995,
+    "jadi": 43.75,
+    "cuma": 45.47,
+    "pabrik": 47.739999999999995,
+    "pengrajin2": 49.11,
+    "mau": 50.15,
+    "follow": 52.349999999999994,
+    "biar": 53.709999999999994,
+    "akhir": 55.83
+  },
+  "cues": [
+    {
+      "type": "pop",
+      "t": 0.8,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 4.1000000000000005,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 8.21,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 10.06,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 13.49,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 14.350000000000001,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 15.709999999999999,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "whoosh",
+      "t": 16.36,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 19.39,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 21.060000000000002,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 22.39,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 24,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "pop",
+      "t": 24.75,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 28.86,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 29.310000000000002,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 30.330000000000002,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 31.720000000000002,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 32.63999999999999,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "pop",
+      "t": 32.989999999999995,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 37.48,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 41.31999999999999,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 43.35,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 45.47,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 47.739999999999995,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 49.11,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 49.75,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "pop",
+      "t": 52.349999999999994,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 53.709999999999994,
+      "file": "pop"
+    }
+  ],
+  "shifted": [],
+  "outro": {
+    "mulai": 57.03
+  },
+  "narratorPeakDb": -3.5,
+  "mixLufsBefore": -19.8
+}
