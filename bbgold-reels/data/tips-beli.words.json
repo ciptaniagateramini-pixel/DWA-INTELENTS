@@ -1,0 +1,657 @@
+{
+ "metode": "pemetaan manual rentang bicara + suku kata (tanpa ASR)",
+ "audio": "assets/audio/tips-beli/rekaman-asli.mp3",
+ "akhir": 57.96,
+ "words": [
+  {
+   "text": "Tips",
+   "start": 0.1,
+   "end": 0.29
+  },
+  {
+   "text": "tipis",
+   "start": 0.29,
+   "end": 0.67
+  },
+  {
+   "text": "sebelum",
+   "start": 0.67,
+   "end": 1.23
+  },
+  {
+   "text": "beli",
+   "start": 1.23,
+   "end": 1.61
+  },
+  {
+   "text": "perhiasan",
+   "start": 1.61,
+   "end": 2.18
+  },
+  {
+   "text": "atau",
+   "start": 2.18,
+   "end": 2.56
+  },
+  {
+   "text": "logam",
+   "start": 2.56,
+   "end": 2.94
+  },
+  {
+   "text": "mulia",
+   "start": 2.94,
+   "end": 3.31
+  },
+  {
+   "text": "di",
+   "start": 3.31,
+   "end": 3.5
+  },
+  {
+   "text": "toko",
+   "start": 3.5,
+   "end": 3.88
+  },
+  {
+   "text": "emas.",
+   "start": 3.88,
+   "end": 4.26
+  },
+  {
+   "text": "Misalnya",
+   "start": 4.79,
+   "end": 5.28
+  },
+  {
+   "text": "kamu",
+   "start": 5.28,
+   "end": 5.61
+  },
+  {
+   "text": "mau",
+   "start": 5.61,
+   "end": 5.77
+  },
+  {
+   "text": "beli",
+   "start": 5.77,
+   "end": 6.1
+  },
+  {
+   "text": "perhiasan",
+   "start": 6.1,
+   "end": 6.6
+  },
+  {
+   "text": "enam",
+   "start": 6.6,
+   "end": 6.92
+  },
+  {
+   "text": "belas",
+   "start": 6.92,
+   "end": 7.25
+  },
+  {
+   "text": "karat.",
+   "start": 7.25,
+   "end": 7.58
+  },
+  {
+   "text": "Sampai",
+   "start": 8.09,
+   "end": 8.46
+  },
+  {
+   "text": "di",
+   "start": 8.46,
+   "end": 8.65
+  },
+  {
+   "text": "toko,",
+   "start": 8.74,
+   "end": 9.07
+  },
+  {
+   "text": "tanya",
+   "start": 9.29,
+   "end": 9.61
+  },
+  {
+   "text": "dulu:",
+   "start": 9.61,
+   "end": 9.92
+  },
+  {
+   "text": "harga",
+   "start": 10.27,
+   "end": 10.55
+  },
+  {
+   "text": "beli",
+   "start": 10.55,
+   "end": 10.84
+  },
+  {
+   "text": "enam",
+   "start": 10.84,
+   "end": 11.12
+  },
+  {
+   "text": "belas",
+   "start": 11.12,
+   "end": 11.41
+  },
+  {
+   "text": "karat",
+   "start": 11.41,
+   "end": 11.69
+  },
+  {
+   "text": "hari",
+   "start": 11.69,
+   "end": 11.98
+  },
+  {
+   "text": "ini",
+   "start": 11.98,
+   "end": 12.26
+  },
+  {
+   "text": "berapa?",
+   "start": 12.26,
+   "end": 12.69
+  },
+  {
+   "text": "Lalu",
+   "start": 13.23,
+   "end": 13.59
+  },
+  {
+   "text": "tanya",
+   "start": 13.59,
+   "end": 13.94
+  },
+  {
+   "text": "lagi:",
+   "start": 13.94,
+   "end": 14.3
+  },
+  {
+   "text": "kalau",
+   "start": 14.66,
+   "end": 14.96
+  },
+  {
+   "text": "dijual",
+   "start": 14.96,
+   "end": 15.26
+  },
+  {
+   "text": "kembali",
+   "start": 15.26,
+   "end": 15.71
+  },
+  {
+   "text": "hari",
+   "start": 15.71,
+   "end": 16.01
+  },
+  {
+   "text": "ini,",
+   "start": 16.01,
+   "end": 16.31
+  },
+  {
+   "text": "harga",
+   "start": 16.53,
+   "end": 16.87
+  },
+  {
+   "text": "buyback-nya",
+   "start": 16.87,
+   "end": 17.39
+  },
+  {
+   "text": "berapa?",
+   "start": 17.39,
+   "end": 17.9
+  },
+  {
+   "text": "Contohnya,",
+   "start": 18.44,
+   "end": 19.13
+  },
+  {
+   "text": "harga",
+   "start": 19.45,
+   "end": 19.8
+  },
+  {
+   "text": "beli",
+   "start": 19.8,
+   "end": 20.15
+  },
+  {
+   "text": "satu",
+   "start": 20.15,
+   "end": 20.5
+  },
+  {
+   "text": "gram",
+   "start": 20.5,
+   "end": 20.67
+  },
+  {
+   "text": "satu",
+   "start": 20.67,
+   "end": 21.02
+  },
+  {
+   "text": "juta",
+   "start": 21.02,
+   "end": 21.37
+  },
+  {
+   "text": "enam",
+   "start": 21.37,
+   "end": 21.71
+  },
+  {
+   "text": "ratus",
+   "start": 21.71,
+   "end": 22.06
+  },
+  {
+   "text": "ribu",
+   "start": 22.06,
+   "end": 22.41
+  },
+  {
+   "text": "rupiah.",
+   "start": 22.41,
+   "end": 22.76
+  },
+  {
+   "text": "Harga",
+   "start": 23.13,
+   "end": 23.54
+  },
+  {
+   "text": "buyback-nya",
+   "start": 23.54,
+   "end": 24.15
+  },
+  {
+   "text": "satu",
+   "start": 24.33,
+   "end": 24.6
+  },
+  {
+   "text": "juta",
+   "start": 24.6,
+   "end": 24.88
+  },
+  {
+   "text": "lima",
+   "start": 24.88,
+   "end": 25.15
+  },
+  {
+   "text": "ratus",
+   "start": 25.15,
+   "end": 25.43
+  },
+  {
+   "text": "lima",
+   "start": 25.51,
+   "end": 25.88
+  },
+  {
+   "text": "puluh",
+   "start": 25.88,
+   "end": 26.25
+  },
+  {
+   "text": "ribu",
+   "start": 26.25,
+   "end": 26.61
+  },
+  {
+   "text": "rupiah.",
+   "start": 26.61,
+   "end": 26.98
+  },
+  {
+   "text": "Berarti",
+   "start": 27.37,
+   "end": 27.66
+  },
+  {
+   "text": "spread-nya",
+   "start": 27.75,
+   "end": 28.3
+  },
+  {
+   "text": "lima",
+   "start": 28.38,
+   "end": 28.83
+  },
+  {
+   "text": "puluh",
+   "start": 28.83,
+   "end": 29.28
+  },
+  {
+   "text": "ribu",
+   "start": 29.28,
+   "end": 29.73
+  },
+  {
+   "text": "per",
+   "start": 29.73,
+   "end": 29.95
+  },
+  {
+   "text": "gram,",
+   "start": 29.95,
+   "end": 30.18
+  },
+  {
+   "text": "untuk",
+   "start": 30.52,
+   "end": 30.81
+  },
+  {
+   "text": "kadar",
+   "start": 30.81,
+   "end": 31.1
+  },
+  {
+   "text": "enam",
+   "start": 31.1,
+   "end": 31.39
+  },
+  {
+   "text": "belas",
+   "start": 31.39,
+   "end": 31.68
+  },
+  {
+   "text": "karat.",
+   "start": 31.68,
+   "end": 31.97
+  },
+  {
+   "text": "Tanyakan",
+   "start": 32.54,
+   "end": 33.03
+  },
+  {
+   "text": "juga:",
+   "start": 33.03,
+   "end": 33.36
+  },
+  {
+   "text": "nanti",
+   "start": 33.73,
+   "end": 34.19
+  },
+  {
+   "text": "kalau",
+   "start": 34.19,
+   "end": 34.65
+  },
+  {
+   "text": "dijual,",
+   "start": 34.65,
+   "end": 35.11
+  },
+  {
+   "text": "ikut",
+   "start": 35.34,
+   "end": 35.7
+  },
+  {
+   "text": "harga",
+   "start": 35.7,
+   "end": 36.06
+  },
+  {
+   "text": "pasar,",
+   "start": 36.06,
+   "end": 36.42
+  },
+  {
+   "text": "atau",
+   "start": 36.6,
+   "end": 36.94
+  },
+  {
+   "text": "harga",
+   "start": 36.94,
+   "end": 37.27
+  },
+  {
+   "text": "di",
+   "start": 37.27,
+   "end": 37.44
+  },
+  {
+   "text": "nota?",
+   "start": 37.44,
+   "end": 37.78
+  },
+  {
+   "text": "Ada",
+   "start": 38.17,
+   "end": 38.44
+  },
+  {
+   "text": "potongan?",
+   "start": 38.44,
+   "end": 38.85
+  },
+  {
+   "text": "Berapa",
+   "start": 39.21,
+   "end": 39.65
+  },
+  {
+   "text": "persen?",
+   "start": 39.65,
+   "end": 39.95
+  },
+  {
+   "text": "Kalau",
+   "start": 40.33,
+   "end": 40.63
+  },
+  {
+   "text": "barangnya",
+   "start": 40.63,
+   "end": 41.08
+  },
+  {
+   "text": "rusak,",
+   "start": 41.08,
+   "end": 41.38
+  },
+  {
+   "text": "potongannya",
+   "start": 41.68,
+   "end": 42.32
+  },
+  {
+   "text": "berapa",
+   "start": 42.32,
+   "end": 42.79
+  },
+  {
+   "text": "persen?",
+   "start": 42.79,
+   "end": 43.11
+  },
+  {
+   "text": "Sebelum",
+   "start": 43.69,
+   "end": 44.26
+  },
+  {
+   "text": "bayar,",
+   "start": 44.26,
+   "end": 44.64
+  },
+  {
+   "text": "minta",
+   "start": 44.82,
+   "end": 45.17
+  },
+  {
+   "text": "staf",
+   "start": 45.17,
+   "end": 45.34
+  },
+  {
+   "text": "menimbang",
+   "start": 45.34,
+   "end": 45.87
+  },
+  {
+   "text": "ulang",
+   "start": 45.87,
+   "end": 46.22
+  },
+  {
+   "text": "di",
+   "start": 46.22,
+   "end": 46.39
+  },
+  {
+   "text": "depan",
+   "start": 46.39,
+   "end": 46.74
+  },
+  {
+   "text": "kamu.",
+   "start": 46.74,
+   "end": 47.09
+  },
+  {
+   "text": "Lalu",
+   "start": 47.48,
+   "end": 47.81
+  },
+  {
+   "text": "kalikan",
+   "start": 47.81,
+   "end": 48.32
+  },
+  {
+   "text": "beratnya",
+   "start": 48.32,
+   "end": 48.82
+  },
+  {
+   "text": "dengan",
+   "start": 48.82,
+   "end": 49.15
+  },
+  {
+   "text": "harga",
+   "start": 49.15,
+   "end": 49.49
+  },
+  {
+   "text": "yang",
+   "start": 49.49,
+   "end": 49.66
+  },
+  {
+   "text": "berlaku",
+   "start": 49.66,
+   "end": 50.16
+  },
+  {
+   "text": "hari",
+   "start": 50.16,
+   "end": 50.49
+  },
+  {
+   "text": "itu.",
+   "start": 50.49,
+   "end": 50.83
+  },
+  {
+   "text": "Kalau",
+   "start": 51.21,
+   "end": 51.48
+  },
+  {
+   "text": "ada",
+   "start": 51.48,
+   "end": 51.74
+  },
+  {
+   "text": "selisih,",
+   "start": 51.74,
+   "end": 52.14
+  },
+  {
+   "text": "langsung",
+   "start": 52.4,
+   "end": 52.79
+  },
+  {
+   "text": "tanyakan.",
+   "start": 52.79,
+   "end": 53.38
+  },
+  {
+   "text": "Ingat,",
+   "start": 53.85,
+   "end": 54.18
+  },
+  {
+   "text": "teliti",
+   "start": 54.53,
+   "end": 55.04
+  },
+  {
+   "text": "di",
+   "start": 55.04,
+   "end": 55.21
+  },
+  {
+   "text": "awal",
+   "start": 55.21,
+   "end": 55.55
+  },
+  {
+   "text": "lebih",
+   "start": 55.55,
+   "end": 55.89
+  },
+  {
+   "text": "baik,",
+   "start": 55.89,
+   "end": 56.06
+  },
+  {
+   "text": "daripada",
+   "start": 56.36,
+   "end": 57.0
+  },
+  {
+   "text": "menyesal",
+   "start": 57.0,
+   "end": 57.48
+  },
+  {
+   "text": "kemudian.",
+   "start": 57.48,
+   "end": 57.96
+  }
+ ]
+}
