@@ -18,7 +18,8 @@ export async function boot(dataPath) {
   const data = await (await fetch("/" + dataPath)).json();
   const words = (await (await fetch("/" + data.words)).json()).words;
   const { biru: B, mustard: M, mustardMuda: MM, krem: K, abuBiru: A } = tokens.color;
-  const lead = data.jedaAwal, V = (n) => n + lead;
+  const COVER = data.cover?.durasi || 0; // detik cover di awal video
+  const lead = data.jedaAwal + COVER, V = (n) => n + lead;
   for (const [file, weight] of [["Poppins-Bold", "700"], ["Poppins-Medium", "500"], ["Poppins-Light", "300"]]) {
     const f = new FontFace("Poppins", `url(/assets/fonts/${file}.woff2)`, { weight });
     document.fonts.add(await f.load());
@@ -53,7 +54,7 @@ export async function boot(dataPath) {
     el.querySelector(".muka").appendChild(img);
     const kil = document.createElement("div"); kil.className = "kilau"; el.querySelector(".muka").appendChild(kil);
     wrap.appendChild(el);
-    cards[c.id] = { el, w, kil, bay: el.querySelector(".bayang"), keys: [] };
+    cards[c.id] = { el, w, img, kil, bay: el.querySelector(".bayang"), keys: [] };
   }
   const ORDER = data.kartu.map((c) => c.id);
   // keyframe: [waktu video, state parsial, durasi, ease]
@@ -363,12 +364,53 @@ export async function boot(dataPath) {
   }
   let wn = 0; cues.forEach((c) => (c.file = c.type === "whoosh" ? `whoosh-${(wn++ % 2) + 1}` : "pop"));
 
+
+  // ---- Cover (frame pertama video; tahan lalu memudar ke adegan) ----
+  function coverGrid() {
+    g.fillStyle = M; g.fillRect(0, 0, W, H);
+    g.save(); g.strokeStyle = B; g.globalAlpha = tokens.grid.opacity; g.lineWidth = tokens.grid.garis;
+    for (let x = 0; x <= W; x += tokens.grid.sel) { g.beginPath(); g.moveTo(x + 0.5, 0); g.lineTo(x + 0.5, H); g.stroke(); }
+    for (let y = 0; y <= H; y += tokens.grid.sel) { g.beginPath(); g.moveTo(0, y + 0.5); g.lineTo(W, y + 0.5); g.stroke(); }
+    g.restore();
+  }
+  function coverLayer(t) {
+    if (!COVER || t >= COVER + 0.35) return;
+    const p = eInOut(prog(t, COVER, 0.35));
+    g.save(); g.globalAlpha = 1 - p; g.translate(540, 960); g.scale(1 + p * 0.06, 1 + p * 0.06); g.translate(-540, -960);
+    drawCover(t); g.restore();
+  }
+  function cropCheck() { // kotak crop 3:4 di tengah (hanya untuk cek)
+    const c = tokens.crop34; g.save(); g.strokeStyle = B; g.lineWidth = 3; g.setLineDash([10, 8]);
+    g.strokeRect((W - c.width) / 2, (H - c.height) / 2, c.width, c.height); g.restore();
+    text("CROP 3:4", (W - c.width) / 2, (H - c.height) / 2 - 22, 26, B, 500, "left");
+  }
+
+  function drawCover() {
+    coverGrid();
+    g.save(); g.letterSpacing = "8px"; text("EDUKASI BB GOLD", 540, 370, 30, B, 500); g.restore();
+    text("Sama-sama 99,99%,", 540, 475, 80, B, 700);
+    text("apa bedanya?", 540, 590, 116, B, 700, "center", K, 22);
+    const rot = { ubs: -8, lotus: 0, emasku: 8 }, xs = { ubs: 250, lotus: 540, emasku: 830 }, nm = { ubs: "UBS", lotus: "Lotus Archi", emasku: "Emasku" };
+    for (const id of ["ubs", "emasku", "lotus"]) {
+      const c = cards[id], h = 500, w = (h * c.img.naturalWidth) / c.img.naturalHeight;
+      g.save(); g.translate(xs[id], 960 + (id === "lotus" ? -20 : 10)); g.rotate((rot[id] * Math.PI) / 180);
+      g.save(); g.globalAlpha = 0.22; g.fillStyle = B; g.filter = "blur(16px)"; g.beginPath(); g.ellipse(0, h / 2 + 30, w * 0.45, 26, 0, 0, Math.PI * 2); g.fill(); g.restore();
+      g.drawImage(c.img, -w / 2, -h / 2, w, h); g.restore();
+    }
+    for (const id of ["ubs", "lotus", "emasku"]) pill(nm[id], xs[id], 1265, 36);
+    rrect(150, 1350, 780, 110, 30, K, B, 5); text("Kamu pilih yang mana?", 540, 1407, 52, B, 700);
+    text("@tokobbgold", 540, 1540, 48, B, 700);
+  }
+
+  const CEK = new URLSearchParams(location.search).has("crop");
   window.renderAt = (t) => {
     g.clearRect(0, 0, W, H);
     drawCards(t);
     scenes(t);
     caption(t);
     disclaimer(t);
+    coverLayer(t);
+    if (CEK && t < COVER) cropCheck();
     const f = eInOut(prog(t, PN.crossFade[0], PN.crossFade[1] - PN.crossFade[0]));
     if (f > 0) { g.fillStyle = M; g.globalAlpha = f; g.fillRect(0, 0, W, H); g.globalAlpha = 1; }
     wrap.style.visibility = f >= 1 ? "hidden" : "visible";

@@ -41,7 +41,7 @@ const DRAFT = args.includes("--draft"); // pratinjau 540x960 15 fps
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: DRAFT ? 0.5 : 1 });
 page.on("pageerror", (e) => { console.error("[page error]", e); process.exit(1); });
 page.on("console", (m) => console.log("[page]", m.text()));
-await page.goto(`http://127.0.0.1:${server.address().port}/${DJSON.page || "perhiasan-part1/index.html"}?data=${DATA}`);
+await page.goto(`http://127.0.0.1:${server.address().port}/${DJSON.page || "perhiasan-part1/index.html"}?data=${DATA}${args0.includes("--crop") ? "&crop" : ""}`);
 await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
 const meta = await page.evaluate(() => window.__meta);
 const shot = async (t) => { await page.evaluate((tt) => window.renderAt(tt), t); return page.screenshot({ type: "png" }); };

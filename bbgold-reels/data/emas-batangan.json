@@ -7,11 +7,43 @@
  "words": "data/emas-batangan.words.json",
  "jedaAwal": 0.3,
  "kartu": [
-  {"id": "ubs", "file": "assets/emas-batangan/ubs.png"},
-  {"id": "lotus", "file": "assets/emas-batangan/lotus-archi.png"},
-  {"id": "emasku", "file": "assets/emas-batangan/emasku.png"}
+  {
+   "id": "ubs",
+   "file": "assets/emas-batangan/ubs.png"
+  },
+  {
+   "id": "lotus",
+   "file": "assets/emas-batangan/lotus-archi.png"
+  },
+  {
+   "id": "emasku",
+   "file": "assets/emas-batangan/emasku.png"
+  }
  ],
  "disclaimer": "Info umum, bukan ajakan investasi. Harga & buyback cek di toko.",
- "penutup": {"outroPutaran": 720, "tahanAkhir": 0.9},
- "sheet": [0.6, 2.2, 4.4, 6.2, 9.8, 15.5, 20.5, 23.0, 26.5, 29.5, 32.6, 36.5, 44.5, 47.8, 50.0, 52.5]
+ "penutup": {
+  "outroPutaran": 720,
+  "tahanAkhir": 0.9
+ },
+ "sheet": [
+  0.6,
+  2.2,
+  4.4,
+  6.2,
+  9.8,
+  15.5,
+  20.5,
+  23.0,
+  26.5,
+  29.5,
+  32.6,
+  36.5,
+  44.5,
+  47.8,
+  50.0,
+  52.5
+ ],
+ "cover": {
+  "durasi": 0.5
+ }
 }

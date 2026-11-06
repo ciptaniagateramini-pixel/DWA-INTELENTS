@@ -20,7 +20,8 @@ export async function boot(dataPath) {
   const data = await (await fetch("/" + dataPath)).json();
   const words = (await (await fetch("/" + data.words)).json()).words;
   const { biru: B, mustard: M, mustardMuda: MM, krem: K, abuBiru: A } = tokens.color;
-  const lead = data.jedaAwal, V = (n) => n + lead;
+  const COVER = data.cover?.durasi || 0; // detik cover di awal video
+  const lead = data.jedaAwal + COVER, V = (n) => n + lead;
   for (const [file, weight] of [["Poppins-Bold", "700"], ["Poppins-Medium", "500"], ["Poppins-Light", "300"]]) {
     const f = new FontFace("Poppins", `url(/assets/fonts/${file}.woff2)`, { weight });
     document.fonts.add(await f.load());
@@ -400,11 +401,46 @@ export async function boot(dataPath) {
   }
   let wn = 0; cues.forEach((c) => (c.file = c.type === "whoosh" ? `whoosh-${(wn++ % 2) + 1}` : "pop"));
 
+
+  // ---- Cover (frame pertama video; tahan lalu memudar ke adegan) ----
+  function coverGrid() {
+    g.fillStyle = M; g.fillRect(0, 0, W, H);
+    g.save(); g.strokeStyle = B; g.globalAlpha = tokens.grid.opacity; g.lineWidth = tokens.grid.garis;
+    for (let x = 0; x <= W; x += tokens.grid.sel) { g.beginPath(); g.moveTo(x + 0.5, 0); g.lineTo(x + 0.5, H); g.stroke(); }
+    for (let y = 0; y <= H; y += tokens.grid.sel) { g.beginPath(); g.moveTo(0, y + 0.5); g.lineTo(W, y + 0.5); g.stroke(); }
+    g.restore();
+  }
+  function coverLayer(t) {
+    if (!COVER || t >= COVER + 0.35) return;
+    const p = eInOut(prog(t, COVER, 0.35));
+    g.save(); g.globalAlpha = 1 - p; g.translate(540, 960); g.scale(1 + p * 0.06, 1 + p * 0.06); g.translate(-540, -960);
+    drawCover(t); g.restore();
+  }
+  function cropCheck() { // kotak crop 3:4 di tengah (hanya untuk cek)
+    const c = tokens.crop34; g.save(); g.strokeStyle = B; g.lineWidth = 3; g.setLineDash([10, 8]);
+    g.strokeRect((W - c.width) / 2, (H - c.height) / 2, c.width, c.height); g.restore();
+    text("CROP 3:4", (W - c.width) / 2, (H - c.height) / 2 - 22, 26, B, 500, "left");
+  }
+
+  function drawCover() {
+    luar(0);
+    ibu(330, 1380, { t: 0.5, jalan: 0, bicara: false, angkat: 0.5 });
+    rrect(270, 300, 540, 90, 45, B); text("TIPS TIPIS", 540, 347, 52, M, 700);
+    text("Sebelum beli emas,", 540, 470, 82, B, 700, "center", K, 16);
+    text("tanya ini dulu!", 540, 590, 116, B, 700, "center", K, 22);
+    bubble(["Harga buyback-nya", "berapa?"], 640, 820, 52, 380, 960);
+    rrect(110, 1462, 860, 104, 30, B); text("Teliti di awal, biar tak menyesal", 540, 1516, 46, K, 700);
+    text("@tokobbgold", 540, 1588, 40, B, 700, "center", K, 10);
+  }
+
+  const CEK = new URLSearchParams(location.search).has("crop");
   window.renderAt = (t) => {
     g.clearRect(0, 0, W, H);
     if (t < keluar[0]) iris(t, masuk, DOOR[0], DOOR[1], adeganLuarMasuk, adeganDalam);
     else iris(t, keluar, 300, 1100, adeganDalam, adeganLuarKeluar);
     caption(t);
+    coverLayer(t);
+    if (CEK && t < COVER) cropCheck();
     const f = eInOut(prog(t, PN.crossFade[0], PN.crossFade[1] - PN.crossFade[0]));
     if (f > 0) { g.fillStyle = M; g.globalAlpha = f; g.fillRect(0, 0, W, H); g.globalAlpha = 1; }
     if (t >= PN.outroMulai) { outroCanvas.style.display = "block"; renderOutro(t - PN.outroMulai, { background: true }); }
