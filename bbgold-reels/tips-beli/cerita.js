@@ -423,14 +423,18 @@ export async function boot(dataPath) {
   }
 
   function drawCover() {
-    luar(0);
-    ibu(330, 1380, { t: 0.5, jalan: 0, bicara: false, angkat: 0.5 });
-    rrect(270, 300, 540, 90, 45, B); text("TIPS TIPIS", 540, 347, 52, M, 700);
-    text("Sebelum beli emas,", 540, 470, 82, B, 700, "center", K, 16);
-    text("tanya ini dulu!", 540, 590, 116, B, 700, "center", K, 22);
-    bubble(["Harga buyback-nya", "berapa?"], 640, 820, 52, 380, 960);
-    rrect(110, 1462, 860, 104, 30, B); text("Teliti di awal, biar tak menyesal", 540, 1516, 46, K, 700);
-    text("@tokobbgold", 540, 1588, 40, B, 700, "center", K, 10);
+    coverGrid();
+    text("Beli emas,", 540, 400, 96, B, 700);
+    text("jangan langsung...", 540, 515, 96, B, 700);
+    g.save(); g.translate(540, 900); g.rotate(-0.07);
+    bubble(["BUNGKUS,", "MBAK!"], 0, 0, 128, -250, 440);
+    g.restore();
+    // coretan lucu di atas "BUNGKUS, MBAK!"
+    g.save(); g.translate(540, 900); g.rotate(-0.07); g.strokeStyle = B; g.lineCap = "round"; g.lineWidth = 22;
+    g.beginPath(); g.moveTo(-300, 40); g.quadraticCurveTo(0, -5, 300, -35); g.stroke(); g.restore();
+    g.save(); g.translate(650, 1260); g.rotate(0.04); pill("Tanya ini dulu!", 0, 0, 64, B, M); g.restore();
+    ibu(240, 1760, { t: 0.5, jalan: 0, bicara: true, angkat: 0.9 });
+    text("@tokobbgold", 760, 1560, 44, B, 700);
   }
 
   const CEK = new URLSearchParams(location.search).has("crop");
