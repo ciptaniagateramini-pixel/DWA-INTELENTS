@@ -1,0 +1,23 @@
+{
+  "name": "nusasari",
+  "font": "/tmp/claude-0/-home-user-DWA-INTELENTS/25f2c5a1-9657-5dfd-b96e-c663582bbbe1/scratchpad/zip/iklan-pop-paket-dasar/iklan-pop/assets/fonts/Poppins-Bold.ttf",
+  "bg_top": [168, 30, 36],
+  "bg_bottom": [104, 14, 22],
+  "glow": [255, 196, 80, 120],
+  "rays": [
+    {"count": 18, "width": 10, "speed": 14, "color": [255, 196, 70, 55]},
+    {"count": 12, "width": 6, "speed": -22, "color": [255, 228, 150, 40]}
+  ],
+  "ray_pulse_hz": 1.2,
+  "ray_center": [540, 860],
+  "text_fill": [255, 255, 255],
+  "text_highlight": [255, 210, 40],
+  "text_stroke": [90, 10, 16],
+  "big_fill": [255, 210, 40],
+  "big_stroke": [90, 10, 16],
+  "caption_scale": 0.72,
+  "caption_y_bottom": 1415,
+  "caption_y_top": 330,
+  "bubble": {"fill": [255, 255, 255], "outline": [90, 10, 16], "text": [90, 10, 16], "highlight": [200, 30, 36]},
+  "outro": {"bg": [104, 14, 22], "accent": [255, 210, 40], "text": [255, 255, 255], "dark": [70, 8, 14], "sub": [240, 210, 210]}
+}

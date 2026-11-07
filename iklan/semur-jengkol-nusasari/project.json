@@ -1,0 +1,426 @@
+{
+ "name": "semur-jengkol-nusasari",
+ "preset": "nusasari.json",
+ "voice": "suara.mp3",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 1.55,
+   "type": "mascot",
+   "asset": "lilis_toa_outline.png",
+   "t0": 0.0,
+   "bubble": {
+    "lines": [
+     [
+      "PERHATIAN,"
+     ],
+     [
+      "PERHATIAN!"
+     ]
+    ],
+    "reveal": [
+     [
+      0.15
+     ],
+     [
+      0.7
+     ]
+    ],
+    "highlight": [
+     "PERHATIAN!"
+    ],
+    "pop": 0.1,
+    "tip": [
+     0.35,
+     0.3
+    ]
+   }
+  },
+  {
+   "start": 1.55,
+   "end": 4.75,
+   "type": "mascot",
+   "asset": "lilis_kangen_outline.png"
+  },
+  {
+   "start": 4.75,
+   "end": 6.45,
+   "type": "items",
+   "items": [
+    {
+     "asset": "jengkol_mentah.png",
+     "width": 960,
+     "cx": 540,
+     "cy": 860,
+     "t0": 4.75,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 6.45,
+   "end": 7.85,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_original.png",
+     "width": 720,
+     "cx": 540,
+     "cy": 860,
+     "t0": 6.5,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 7.85,
+   "end": 10.9,
+   "type": "mascot",
+   "asset": "lilis_praktis_outline.png"
+  },
+  {
+   "start": 10.9,
+   "end": 12.75,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_original.png",
+     "width": 700,
+     "cx": 540,
+     "cy": 900,
+     "t0": 10.9,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 12.75,
+   "end": 16.2,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_original.png",
+     "width": 540,
+     "cx": 540,
+     "cy": 720,
+     "t0": 12.9,
+     "bob": 1
+    },
+    {
+     "asset": "produk_sambal_merah.png",
+     "width": 420,
+     "cx": 285,
+     "cy": 1130,
+     "t0": 14.15,
+     "rot": 1
+    },
+    {
+     "asset": "produk_cabe_ijo.png",
+     "width": 460,
+     "cx": 800,
+     "cy": 1130,
+     "t0": 14.86,
+     "rot": 1
+    }
+   ]
+  },
+  {
+   "start": 16.2,
+   "end": 18.1,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_cabe_ijo.png",
+     "width": 440,
+     "cx": 265,
+     "cy": 900,
+     "t0": 16.25,
+     "rot": 1
+    },
+    {
+     "asset": "produk_sambal_merah.png",
+     "width": 430,
+     "cx": 815,
+     "cy": 900,
+     "t0": 16.4,
+     "rot": 1
+    },
+    {
+     "asset": "produk_original.png",
+     "width": 600,
+     "cx": 540,
+     "cy": 840,
+     "t0": 16.55,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 18.1,
+   "end": 21.5,
+   "type": "items",
+   "items": [
+    {
+     "asset": "nasi_semur.png",
+     "width": 1000,
+     "cx": 540,
+     "cy": 860,
+     "t0": 18.1,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 21.5,
+   "end": 23.55,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_sambal_merah.png",
+     "width": 660,
+     "cx": 540,
+     "cy": 860,
+     "t0": 21.5,
+     "bob": 1
+    }
+   ]
+  },
+  {
+   "start": 23.55,
+   "end": 25.95,
+   "type": "mascot",
+   "asset": "lilis_produk_nasi_outline.png"
+  },
+  {
+   "start": 25.95,
+   "end": 30.45,
+   "type": "mascot",
+   "asset": "lilis_toa_outline.png"
+  },
+  {
+   "start": 30.45,
+   "end": 32.37,
+   "type": "items",
+   "items": [
+    {
+     "asset": "produk_cabe_ijo.png",
+     "width": 440,
+     "cx": 265,
+     "cy": 860,
+     "t0": 30.45,
+     "rot": 1
+    },
+    {
+     "asset": "produk_sambal_merah.png",
+     "width": 430,
+     "cx": 815,
+     "cy": 860,
+     "t0": 30.55,
+     "rot": 1
+    },
+    {
+     "asset": "produk_original.png",
+     "width": 600,
+     "cx": 540,
+     "cy": 800,
+     "t0": 30.65,
+     "bob": 1
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 1.67,
+   "end": 3.3,
+   "lines": [
+    "PANGGILAN",
+    "DITUJUKAN..."
+   ],
+   "size": 118,
+   "pos": "top"
+  },
+  {
+   "start": 3.35,
+   "end": 4.7,
+   "lines": [
+    "YANG LAGI *KANGEN*",
+    "*MASAKAN RUMAHAN*"
+   ],
+   "size": 108,
+   "pos": "top"
+  },
+  {
+   "start": 4.8,
+   "end": 6.4,
+   "lines": [
+    "TAPI *MALESSS*",
+    "MASAK!"
+   ],
+   "size": 124
+  },
+  {
+   "start": 6.6,
+   "end": 7.8,
+   "lines": [
+    "KINI *HADIR LAGI!*"
+   ],
+   "size": 124
+  },
+  {
+   "start": 7.95,
+   "end": 9.5,
+   "lines": [
+    "PO *SEMUR JENGKOL*",
+    "EKONOMIS"
+   ],
+   "size": 112,
+   "pos": "top"
+  },
+  {
+   "start": 9.55,
+   "end": 10.85,
+   "lines": [
+    "DIMASAK *DADAKAN!*"
+   ],
+   "size": 112,
+   "pos": "top"
+  },
+  {
+   "start": 11.0,
+   "end": 11.9,
+   "lines": [
+    "MULAI"
+   ],
+   "size": 150,
+   "pos": "top"
+  },
+  {
+   "start": 11.4,
+   "end": 12.7,
+   "lines": [
+    "10 RIBUAN!"
+   ],
+   "size": 230,
+   "style": "big",
+   "cy": 1500,
+   "rot": -5
+  },
+  {
+   "start": 12.85,
+   "end": 14.1,
+   "lines": [
+    "RASA *ORIGINAL*"
+   ],
+   "size": 124,
+   "pos": "top"
+  },
+  {
+   "start": 14.1,
+   "end": 14.8,
+   "lines": [
+    "*BALADO*"
+   ],
+   "size": 140,
+   "pos": "top"
+  },
+  {
+   "start": 14.8,
+   "end": 16.15,
+   "lines": [
+    "DAN *CABAI IJO!*"
+   ],
+   "size": 130,
+   "pos": "top"
+  },
+  {
+   "start": 16.3,
+   "end": 17.15,
+   "lines": [
+    "MAU *NYETOK?*"
+   ],
+   "size": 140,
+   "pos": "top"
+  },
+  {
+   "start": 17.2,
+   "end": 18.05,
+   "lines": [
+    "BISAA!"
+   ],
+   "size": 300,
+   "style": "big",
+   "cy": 1480,
+   "rot": -6
+  },
+  {
+   "start": 18.2,
+   "end": 19.4,
+   "lines": [
+    "SIMPAN DI *FREEZER*"
+   ],
+   "size": 120,
+   "pos": "top"
+  },
+  {
+   "start": 19.45,
+   "end": 21.45,
+   "lines": [
+    "MAU MAKAN?",
+    "TINGGAL *ANGETIN!*"
+   ],
+   "size": 120,
+   "pos": "top"
+  },
+  {
+   "start": 21.65,
+   "end": 23.5,
+   "lines": [
+    "*10 RIBU*,",
+    "*ISI BANYAK!*"
+   ],
+   "size": 130,
+   "pos": "top"
+  },
+  {
+   "start": 23.7,
+   "end": 25.95,
+   "lines": [
+    "EMPUUUK!"
+   ],
+   "size": 280,
+   "style": "big",
+   "cy": 330,
+   "rot": -6
+  },
+  {
+   "start": 26.1,
+   "end": 27.6,
+   "lines": [
+    "MAU *PO BATCH 2?*"
+   ],
+   "size": 124,
+   "pos": "top"
+  },
+  {
+   "start": 27.75,
+   "end": 30.4,
+   "lines": [
+    "KOMEN \"*MAU*\"",
+    "NANTI KITA KASIH",
+    "*LINK PO-NYA!*"
+   ],
+   "size": 112,
+   "pos": "top"
+  },
+  {
+   "start": 30.55,
+   "end": 32.37,
+   "lines": [
+    "KHUSUS AREA",
+    "*PURWAKARTA*"
+   ],
+   "size": 130
+  }
+ ]
+}
