@@ -208,6 +208,8 @@ export async function boot(dataPath) {
     butuh: plate([["butuh laptop", 74, B]]),
     ketemu: plate([["ketemu!", 110, K]], { bg: B }),
     jakarta: plate([["Jakarta", 80, K]], { bg: B }),
+    alamat: plate([["Offline Store Jakarta", 54, B], ["Sampoerna Strategic Square, North Tower", 34, B, 500], ["Lantai LG No. 12", 34, B, 500], ["Jl. Jend. Sudirman Kav 45-46, Jakarta 12930", 34, A, 500]], { pad: 40 }),
+    info: plate([["WARIS Sampoerna · kadar 999.9", 44, B], ["info & beli: sampoernagold.com", 36, A, 500]], { pad: 36 }),
     buyback: plate([["buyback resmi · 7 Nov 2026", 46, A, 500], ["Rp119.000.000", 104, B], ["sumber: sampoernagold.com", 34, A, 500]]),
     banding: plate([["coba bandingkan", 80, B]]),
     lUang: plate([["UANG", 70, K]], { bg: B }), lEmas: plate([["EMAS", 70, B]], { bg: M }),
@@ -302,8 +304,9 @@ export async function boot(dataPath) {
     show(P.ketemu, t, T.ketemu, T.dijual - 0.3); place(P.ketemu, xl - 0.2, TOP, 0.3);
     // --- area jual ---
     show(toko, t, T.dijual - 0.4, T.coba - 0.3, 0.6, 0.72); place(toko, xj - 0.45, -0.88, -0.9, 0.3);
-    show(pin, t, T.dijual + 0.3, T.coba - 0.3, 0.45, 0.62); place(pin, xj + 0.95, 1.55 + Math.abs(Math.sin(t * 3)) * 0.12, 0.2, Math.sin(t) * 0.4);
-    show(P.jakarta, t, T.dijual + 0.5, T.coba - 0.3); place(P.jakarta, xj + 0.95, 0.85, 0.5, -0.15);
+    show(pin, t, T.dijual + 0.3, T.coba - 0.3, 0.45, 0.62); place(pin, xj + 1.05, 1.0 + Math.abs(Math.sin(t * 3)) * 0.12, 0.2, Math.sin(t) * 0.4);
+    P.jakarta.visible = false;
+    show(P.alamat, t, T.dijual + 0.2, T.coba - 0.3); place(P.alamat, xj, TOP - 0.05, 0.4);
     show(P.buyback, t, T.buyback, T.coba - 0.3); place(P.buyback, xj, -0.7, 1.9, -0.06, -0.05);
     // --- area banding ---
     const UX = xc - 0.95, EX = xc + 0.95;
@@ -323,10 +326,11 @@ export async function boot(dataPath) {
     show(P.n11, t, T.sebelas + 0.6, T.hargaEmas - 0.3); place(P.n11, EX, 1.65, 0.3, -0.1);
     show(P.sisa, t, T.sisa, T.hargaEmas - 0.3); place(P.sisa, xc, TOP, 0.4);
     // --- area akhir ---
-    show(kartuAkhir, t, T.hargaEmas - 0.2); place(kartuAkhir, xa, 0.45 + Math.sin(t * 1.6) * 0.06, 0, t * 0.9);
+    show(kartuAkhir, t, T.hargaEmas - 0.2, 1e9, 0.45, 1); place(kartuAkhir, xa, 0.95 + Math.sin(t * 1.6) * 0.06, 0, t * 0.9);
+    show(P.info, t, T.hargaEmas + 0.4, 1e9); place(P.info, xa, -0.2, 1.0);
     show(P.naikTurun, t, T.hargaEmas, 1e9); place(P.naikTurun, xa, TOP, 0.3);
-    show(P.tanya, t, T.kamu, T.komen - 0.1); place(P.tanya, xa, -1.0, 1.5, 0.08, -0.04);
-    show(P.komen, t, T.komen, 1e9); place(P.komen, xa, -1.0, 1.5, -0.06);
+    show(P.tanya, t, T.kamu, T.komen - 0.1); place(P.tanya, xa, -0.9, 1.6, 0.08, -0.04);
+    show(P.komen, t, T.komen, 1e9); place(P.komen, xa, -0.85, 1.6, -0.06);
   }
 
   // ---- Lapisan 2D: transkrip kecil + cover + outro ----
