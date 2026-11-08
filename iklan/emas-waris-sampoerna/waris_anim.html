@@ -1,0 +1,198 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Pop;src:url(Poppins-Bold.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1920px;overflow:hidden;background:#140205}
+#st{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif;color:#fff;
+  background:radial-gradient(ellipse at 50% 42%,#7a0f1c 0%,#3d050c 45%,#140205 100%)}
+#floor{position:absolute;left:-400px;right:-400px;top:1180px;height:1200px;transform:perspective(900px) rotateX(72deg);transform-origin:50% 0;
+  background-image:linear-gradient(rgba(232,195,90,.18) 2px,transparent 2px),linear-gradient(90deg,rgba(232,195,90,.18) 2px,transparent 2px);background-size:90px 90px;
+  -webkit-mask-image:linear-gradient(#000,transparent 70%)}
+.abs{position:absolute}
+.gold{color:#F2CB5B}
+#hdr{left:0;right:0;top:120px;text-align:center}
+#kick{display:inline-block;font-family:Pop;font-size:34px;color:#3d050c;background:linear-gradient(#ffe08a,#d9a531);padding:6px 28px;border-radius:40px;margin-bottom:18px}
+#ttl{font-family:Pop;font-size:76px;line-height:1.08;text-shadow:0 6px 20px rgba(0,0,0,.5)}
+#ttl b{font-weight:normal;background:linear-gradient(#fff3c4,#F2CB5B 45%,#b9861d);-webkit-background-clip:text;color:transparent}
+#cap{left:70px;right:70px;top:1560px;text-align:center;font-size:40px;line-height:1.4;font-weight:600;color:#f3dfe0}
+#cap b{color:#F2CB5B}
+#sub{left:90px;right:90px;top:1745px;text-align:center}
+#sub span{display:inline-block;max-width:900px;font-size:29px;line-height:1.35;font-weight:600;color:rgba(255,255,255,.92);background:rgba(0,0,0,.35);padding:8px 18px;border-radius:12px}
+#src{left:0;right:0;bottom:40px;text-align:center;font-size:24px;color:rgba(255,255,255,.45)}
+/* 3D gold card */
+.scene3d{position:absolute;left:0;right:0;top:420px;height:1060px;perspective:1600px}
+.card{position:absolute;left:50%;top:50%;width:560px;height:855px;margin:-427px 0 0 -280px;transform-style:preserve-3d}
+.face{position:absolute;inset:0;border-radius:34px;overflow:hidden;backface-visibility:hidden}
+.face img{width:100%;height:100%;object-fit:cover}
+.back{transform:rotateY(180deg)}
+.edge{position:absolute;inset:0;border-radius:34px;background:#8c0f1d}
+.shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.35) 47%,transparent 58%);mix-blend-mode:screen}
+.shadow{position:absolute;left:50%;top:960px;width:600px;height:80px;margin-left:-300px;border-radius:50%;background:radial-gradient(rgba(0,0,0,.6),transparent 70%)}
+.chip{position:absolute;display:flex;align-items:center;gap:16px;padding:18px 28px;border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:2px solid rgba(242,203,91,.55);
+  box-shadow:0 20px 40px rgba(0,0,0,.45);backdrop-filter:blur(6px);font-family:Pop;font-size:38px}
+.chip i{font-style:normal;width:56px;height:56px;border-radius:16px;background:linear-gradient(#ffe08a,#c99325);color:#3d050c;display:flex;align-items:center;justify-content:center;font-size:30px}
+.chip small{display:block;font-family:Inter;font-weight:600;font-size:24px;color:#f0d9da}
+/* phone */
+.pwrap{position:absolute;left:232px;top:430px;width:616px;height:1065px;perspective:1800px}
+.phone{position:absolute;inset:0;border-radius:84px;background:linear-gradient(145deg,#2b2b2e,#0c0c0e);transform-style:preserve-3d;
+  box-shadow:0 0 0 4px #4a3a2a,0 60px 120px rgba(0,0,0,.7)}
+.scr{position:absolute;left:20px;top:20px;width:576px;height:1024px;border-radius:66px;overflow:hidden;background:#fff}
+.scr .pg{position:absolute;left:0;width:576px}
+.island{position:absolute;left:228px;top:40px;width:160px;height:44px;border-radius:24px;background:#000;z-index:9}
+.glare{position:absolute;inset:0;border-radius:84px;background:linear-gradient(120deg,rgba(255,255,255,.12),transparent 40%);pointer-events:none}
+.tap{position:absolute;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(242,203,91,.5);border:5px solid #F2CB5B;z-index:20}
+.hl{position:absolute;border:5px solid #F2CB5B;border-radius:14px;box-shadow:0 0 0 8px rgba(242,203,91,.25);z-index:19}
+.badge{position:absolute;z-index:30;padding:20px 26px;border-radius:22px;background:linear-gradient(145deg,#fff8e1,#f4d27a);color:#3d050c;font-family:Pop;font-size:30px;line-height:1.25;box-shadow:0 24px 50px rgba(0,0,0,.5)}
+.badge small{display:block;font-family:Inter;font-weight:600;font-size:22px;color:#6b1a20}
+/* bars */
+.bars{position:absolute;left:0;right:0;top:470px;height:900px;perspective:1400px}
+.bar3{position:absolute;bottom:0;transform-style:preserve-3d}
+.bar3 .f{position:absolute;inset:0;background:linear-gradient(90deg,#f7d778,#d39f2c 60%,#a8761a)}
+.bar3 .s{position:absolute;top:0;right:-60px;width:60px;height:100%;background:linear-gradient(#a8761a,#6e4a0b);transform:skewY(-40deg);transform-origin:0 0}
+.bar3 .t{position:absolute;top:-50px;left:0;width:100%;height:50px;background:linear-gradient(90deg,#fff1b8,#e8bf55);transform:skewX(-50deg);transform-origin:0 100%}
+.lbl{position:absolute;text-align:center;font-family:Pop}
+/* map */
+#mapwrap{position:absolute;left:0;right:0;top:470px;height:1000px;perspective:1300px}
+#map{position:absolute;left:-113px;top:-60px;width:1400px;height:700px;transform:rotateX(40deg);transform-style:preserve-3d;transform-origin:50% 60%}
+.pin{position:absolute;transform-origin:50% 100%}
+.pin .head{width:84px;height:84px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:linear-gradient(135deg,#ffe08a,#c58f22);box-shadow:0 10px 20px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+.pin .head span{transform:rotate(45deg);width:30px;height:30px;border-radius:50%;background:#7a0f1c}
+.mcard{position:absolute;width:440px;padding:22px 24px;border-radius:24px;background:linear-gradient(145deg,#fff8e8,#f3dfb3);color:#3d050c;box-shadow:0 26px 50px rgba(0,0,0,.55);font-size:24px;line-height:1.35;font-weight:600}
+.mcard h3{font-family:Pop;font-size:36px;font-weight:normal;margin-bottom:6px;color:#7a0f1c}
+</style></head><body><div id="st">
+<div id="floor"></div>
+<div id="hdr" class="abs"><div><span id="kick"></span></div><div id="ttl"></div></div>
+<div id="body"></div>
+<div id="cap" class="abs"></div>
+<div id="sub" class="abs"><span></span></div>
+<div id="src" class="abs">Sumber: sampoernagold.com · harga per 7 November 2026</div>
+</div>
+<script>
+const MAP={"java": [[462.3, 427.8], [653.9, 437.7], [676.0, 396.5], [861.5, 444.6], [897.9, 509.4], [1047.9, 527.7], [1170.6, 587.1], [1056.5, 625.2], [946.5, 584.9], [856.0, 587.6], [752.2, 580.2], [658.6, 562.3], [542.8, 524.1], [469.4, 514.2], [427.8, 526.7], [245.4, 485.5], [228.1, 442.5], [136.5, 435.1], [205.2, 339.6], [326.5, 345.5], [407.2, 384.6], [448.7, 392.2], [462.3, 427.8]], "sumatra": [[181.8, 335.2], [71.0, 337.3], [-13.2, 253.7], [-141.6, 172.0], [-184.4, 111.4], [-260.1, 30.0], [-309.7, -45.0], [1.1, -144.1], [37.0, -141.5], [53.9, -71.8], [88.8, -16.0], [162.2, -7.1], [210.9, 56.2], [185.7, 180.6], [181.8, 335.2]], "kal": [[1214.8, 151.3], [1200.1, 115.7], [1086.5, 160.7], [1046.9, 99.6], [975.6, 93.9], [925.7, 61.9], [806.8, 97.8], [770.3, 49.4], [704.8, 54.9], [622.4, 43.4], [607.1, -90.7], [1253.4, -1.6], [1214.8, 151.3]], "lomb": [[1390.0, 559.6], [1426.1, 586.2], [1487.8, 578.1], [1512.7, 620.6], [1397.0, 640.7], [1327.8, 654.1], [1274.0, 653.3], [1308.4, 595.7], [1363.2, 594.9], [1390.0, 559.6]], "jkt": [282.2, 372.5], "sby": [873.3, 474.8]};
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=k=>1-Math.pow(1-cl(k),3);
+const eio=k=>{k=cl(k);return k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2};
+const back=k=>{k=cl(k);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(k-1,3)+c1*Math.pow(k-1,2)};
+const pop=(t,t0,d=.35)=>t<t0?`opacity:0;transform:scale(.6)`:`opacity:${cl((t-t0)/d*2)};transform:scale(${0.6+0.4*back((t-t0)/d)})`;
+const K=1.6;
+function card(t,ry,rx,extra='',sc=1){let e='';for(let i=1;i<=14;i++)e+=`<div class="edge" style="transform:translateZ(${-i}px)"></div>`;
+  const sh=((t*0.35)%2)-0.5; // moving shine
+  const shine=`<div class="shine" style="background:linear-gradient(115deg,transparent ${30+sh*60}%,rgba(255,255,255,.38) ${42+sh*60}%,transparent ${54+sh*60}%)"></div>`;
+  return `<div class="scene3d"><div class="shadow"></div><div class="card" style="transform:translateY(${Math.sin(t*1.3)*14}px) scale(${sc}) rotateX(${rx}deg) rotateY(${ry}deg)">
+   <div class="face" style="transform:translateZ(1px)"><img src="front.png">${shine}</div>${e}
+   <div class="face back" style="transform:rotateY(180deg) translateZ(15px)"><img src="back.png">${shine}</div></div>${extra}</div>`;}
+function phone(t,t0,inner){const k=eo((t-t0)/.7);const ry=-10+3*Math.sin(t*.6),rx=4+1.5*Math.sin(t*.45);
+  return `<div class="pwrap" style="transform:translateY(${(1-k)*700}px);opacity:${k}"><div class="phone" style="transform:rotateY(${ry}deg) rotateX(${rx}deg)"><div class="island"></div><div class="scr">${inner}</div><div class="glare"></div></div></div>`;}
+function shot(file,y,op=1){return `<img class="pg" src="web/${file}" style="top:${-y*K}px;opacity:${op}">`;}
+function tap(t,t0,x,y){const k=(t-t0)/.6;if(k<-.5||k>1)return'';const o=k<0?1+k/.5:1-k,s=k<0?1:1+1.4*k;
+  return `<div class="tap" style="left:${x}px;top:${y}px;opacity:${o};transform:scale(${s})"></div>`;}
+function hl(t,t0,x,y,w,h){if(t<t0)return'';const o=0.6+0.4*Math.sin((t-t0)*6);return `<div class="hl" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;opacity:${cl((t-t0)/.2)*o}"></div>`;}
+function badge(t,t0,css,html){return t<t0?'':`<div class="badge" style="${css};${pop(t,t0)}">${html}</div>`;}
+function chip(t,t0,css,ic,a,b){return `<div class="chip" style="${css};${pop(t,t0)}"><i>${ic}</i><div>${a}<small>${b}</small></div></div>`;}
+function poly(pts,fill,stroke){return `<polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="3" stroke-linejoin="round"/>`}
+function bar(t,t0,css,h,small){const k=eo((t-t0)/.7);if(t<t0)return'';const hh=h*k;
+  return `<div class="bar3" style="${css};height:${hh}px"><div class="t" ${small?'style="top:-40px;height:40px"':''}></div><div class="f"></div><div class="s" ${small?'style="right:-44px;width:44px"':''}></div></div>`;}
+const SC=[
+ [0,2.2,(t,l)=>({kick:'',ttl:'Kenalan dengan<br><b>Emas WARIS</b><br>Sampoerna',cap:'',body:card(t,-200+176*eo(t/1.6)+t*3,6,'',0.7+0.3*eo(t/1.2))})],
+ [2.2,15.3,(t,l)=>({kick:'INTRO',ttl:'Emas batangan<br><b>kadar 999,9</b>',cap:'Produksi <b>PT Sampoerna Gold Indonesia</b>',
+   body:card(t,28-l*2.2,4,chip(t,5.9,'left:40px;top:120px','✦','999,9','kadar kemurnian')+chip(t,9.2,'left:60px;top:760px','19','Sejak 2019','hadir di Jakarta')+chip(t,11.9,'right:40px;top:470px','g','0,5 – 100 g','pilihan gramasi'))})],
+ [15.3,23.4,(t,l)=>({kick:'CEK KEASLIAN',ttl:l<2.2?'Gimana cara tahu<br><b>emasnya asli?</b>':'Tiap kemasan punya<br><b>QR code unik</b>',cap:t<20.9?'Pindai QR code-nya untuk <b>cek keaslian</b>':'Ditambah <b>label void</b> dan <b>hologram</b> pengaman',
+   body:card(t,20+138*eio((t-15.6)/1.1)+(t-16.7)*1.2,4,chip(t,17.6,'left:30px;top:150px','▦','QR code','pindai untuk cek')+chip(t,20.95,'right:30px;top:560px','◈','Label void','anti rusak')+chip(t,22.1,'right:50px;top:760px','✧','Hologram','pengaman kemasan'))})],
+ [23.4,33.5,(t,l)=>({kick:'CARA BELI · 1',ttl:t<27.8?'Beli lewat <b>website</b>':'Daftar atau <b>login</b>',cap:t<27.8?'Buka <b>sampoernagold.com</b>':t<30.5?'Belum punya akun? Klik <b>Registrasi</b>':'Sudah punya? <b>Login</b> pakai email &amp; password',
+   body:phone(t,23.45,shot('home.png',0,1-cl((t-27.8)/.3))+(t>27.8?shot('login.png',130,cl((t-27.8)/.3)):'')
+     +(t>27.8?tap(t,29.3,190*K,(683-130)*K)+hl(t,29.25,95*K,(668-130)*K,190*K,26*K)+hl(t,31.4,52*K,(532-130)*K,256*K,56*K):''))
+     +(t<27.8?badge(t,25.9,'left:560px;top:1280px;transform:rotate(3deg)','sampoernagold.com<small>website resmi</small>'):'')})],
+ [33.5,42.6,(t,l)=>{const prod=t>=35.25;return {kick:prod?'CARA BELI · 3':'CARA BELI · 2',ttl:prod?(t<37.3?'Pilih <b>gramasi</b>':'Klik <b>Beli Sekarang</b>'):'Cek <b>harga hari ini</b>',
+   cap:prod?(t<39.3?'Atau masukkan ke <b>Keranjang</b> dulu':'Isi <b>data pengiriman</b>, lalu <b>bayar</b>'):'Harga diperbarui <b>setiap hari</b>',
+   body:phone(t,33.55,prod?shot('produk.png',700):shot('home.png',3880-cl((t-33.6)/.8)*0))
+     .replace('</div><div class="glare">',(prod?hl(t,35.5,12*K,(1036-700)*K-26*K,336*K,46*K)+hl(t,37.4,12*K,(1052-700)*K,336*K,46*K)+tap(t,37.9,180*K,(1137-700)*K)+hl(t,37.9,12*K,(1114-700)*K,336*K,47*K):hl(t,33.9,10*K,(4036-3880)*K,340*K,42*K))+'</div><div class="glare">')
+     +(prod?'':badge(t,34.0,'left:40px;top:1120px;transform:rotate(-3deg)','1 gram<small>Jual Rp2.507.000 · Buyback Rp2.380.000</small>'))}}],
+ [42.6,51.5,(t,l)=>({kick:'CARA BELI · 4',ttl:'Invoice &amp; resi<br>dikirim lewat <b>email</b>',cap:t<45.3?'Cek <b>email</b> kamu setelah bayar':'Pesanan <b>sebelum 13.00</b> dikirim hari yang sama<br>(Sabtu, Minggu &amp; hari libur tutup)',
+   body:phone(t,-99,shot('produk.png',1170)+hl(t,45.4,8*K,(1300-1170)*K,344*K,88*K))+badge(t,42.9,'left:640px;top:1230px;transform:rotate(4deg)','✉ Email masuk<small>Invoice + nomor resi</small>')})],
+ [51.5,73.0,(t,l)=>{const H=620,hb=H*2380000/2507000;const show=t>=55.0;
+   return {kick:'SPREAD',ttl:t<55?'Pahami dulu<br>yang namanya <b>spread</b>':'Selisih <b>harga jual</b><br>&amp; <b>buyback</b>',
+   cap:t<61.7?(t<55?'Penting sebelum membeli':'Contoh: emas <b>1 gram</b>, per 7 Nov 2026'):t<69?'Dijual <b>Rp2.507.000</b> · buyback <b>Rp2.380.000</b>':'Selisih <b>Rp127.000</b>, sekitar <b>5%</b>',
+   body:(t<55?card(t,-18+l*4,6,'',0.85):'')+(show?`<div class="bars">
+    ${bar(t,61.8,'left:250px;width:220px',H)}${bar(t,65.7,'left:600px;width:220px;filter:saturate(.55) brightness(.9)',hb)}
+    <div class="lbl" style="left:200px;width:320px;top:920px;font-size:34px;${pop(t,61.8)}">Harga jual<br><span class="gold">Rp2.507.000</span></div>
+    <div class="lbl" style="left:550px;width:320px;top:920px;font-size:34px;${pop(t,65.7)}">Buyback<br><span class="gold">Rp2.380.000</span></div>
+    ${t>69.1?`<div style="position:absolute;left:600px;width:280px;top:${900-H-50}px;height:${H-hb}px;border:4px dashed #F2CB5B;border-bottom:none;border-radius:10px 10px 0 0;opacity:${cl((t-69.1)/.3)}"></div>`:''}
+    ${badge(t,69.1,`left:610px;top:${900-H-170}px`,'Spread<small>Rp127.000 ≈ 5,1%</small>')}</div>`:'')}}],
+ [73.0,82.0,(t,l)=>{const d=[['0,5 g',8.67,73.3],['1 g',5.07,73.6],['10 g',3.82,76.6],['100 g',3.73,79.3]];const sc=60;
+   return {kick:'SPREAD',ttl:'Makin besar gramasi,<br><b>spread makin kecil</b>',cap:t<76.5?'Persentase spread per gramasi':t<79.2?'<b>10 gram</b> sekitar <b>3,8%</b>':'<b>100 gram</b> sekitar <b>3,7%</b>',
+   body:`<div class="bars">`+d.map((x,i)=>bar(t,x[2],`left:${120+i*230}px;width:150px`,x[1]*sc,1)+
+    `<div class="lbl" style="left:${100+i*230}px;width:190px;top:${900-x[1]*sc-120}px;font-size:44px;color:#F2CB5B;${pop(t,x[2]+.5)}">${x[1].toFixed(1).replace('.',',')}%</div>
+     <div class="lbl" style="left:${100+i*230}px;width:190px;top:930px;font-size:36px;${pop(t,x[2])}">${x[0]}</div>`).join('')+`</div>`}}],
+ [82.0,89.85,(t,l)=>({kick:'ARTINYA',ttl:t<86.6?'Harga perlu naik<br>melewati <b>spread</b> dulu':'Cocok untuk<br><b>jangka panjang</b>',cap:t<86.6?'Baru setelah itu kamu <b>untung</b>':'Emas lebih cocok untuk <b>simpanan jangka panjang</b>',
+   body:card(t,-24+l*5,6,chip(t,86.8,'left:40px;top:880px','⏳','Jangka panjang','simpanan nilai'))})],
+ [89.85,105.35,(t,l)=>{const sx=p=>p[0],sy=p=>p[1];const k=eo((t-89.9)/.9);
+   const pin=(p,t0)=>t<t0?'':`<div class="pin" style="left:${sx(p)-42}px;top:${sy(p)-100-(1-back((t-t0)/.45))*220}px;transform:rotateX(-40deg);opacity:${cl((t-t0)/.15)}"><div class="head"><span></span></div></div>`;
+   return {kick:'TOKO OFFLINE',ttl:t<91.3?'Lebih suka<br>beli <b>langsung</b>?':'Ada <b>dua toko</b> offline',cap:'',
+   body:`<div id="mapwrap" style="opacity:${k}"><div id="map" style="transform:translateY(${(1-k)*200}px) rotateX(${40+(1-k)*25}deg) rotateZ(${Math.sin(t*.3)*2}deg)">
+    <svg width="1400" height="700" style="position:absolute;left:0;top:0;overflow:visible">
+     <defs><pattern id="g" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="rgba(242,203,91,.12)" stroke-width="2"/></pattern>
+     <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d77a"/><stop offset="1" stop-color="#b9861d"/></linearGradient></defs>
+     <rect x="-300" y="-300" width="2000" height="1300" fill="url(#g)"/>
+     <g transform="translate(0,14)" opacity=".55">${poly(MAP.java,'#4a2a05','none')}</g>
+     ${poly(MAP.sumatra,'rgba(242,203,91,.18)','rgba(242,203,91,.4)')}${poly(MAP.kal,'rgba(242,203,91,.18)','rgba(242,203,91,.4)')}${poly(MAP.lomb,'rgba(242,203,91,.18)','rgba(242,203,91,.4)')}
+     ${poly(MAP.java,'url(#land)','#fff3c4')}
+     <text x="700" y="530" fill="#5a3a06" font-family="Pop" font-size="40" opacity=".55">JAWA</text>
+     ${t>92.7?`<circle cx="${sx(MAP.jkt)}" cy="${sy(MAP.jkt)}" r="${26+((t*1.5)%1)*30}" fill="none" stroke="#7a0f1c" stroke-width="6" opacity="${1-((t*1.5)%1)}"/>`:''}
+     ${t>99.5?`<circle cx="${sx(MAP.sby)}" cy="${sy(MAP.sby)}" r="${26+((t*1.5)%1)*30}" fill="none" stroke="#7a0f1c" stroke-width="6" opacity="${1-((t*1.5)%1)}"/>`:''}
+    </svg>${pin(MAP.jkt,92.75)}${pin(MAP.sby,99.5)}</div>
+    ${t<92.7?'':`<div class="mcard" style="left:40px;top:640px;${pop(t,93.7)}"><h3>Jakarta</h3>Sampoerna Strategic Square, North Tower<br>Lantai LG No. 12<br>Jl. Jenderal Sudirman Kav 45-46</div>`}
+    ${t<99.5?'':`<div class="mcard" style="left:600px;top:820px;${pop(t,100.6)}"><h3>Surabaya</h3>BG Junction Mall<br>Lantai G, Unit B-77A<br>Jl. Bubutan No. 1-7</div>`}
+   </div>`}}],
+ [105.35,112.6,(t,l)=>({kick:'',ttl:'Cek harga terbaru di<br><b>sampoernagold.com</b>',cap:'Harga emas bisa berubah <b>setiap hari</b>',body:card(t,-20+l*6,8,'',0.95)})],
+];
+const SUBS=[[0.00,1.99,"Pernah dengar emas WARIS Sampoerna?"],
+[2.41,5.50,"Ini emas batangan dari PT Sampoerna Gold Indonesia,"],
+[5.78,8.85,"kadarnya 999,9."],
+[9.16,11.54,"Pertama kali hadir tahun 2019,"],
+[11.75,15.06,"dan sekarang tersedia dari setengah gram sampai seratus gram."],
+[15.42,17.07,"Gimana cara tahu emasnya asli?"],
+[17.50,20.63,"Tiap kemasan punya QR code unik yang bisa kamu pindai,"],
+[20.94,23.18,"ditambah label void dan hologram pengaman."],
+[23.50,25.54,"Sekarang, cara belinya lewat website."],
+[25.88,27.65,"Buka sampoernagold.com"],
+[27.88,30.33,"Kalau belum punya akun, klik Registrasi dulu."],
+[30.60,33.27,"Kalau sudah, tinggal login pakai email dan password."],
+[33.63,37.00,"Cek harga emas hari ini, lalu pilih gramasi yang kamu mau."],
+[37.32,39.08,"Klik Keranjang atau Beli Sekarang,"],
+[39.35,42.40,"isi data pengiriman, lalu selesaikan pembayarannya."],
+[42.75,45.10,"Invoice dan nomor resi dikirim lewat email."],
+[45.40,48.71,"Pesanan yang masuk sebelum jam 13.00 dikirim di hari yang sama,"],
+[48.96,51.37,"kecuali Sabtu, Minggu, dan hari libur."],
+[51.69,54.71,"Nah, sebelum beli, pahami dulu yang namanya spread."],
+[55.05,58.35,"Spread itu selisih antara harga jual dan harga buyback."],
+[58.66,61.57,"Contohnya, per 7 November 2026,"],
+[61.79,65.42,"emas 1 gram dijual Rp2.507.000."],
+[65.71,68.80,"Harga buyback-nya Rp2.380.000."],
+[69.07,72.79,"Selisihnya Rp127.000, sekitar 5%."],
+[73.15,76.27,"Makin besar gramasinya, persentase spread-nya makin kecil."],
+[76.54,78.99,"10 gram sekitar 3,8%,"],
+[79.25,81.81,"100 gram sekitar 3,7%."],
+[82.10,86.42,"Artinya, harga emas perlu naik melewati spread dulu sebelum kamu untung."],
+[86.71,89.66,"Jadi emas lebih cocok untuk simpanan jangka panjang."],
+[89.96,92.47,"Lebih suka beli langsung? Ada dua toko offline."],
+[92.74,95.20,"Di Jakarta, Sampoerna Strategic Square,"],
+[95.38,99.18,"North Tower, lantai LG nomor 12, Jalan Jenderal Sudirman."],
+[99.47,101.74,"Dan di Surabaya, BG Junction Mall,"],
+[101.90,105.18,"lantai G unit B-77A, Jalan Bubutan."],
+[105.47,107.47,"Harga emas bisa berubah setiap hari,"],
+[107.76,111.51,"jadi selalu cek harga terbarunya di website resmi sebelum membeli."]]
+;
+const DUR=112.6; let lastTtl='',ttlT=0;
+function frame(t){const i=SC.findIndex(s=>t>=s[0]&&t<s[1]);const s=SC[i<0?SC.length-1:i];const l=t-s[0];const r=s[2](t,l);
+  $('kick').textContent=r.kick;$('kick').style.display=r.kick?'inline-block':'none';
+  $('ttl').innerHTML=r.ttl; const kk=(r.tt0!==undefined?t-r.tt0:l)/.35; $('hdr').style.cssText=`opacity:${cl(kk*2)};transform:scale(${0.85+0.15*back(kk)})`;
+  $('cap').innerHTML=r.cap; $('body').innerHTML=r.body;
+  $('body').style.opacity=cl(l/.25);
+  {const sb=SUBS.find(x=>t>=x[0]-0.05&&t<x[1]+0.25);const sp=$('sub').firstChild;sp.textContent=sb?sb[2]:'';sp.style.visibility=sb?'visible':'hidden';}
+  $('floor').style.backgroundPosition=`0 ${t*30}px`;
+}
+window.frame=frame;window.DUR=DUR;
+</script></body></html>
