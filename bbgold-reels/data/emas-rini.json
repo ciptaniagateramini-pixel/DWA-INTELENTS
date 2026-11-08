@@ -1,0 +1,14 @@
+{
+ "id": "emas-rini",
+ "out": "emas-rini",
+ "page": "emas-rini/index.html",
+ "judul": "Bu Rini lupa simpan Waris 50 gram sejak 2023",
+ "audio": "assets/audio/emas-rini/rekaman-asli.mp3",
+ "words": "data/emas-rini.words.json",
+ "jedaAwal": 0.3,
+ "cover": {"durasi": 0.5},
+ "kartu": {"depan": "assets/emas-rini/kartu-depan.png", "belakang": "assets/emas-rini/kartu-belakang.png"},
+ "sumberHarga": ["web.archive.org/web/20230531200511/https://www.sampoernagold.com/produk (beli 50 g Rp49.780.000)", "sampoernagold.com diperbarui 07-11-2026 08:57 (buyback 50 g Rp119.000.000)"],
+ "penutup": {"outroPutaran": 720, "tahanAkhir": 1.0},
+ "sheet": [0, 2.0, 6.5, 9.4, 11.3, 13.4, 16.0, 18.4, 20.2, 22.8, 26.0, 29.0, 31.5, 34.7, 38.0, 41.0]
+}

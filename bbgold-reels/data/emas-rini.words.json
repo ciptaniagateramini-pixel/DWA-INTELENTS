@@ -1,0 +1,477 @@
+{
+ "metode": "pemetaan manual rentang bicara + suku kata (tanpa ASR)",
+ "audio": "assets/audio/emas-rini/rekaman-asli.mp3",
+ "akhir": 40.75,
+ "words": [
+  {
+   "text": "Bu",
+   "start": 0.0,
+   "end": 0.17
+  },
+  {
+   "text": "Rini",
+   "start": 0.17,
+   "end": 0.52
+  },
+  {
+   "text": "beli",
+   "start": 0.52,
+   "end": 0.86
+  },
+  {
+   "text": "emas",
+   "start": 0.86,
+   "end": 1.21
+  },
+  {
+   "text": "Waris",
+   "start": 1.21,
+   "end": 1.55
+  },
+  {
+   "text": "lima",
+   "start": 1.55,
+   "end": 1.89
+  },
+  {
+   "text": "puluh",
+   "start": 1.89,
+   "end": 2.24
+  },
+  {
+   "text": "gram,",
+   "start": 2.24,
+   "end": 2.41
+  },
+  {
+   "text": "Mei",
+   "start": 2.72,
+   "end": 2.9
+  },
+  {
+   "text": "dua",
+   "start": 2.9,
+   "end": 3.08
+  },
+  {
+   "text": "ribu",
+   "start": 3.08,
+   "end": 3.43
+  },
+  {
+   "text": "dua",
+   "start": 3.43,
+   "end": 3.61
+  },
+  {
+   "text": "puluh",
+   "start": 3.61,
+   "end": 3.96
+  },
+  {
+   "text": "tiga.",
+   "start": 3.96,
+   "end": 4.32
+  },
+  {
+   "text": "Harganya",
+   "start": 4.74,
+   "end": 5.47
+  },
+  {
+   "text": "empat",
+   "start": 5.57,
+   "end": 5.88
+  },
+  {
+   "text": "puluh",
+   "start": 5.88,
+   "end": 6.19
+  },
+  {
+   "text": "sembilan",
+   "start": 6.19,
+   "end": 6.65
+  },
+  {
+   "text": "koma",
+   "start": 6.65,
+   "end": 6.96
+  },
+  {
+   "text": "delapan",
+   "start": 6.96,
+   "end": 7.42
+  },
+  {
+   "text": "juta.",
+   "start": 7.42,
+   "end": 7.73
+  },
+  {
+   "text": "Lalu...",
+   "start": 8.25,
+   "end": 8.72
+  },
+  {
+   "text": "lupa.",
+   "start": 8.72,
+   "end": 9.19
+  },
+  {
+   "text": "Tersimpan",
+   "start": 9.6,
+   "end": 10.21
+  },
+  {
+   "text": "di",
+   "start": 10.62,
+   "end": 10.9
+  },
+  {
+   "text": "lemari.",
+   "start": 10.9,
+   "end": 11.73
+  },
+  {
+   "text": "Tujuh",
+   "start": 12.22,
+   "end": 12.54
+  },
+  {
+   "text": "November",
+   "start": 12.54,
+   "end": 13.02
+  },
+  {
+   "text": "dua",
+   "start": 13.02,
+   "end": 13.18
+  },
+  {
+   "text": "ribu",
+   "start": 13.18,
+   "end": 13.51
+  },
+  {
+   "text": "dua",
+   "start": 13.51,
+   "end": 13.67
+  },
+  {
+   "text": "puluh",
+   "start": 13.67,
+   "end": 13.99
+  },
+  {
+   "text": "enam,",
+   "start": 13.99,
+   "end": 14.31
+  },
+  {
+   "text": "anaknya",
+   "start": 14.56,
+   "end": 15.06
+  },
+  {
+   "text": "butuh",
+   "start": 15.06,
+   "end": 15.39
+  },
+  {
+   "text": "laptop",
+   "start": 15.39,
+   "end": 15.73
+  },
+  {
+   "text": "sepuluh",
+   "start": 15.73,
+   "end": 16.23
+  },
+  {
+   "text": "juta.",
+   "start": 16.23,
+   "end": 16.56
+  },
+  {
+   "text": "Eh,",
+   "start": 16.92,
+   "end": 17.1
+  },
+  {
+   "text": "emasnya",
+   "start": 17.32,
+   "end": 17.77
+  },
+  {
+   "text": "ketemu!",
+   "start": 17.77,
+   "end": 18.21
+  },
+  {
+   "text": "Dijual",
+   "start": 18.52,
+   "end": 18.95
+  },
+  {
+   "text": "di",
+   "start": 18.95,
+   "end": 19.16
+  },
+  {
+   "text": "store",
+   "start": 19.16,
+   "end": 19.37
+  },
+  {
+   "text": "Jakarta,",
+   "start": 19.37,
+   "end": 20.01
+  },
+  {
+   "text": "buyback",
+   "start": 20.24,
+   "end": 20.58
+  },
+  {
+   "text": "resmi",
+   "start": 20.58,
+   "end": 20.91
+  },
+  {
+   "text": "hari",
+   "start": 20.91,
+   "end": 21.25
+  },
+  {
+   "text": "itu:",
+   "start": 21.25,
+   "end": 21.59
+  },
+  {
+   "text": "seratus",
+   "start": 21.81,
+   "end": 22.32
+  },
+  {
+   "text": "sembilan",
+   "start": 22.32,
+   "end": 22.82
+  },
+  {
+   "text": "belas",
+   "start": 22.82,
+   "end": 23.16
+  },
+  {
+   "text": "juta.",
+   "start": 23.16,
+   "end": 23.5
+  },
+  {
+   "text": "Coba",
+   "start": 24.04,
+   "end": 24.39
+  },
+  {
+   "text": "bandingkan.",
+   "start": 24.39,
+   "end": 24.92
+  },
+  {
+   "text": "Kalau",
+   "start": 25.23,
+   "end": 25.62
+  },
+  {
+   "text": "dulu",
+   "start": 25.62,
+   "end": 26.0
+  },
+  {
+   "text": "uangnya",
+   "start": 26.0,
+   "end": 26.39
+  },
+  {
+   "text": "disimpan",
+   "start": 26.39,
+   "end": 26.97
+  },
+  {
+   "text": "saja,",
+   "start": 26.97,
+   "end": 27.36
+  },
+  {
+   "text": "sekarang",
+   "start": 27.54,
+   "end": 28.03
+  },
+  {
+   "text": "cuma",
+   "start": 28.03,
+   "end": 28.35
+  },
+  {
+   "text": "cukup",
+   "start": 28.35,
+   "end": 28.68
+  },
+  {
+   "text": "beli",
+   "start": 28.68,
+   "end": 29.0
+  },
+  {
+   "text": "empat",
+   "start": 29.0,
+   "end": 29.33
+  },
+  {
+   "text": "laptop.",
+   "start": 29.33,
+   "end": 29.65
+  },
+  {
+   "text": "Karena",
+   "start": 30.03,
+   "end": 30.5
+  },
+  {
+   "text": "disimpan",
+   "start": 30.5,
+   "end": 30.97
+  },
+  {
+   "text": "dalam",
+   "start": 30.97,
+   "end": 31.28
+  },
+  {
+   "text": "emas,",
+   "start": 31.28,
+   "end": 31.59
+  },
+  {
+   "text": "Bu",
+   "start": 31.76,
+   "end": 31.93
+  },
+  {
+   "text": "Rini",
+   "start": 31.93,
+   "end": 32.28
+  },
+  {
+   "text": "bisa",
+   "start": 32.28,
+   "end": 32.63
+  },
+  {
+   "text": "beli",
+   "start": 32.63,
+   "end": 32.98
+  },
+  {
+   "text": "sebelas",
+   "start": 32.98,
+   "end": 33.5
+  },
+  {
+   "text": "laptop,",
+   "start": 33.5,
+   "end": 33.85
+  },
+  {
+   "text": "dan",
+   "start": 34.06,
+   "end": 34.25
+  },
+  {
+   "text": "masih",
+   "start": 34.25,
+   "end": 34.62
+  },
+  {
+   "text": "sisa",
+   "start": 34.62,
+   "end": 34.99
+  },
+  {
+   "text": "sembilan",
+   "start": 34.99,
+   "end": 35.55
+  },
+  {
+   "text": "juta!",
+   "start": 35.55,
+   "end": 35.92
+  },
+  {
+   "text": "Harga",
+   "start": 36.35,
+   "end": 36.71
+  },
+  {
+   "text": "emas",
+   "start": 36.71,
+   "end": 37.07
+  },
+  {
+   "text": "bisa",
+   "start": 37.07,
+   "end": 37.42
+  },
+  {
+   "text": "naik",
+   "start": 37.42,
+   "end": 37.6
+  },
+  {
+   "text": "turun,",
+   "start": 37.6,
+   "end": 37.96
+  },
+  {
+   "text": "ya.",
+   "start": 37.96,
+   "end": 38.14
+  },
+  {
+   "text": "Kamu",
+   "start": 38.5,
+   "end": 38.79
+  },
+  {
+   "text": "simpan",
+   "start": 38.79,
+   "end": 39.08
+  },
+  {
+   "text": "emas",
+   "start": 39.08,
+   "end": 39.37
+  },
+  {
+   "text": "apa?",
+   "start": 39.37,
+   "end": 39.66
+  },
+  {
+   "text": "Komen",
+   "start": 39.96,
+   "end": 40.28
+  },
+  {
+   "text": "di",
+   "start": 40.28,
+   "end": 40.43
+  },
+  {
+   "text": "bawah!",
+   "start": 40.43,
+   "end": 40.75
+  }
+ ]
+}
