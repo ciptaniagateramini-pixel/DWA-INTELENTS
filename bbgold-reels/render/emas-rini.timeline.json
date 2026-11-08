@@ -1,0 +1,140 @@
+{
+  "id": "emas-rini",
+  "fps": 30,
+  "duration": 46.15,
+  "lead": 0.8,
+  "audio": "assets/audio/emas-rini/rekaman-asli.mp3",
+  "T": {
+    "mulai": 0.8,
+    "mei": 3.5200000000000005,
+    "harga": 5.54,
+    "lalu": 9.05,
+    "tersimpan": 10.4,
+    "tujuh": 13.020000000000001,
+    "anak": 15.360000000000001,
+    "laptop": 16.19,
+    "eh": 17.720000000000002,
+    "ketemu": 18.57,
+    "dijual": 19.32,
+    "buyback": 21.04,
+    "seratus": 22.61,
+    "coba": 24.84,
+    "kalau": 26.03,
+    "empat": 29.8,
+    "karena": 30.830000000000002,
+    "sebelas": 33.779999999999994,
+    "sisa": 35.419999999999995,
+    "hargaEmas": 37.15,
+    "kamu": 39.3,
+    "komen": 40.76,
+    "akhir": 41.55
+  },
+  "cues": [
+    {
+      "type": "pop",
+      "t": 0.9,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 5.54,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 8.600000000000001,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 9.350000000000001,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 15.360000000000001,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 18.27,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "pop",
+      "t": 18.57,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 18.869999999999997,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 19.62,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 21.04,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 24.389999999999997,
+      "file": "whoosh-2"
+    },
+    {
+      "type": "pop",
+      "t": 26.03,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 29.8,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 30.830000000000002,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 33.779999999999994,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 35.419999999999995,
+      "file": "pop"
+    },
+    {
+      "type": "whoosh",
+      "t": 36.699999999999996,
+      "file": "whoosh-1"
+    },
+    {
+      "type": "pop",
+      "t": 37.15,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 39.3,
+      "file": "pop"
+    },
+    {
+      "type": "pop",
+      "t": 40.76,
+      "file": "pop"
+    }
+  ],
+  "shifted": [],
+  "outro": {
+    "mulai": 42.55
+  },
+  "narratorPeakDb": -3,
+  "mixLufsBefore": -19.4
+}
