@@ -359,16 +359,16 @@ export async function boot(dataPath) {
   }
 
   // ---- Cover ----
-  function teks3d(s, x, y, size, depan, sisi, tebal = 12) {
+  function teks3d(s, x, y, size, depan, sisi, tebal = 12, garis = B, gw = 8) {
     g.font = `700 ${size}px Poppins`; g.textAlign = "center"; g.textBaseline = "middle";
     for (let i = tebal; i > 0; i--) { g.fillStyle = sisi; g.fillText(s, x + i * 0.7, y + i); }
-    g.lineJoin = "round"; g.strokeStyle = B; g.lineWidth = 8; g.strokeText(s, x, y); g.fillStyle = depan; g.fillText(s, x, y);
+    g.lineJoin = "round"; g.strokeStyle = garis; g.lineWidth = gw; g.strokeText(s, x, y); g.fillStyle = depan; g.fillText(s, x, y);
   }
   function drawCover(t) {
     langit(); lantai();
     g.save(); g.translate(540, 350); g.rotate(-0.02); pill("Pertanyaan sepele, dampaknya BESAR!", 0, 0, 40, B, M); g.restore();
     teks3d("BELI EMAS", 540, 510, 150, K, B, 14);
-    teks3d("BUAT APA?", 540, 670, 150, M, B, 14);
+    teks3d("BUAT APA?", 540, 670, 150, M, B, 14, "#FFFFFF", 14);
     tanda("BERHIAS", 300, 840, 62, B, K, -0.05);
     tanda("INVESTASI", 800, 840, 62, M, B, 0.05);
     circle(552, 840, 50, K, B, 6); text("VS", 552, 844, 44, B);
