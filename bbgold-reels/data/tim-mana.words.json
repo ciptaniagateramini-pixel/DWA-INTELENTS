@@ -1,0 +1,457 @@
+{
+ "metode": "pemetaan manual rentang bicara + suku kata (tanpa ASR)",
+ "audio": "assets/audio/tim-mana/rekaman-asli.mp3",
+ "akhir": 42.43,
+ "words": [
+  {
+   "text": "Pertanyaan",
+   "start": 0.12,
+   "end": 0.75
+  },
+  {
+   "text": "ini",
+   "start": 0.75,
+   "end": 1.06
+  },
+  {
+   "text": "sepele,",
+   "start": 1.06,
+   "end": 1.53
+  },
+  {
+   "text": "tapi",
+   "start": 1.94,
+   "end": 2.45
+  },
+  {
+   "text": "dampaknya",
+   "start": 2.45,
+   "end": 3.21
+  },
+  {
+   "text": "besar.",
+   "start": 3.21,
+   "end": 3.72
+  },
+  {
+   "text": "Beli",
+   "start": 4.23,
+   "end": 4.61
+  },
+  {
+   "text": "emas,",
+   "start": 4.61,
+   "end": 4.99
+  },
+  {
+   "text": "buat",
+   "start": 5.18,
+   "end": 5.41
+  },
+  {
+   "text": "apa?",
+   "start": 5.41,
+   "end": 5.87
+  },
+  {
+   "text": "Kenapa",
+   "start": 6.43,
+   "end": 6.86
+  },
+  {
+   "text": "emas",
+   "start": 6.86,
+   "end": 7.15
+  },
+  {
+   "text": "yang",
+   "start": 7.15,
+   "end": 7.29
+  },
+  {
+   "text": "baru",
+   "start": 7.29,
+   "end": 7.58
+  },
+  {
+   "text": "dibeli,",
+   "start": 7.58,
+   "end": 8.01
+  },
+  {
+   "text": "kalau",
+   "start": 8.22,
+   "end": 8.61
+  },
+  {
+   "text": "langsung",
+   "start": 8.61,
+   "end": 9.01
+  },
+  {
+   "text": "dijual,",
+   "start": 9.01,
+   "end": 9.4
+  },
+  {
+   "text": "hampir",
+   "start": 9.4,
+   "end": 9.79
+  },
+  {
+   "text": "selalu",
+   "start": 9.87,
+   "end": 10.43
+  },
+  {
+   "text": "rugi?",
+   "start": 10.43,
+   "end": 10.8
+  },
+  {
+   "text": "Karena",
+   "start": 11.29,
+   "end": 11.88
+  },
+  {
+   "text": "ada",
+   "start": 11.88,
+   "end": 12.27
+  },
+  {
+   "text": "selisih",
+   "start": 12.27,
+   "end": 12.86
+  },
+  {
+   "text": "harga",
+   "start": 12.86,
+   "end": 13.25
+  },
+  {
+   "text": "jual",
+   "start": 13.25,
+   "end": 13.44
+  },
+  {
+   "text": "dan",
+   "start": 13.44,
+   "end": 13.64
+  },
+  {
+   "text": "harga",
+   "start": 13.64,
+   "end": 14.03
+  },
+  {
+   "text": "buyback.",
+   "start": 14.03,
+   "end": 14.42
+  },
+  {
+   "text": "Di",
+   "start": 14.85,
+   "end": 15.09
+  },
+  {
+   "text": "perhiasan,",
+   "start": 15.09,
+   "end": 15.81
+  },
+  {
+   "text": "ada",
+   "start": 15.92,
+   "end": 16.26
+  },
+  {
+   "text": "juga",
+   "start": 16.26,
+   "end": 16.59
+  },
+  {
+   "text": "ongkos",
+   "start": 16.59,
+   "end": 16.93
+  },
+  {
+   "text": "pembuatannya.",
+   "start": 16.93,
+   "end": 17.6
+  },
+  {
+   "text": "Itulah",
+   "start": 18.07,
+   "end": 18.58
+  },
+  {
+   "text": "kenapa",
+   "start": 18.58,
+   "end": 19.1
+  },
+  {
+   "text": "beli",
+   "start": 19.1,
+   "end": 19.44
+  },
+  {
+   "text": "emas",
+   "start": 19.44,
+   "end": 19.78
+  },
+  {
+   "text": "harus",
+   "start": 19.78,
+   "end": 20.12
+  },
+  {
+   "text": "punya",
+   "start": 20.12,
+   "end": 20.46
+  },
+  {
+   "text": "tujuan",
+   "start": 20.46,
+   "end": 20.81
+  },
+  {
+   "text": "yang",
+   "start": 20.81,
+   "end": 20.98
+  },
+  {
+   "text": "pasti.",
+   "start": 20.98,
+   "end": 21.32
+  },
+  {
+   "text": "Untuk",
+   "start": 21.82,
+   "end": 22.3
+  },
+  {
+   "text": "berhias,",
+   "start": 22.3,
+   "end": 22.79
+  },
+  {
+   "text": "atau",
+   "start": 22.99,
+   "end": 23.38
+  },
+  {
+   "text": "untuk",
+   "start": 23.38,
+   "end": 23.76
+  },
+  {
+   "text": "investasi?",
+   "start": 23.76,
+   "end": 24.54
+  },
+  {
+   "text": "Kalau",
+   "start": 25.06,
+   "end": 25.44
+  },
+  {
+   "text": "untuk",
+   "start": 25.44,
+   "end": 25.81
+  },
+  {
+   "text": "berhias,",
+   "start": 25.81,
+   "end": 26.19
+  },
+  {
+   "text": "pilih",
+   "start": 26.39,
+   "end": 26.72
+  },
+  {
+   "text": "toko",
+   "start": 26.72,
+   "end": 27.05
+  },
+  {
+   "text": "yang",
+   "start": 27.05,
+   "end": 27.22
+  },
+  {
+   "text": "buyback-nya",
+   "start": 27.22,
+   "end": 27.72
+  },
+  {
+   "text": "mengikuti",
+   "start": 27.72,
+   "end": 28.39
+  },
+  {
+   "text": "harga",
+   "start": 28.39,
+   "end": 28.72
+  },
+  {
+   "text": "nota.",
+   "start": 28.72,
+   "end": 29.05
+  },
+  {
+   "text": "Kalau",
+   "start": 29.5,
+   "end": 29.81
+  },
+  {
+   "text": "untuk",
+   "start": 29.81,
+   "end": 30.12
+  },
+  {
+   "text": "investasi,",
+   "start": 30.12,
+   "end": 30.74
+  },
+  {
+   "text": "pilih",
+   "start": 30.95,
+   "end": 31.3
+  },
+  {
+   "text": "toko",
+   "start": 31.3,
+   "end": 31.64
+  },
+  {
+   "text": "yang",
+   "start": 31.64,
+   "end": 31.81
+  },
+  {
+   "text": "jual",
+   "start": 31.81,
+   "end": 31.99
+  },
+  {
+   "text": "belinya",
+   "start": 31.99,
+   "end": 32.51
+  },
+  {
+   "text": "mengikuti",
+   "start": 32.51,
+   "end": 33.2
+  },
+  {
+   "text": "harga",
+   "start": 33.2,
+   "end": 33.54
+  },
+  {
+   "text": "pasar.",
+   "start": 33.54,
+   "end": 33.89
+  },
+  {
+   "text": "Ini",
+   "start": 34.35,
+   "end": 34.65
+  },
+  {
+   "text": "salah",
+   "start": 34.65,
+   "end": 34.96
+  },
+  {
+   "text": "satu",
+   "start": 34.96,
+   "end": 35.26
+  },
+  {
+   "text": "alasan",
+   "start": 35.26,
+   "end": 35.72
+  },
+  {
+   "text": "kamu",
+   "start": 35.72,
+   "end": 36.02
+  },
+  {
+   "text": "harus",
+   "start": 36.02,
+   "end": 36.33
+  },
+  {
+   "text": "teliti",
+   "start": 36.33,
+   "end": 36.78
+  },
+  {
+   "text": "sebelum",
+   "start": 36.78,
+   "end": 37.24
+  },
+  {
+   "text": "bungkus,",
+   "start": 37.24,
+   "end": 37.55
+  },
+  {
+   "text": "ya,",
+   "start": 37.55,
+   "end": 37.7
+  },
+  {
+   "text": "Say!",
+   "start": 37.7,
+   "end": 37.85
+  },
+  {
+   "text": "Kamu",
+   "start": 38.35,
+   "end": 38.88
+  },
+  {
+   "text": "tim",
+   "start": 38.88,
+   "end": 39.14
+  },
+  {
+   "text": "berhias,",
+   "start": 39.14,
+   "end": 39.67
+  },
+  {
+   "text": "atau",
+   "start": 39.8,
+   "end": 40.2
+  },
+  {
+   "text": "tim",
+   "start": 40.2,
+   "end": 40.4
+  },
+  {
+   "text": "investasi?",
+   "start": 40.4,
+   "end": 41.19
+  },
+  {
+   "text": "Komen",
+   "start": 41.61,
+   "end": 41.94
+  },
+  {
+   "text": "di",
+   "start": 41.94,
+   "end": 42.1
+  },
+  {
+   "text": "bawah!",
+   "start": 42.1,
+   "end": 42.43
+  }
+ ]
+}
