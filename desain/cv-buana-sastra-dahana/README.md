@@ -1,5 +1,8 @@
 # CV BUANA SASTRA DAHANA: portofolio & panduan web app
 
+**Portofolio utama:** `portfolio-katalog-cv-buana.png` (katalog 3×3, format sama dengan katalog Beezam).
+Kotak-kotaknya ada di `showcase/01_landing.png` … `09_legal.png`; pembuatnya `gen_portfolio.py`.
+
 Sumber: https://buanasastradahana.online (dijelajahi lewat Firecrawl + Playwright, tangkapan layar asli).
 
 - `portfolio-web-app-cv-buana.png`: halaman portofolio "Website & Web App Design" (1080×1350)
