@@ -1,0 +1,54 @@
+{
+  "doc_title": "Beezam Sachet - Feed IG",
+  "brand": "BEEZAM",
+  "title": "Praktis Banget!",
+  "sub": "Lebih praktis dibawa *ke mana saja*",
+  "tag_left_big": "Sachet",
+  "tag_left_small": "Muat di tas & saku",
+  "tag_right_big": "Madu",
+  "tag_right_small": "Hutan asli",
+  "pill": "Tinggal sobek, langsung nikmat!",
+  "product_image": "../assets/beezam-sachet-box.png",
+  "product_alt": "Kemasan box dan sachet madu Beezam",
+  "product_max_w": 560,
+  "product_max_h": 620,
+  "fonts": {
+    "kit": "ibn3qmg",
+    "styles": {
+      "title": {
+        "family": "\"dynapuff\",sans-serif",
+        "weight": 700,
+        "extra": "letter-spacing:1px"
+      },
+      "sub": {
+        "family": "\"quicksand\",sans-serif",
+        "weight": 700
+      },
+      "brand": {
+        "family": "\"dynapuff\",sans-serif",
+        "weight": 500
+      },
+      "pill": {
+        "family": "\"dynapuff\",sans-serif",
+        "weight": 500
+      },
+      "tagL span": {
+        "family": "\"dynapuff\",sans-serif",
+        "weight": 700
+      },
+      "tagR span": {
+        "family": "\"dynapuff\",sans-serif",
+        "weight": 700
+      },
+      "tagL": {
+        "family": "\"quicksand\",sans-serif",
+        "weight": 700
+      },
+      "tagR": {
+        "family": "\"quicksand\",sans-serif",
+        "weight": 700
+      }
+    }
+  },
+  "product_base_y": 1062
+}

@@ -17,6 +17,14 @@ Semua feed Beezam memakai gaya ini, kecuali user meminta gaya lain. Contoh hasil
 
 Skrip ini otomatis menyesuaikan ukuran produk. Produk dipasang di kotak maksimal 380×650 px, berdiri di permukaan podium (titik tengah x=540, dasar y=1022), lalu pantulannya dibuat otomatis.
 
+### Opsi tambahan di JSON (lihat `examples/sachet-praktis.json`)
+- `product_max_w` / `product_max_h`: memperbesar kotak produk untuk kemasan yang melebar, misalnya box + sachet. Contoh: 560×620.
+- `product_base_y`: menurunkan produk kalau titik terbawahnya bukan alasnya, supaya produk tetap duduk di podium. Contoh sachet: 1062.
+- `fonts`: tipografi lain sesuai permintaan user. Backdrop, podium, dan tata letak tetap sama.
+  - Isi dengan kit Adobe Fonts + gaya per kelas (`title`, `sub`, `brand`, `pill`, `tagL`, `tagR`, `tagL span`, `tagR span`).
+  - Varian **"sedikit funny"**: DynaPuff (Bold/Medium) + Quicksand Bold, kit `ibn3qmg`.
+  - Agar preview memakai font asli, jaringan harus mengizinkan `use.typekit.net` dan `p.typekit.net`.
+
 ## Elemen tetap (jangan diubah tanpa diminta)
 | Elemen | Nilai |
 |---|---|
